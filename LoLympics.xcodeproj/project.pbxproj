@@ -12,6 +12,8 @@
 		5A0545B61C0C31E700961E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B41C0C31E700961E23 /* Main.storyboard */; };
 		5A0545B81C0C31E700961E23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B71C0C31E700961E23 /* Assets.xcassets */; };
 		5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */; };
+		5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545C61C0C34D100961E23 /* ionicons.ttf */; };
+		5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545C81C0C375C00961E23 /* ButtonClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		5A0545B71C0C31E700961E23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A0545BA1C0C31E700961E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A0545BC1C0C31E700961E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5A0545C61C0C34D100961E23 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
+		5A0545C81C0C375C00961E23 /* ButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,10 @@
 		5A0545AF1C0C31E700961E23 /* LoLympics */ = {
 			isa = PBXGroup;
 			children = (
+				5A0545C51C0C346F00961E23 /* Resources */,
+				5A0545C41C0C346800961E23 /* Model */,
+				5A0545C31C0C346300961E23 /* View */,
+				5A0545C21C0C345B00961E23 /* Controller */,
 				5A0545B01C0C31E700961E23 /* AppDelegate.swift */,
 				5A0545B21C0C31E700961E23 /* ViewController.swift */,
 				5A0545B41C0C31E700961E23 /* Main.storyboard */,
@@ -62,6 +70,36 @@
 				5A0545BC1C0C31E700961E23 /* Info.plist */,
 			);
 			path = LoLympics;
+			sourceTree = "<group>";
+		};
+		5A0545C21C0C345B00961E23 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
+		5A0545C31C0C346300961E23 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				5A0545C81C0C375C00961E23 /* ButtonClass.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		5A0545C41C0C346800961E23 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		5A0545C51C0C346F00961E23 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				5A0545C61C0C34D100961E23 /* ionicons.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -96,6 +134,7 @@
 				TargetAttributes = {
 					5A0545AC1C0C31E700961E23 = {
 						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = TRX47M4KT5;
 					};
 				};
 			};
@@ -124,6 +163,7 @@
 			files = (
 				5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */,
 				5A0545B81C0C31E700961E23 /* Assets.xcassets in Resources */,
+				5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */,
 				5A0545B61C0C31E700961E23 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -137,6 +177,7 @@
 			files = (
 				5A0545B31C0C31E700961E23 /* ViewController.swift in Sources */,
 				5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */,
+				5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -249,6 +290,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LoLympics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.app.LoLympics;
@@ -260,6 +302,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = LoLympics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.app.LoLympics;
