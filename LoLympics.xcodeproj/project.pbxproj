@@ -63,7 +63,6 @@
 				5A0545C31C0C346300961E23 /* View */,
 				5A0545C21C0C345B00961E23 /* Controller */,
 				5A0545B01C0C31E700961E23 /* AppDelegate.swift */,
-				5A0545B21C0C31E700961E23 /* LoginViewController.swift */,
 				5A0545B41C0C31E700961E23 /* Main.storyboard */,
 				5A0545B71C0C31E700961E23 /* Assets.xcassets */,
 				5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */,
@@ -75,6 +74,7 @@
 		5A0545C21C0C345B00961E23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5A0545B21C0C31E700961E23 /* LoginViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

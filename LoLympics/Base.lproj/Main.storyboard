@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GhD-3g-RJP">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -319,6 +319,85 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="338" y="418.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="DMm-KY-zRk">
+            <objects>
+                <viewController id="GhD-3g-RJP" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ImB-f6-omJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="KAh-xf-9z4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="mpx-Zx-7m0">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hDS-2u-ZS1">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vSn-qF-4Us" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="0wh-Hu-Mp2">
+                                                <rect key="frame" x="88" y="36" width="199" height="215"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="215" id="5sY-le-jla"/>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="215" id="QsK-RT-mlB"/>
+                                                    <constraint firstAttribute="width" constant="199" id="X3a-cT-AWR"/>
+                                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="199" id="dxR-VM-8Ev"/>
+                                                </constraints>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CREATE YOUR ACCOUNT" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SVI-kJ-2VU">
+                                                <rect key="frame" x="38" y="299" width="299" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="2GB-aw-Zzp"/>
+                                                    <constraint firstAttribute="width" constant="299" id="9Ra-Ky-JmR"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
+                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="SVI-kJ-2VU" firstAttribute="top" secondItem="0wh-Hu-Mp2" secondAttribute="bottom" constant="48" id="6A9-jO-4fv"/>
+                                            <constraint firstItem="SVI-kJ-2VU" firstAttribute="centerX" secondItem="vSn-qF-4Us" secondAttribute="centerX" id="Pjt-wA-CTx"/>
+                                            <constraint firstItem="0wh-Hu-Mp2" firstAttribute="top" secondItem="vSn-qF-4Us" secondAttribute="top" constant="36" id="a7j-rB-FJn"/>
+                                            <constraint firstAttribute="height" constant="667" id="sad-Qd-Z4B"/>
+                                            <constraint firstItem="0wh-Hu-Mp2" firstAttribute="centerX" secondItem="vSn-qF-4Us" secondAttribute="centerX" id="yx2-sH-Vpg"/>
+                                        </constraints>
+                                        <variation key="default">
+                                            <mask key="constraints">
+                                                <exclude reference="sad-Qd-Z4B"/>
+                                            </mask>
+                                        </variation>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="vSn-qF-4Us" secondAttribute="trailing" id="4Sf-Dn-ggg"/>
+                                    <constraint firstAttribute="bottom" secondItem="vSn-qF-4Us" secondAttribute="bottom" id="88r-ny-cdd"/>
+                                    <constraint firstItem="vSn-qF-4Us" firstAttribute="leading" secondItem="hDS-2u-ZS1" secondAttribute="leading" id="S7i-O8-YXb"/>
+                                    <constraint firstItem="vSn-qF-4Us" firstAttribute="centerY" secondItem="hDS-2u-ZS1" secondAttribute="centerY" id="fPP-Iu-36q"/>
+                                    <constraint firstItem="vSn-qF-4Us" firstAttribute="top" secondItem="hDS-2u-ZS1" secondAttribute="top" id="yg0-AP-deQ"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="vSn-qF-4Us" firstAttribute="width" secondItem="mpx-Zx-7m0" secondAttribute="width" id="0Fr-Yg-2LU"/>
+                            <constraint firstItem="vSn-qF-4Us" firstAttribute="width" secondItem="mpx-Zx-7m0" secondAttribute="width" id="Ec4-1r-isw"/>
+                            <constraint firstItem="KAh-xf-9z4" firstAttribute="top" secondItem="hDS-2u-ZS1" secondAttribute="bottom" id="MQx-XW-FYd"/>
+                            <constraint firstAttribute="trailing" secondItem="hDS-2u-ZS1" secondAttribute="trailing" id="N1z-39-b3J"/>
+                            <constraint firstItem="hDS-2u-ZS1" firstAttribute="leading" secondItem="mpx-Zx-7m0" secondAttribute="leading" id="Y0J-iS-Sdh"/>
+                            <constraint firstItem="hDS-2u-ZS1" firstAttribute="top" secondItem="mpx-Zx-7m0" secondAttribute="top" id="lUQ-W6-RmX"/>
+                        </constraints>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="667"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAE-Ir-CjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809.5" y="418.5"/>
         </scene>
     </scenes>
     <resources>
