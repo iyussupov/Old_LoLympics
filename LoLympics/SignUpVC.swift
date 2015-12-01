@@ -25,31 +25,27 @@ class SignUpVC: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-
-    func signUp() {
-        
-        let user = PFUser()
-        user.username = UsernameTxtFld.text
-        user.password = PasswordTxtFld.text
-        user.email = EmailTxtFld.text
-        
-        user["provider"] = "email"
-        
-        user.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-            if error == nil {
-                // Hooray! Let them use the app now.
-                print("Move next")
-            } else {
-                // Examine the error object and inform the user.
-                print(error)
-            }
-        }
-    
-    }
     
     @IBAction func SignUpBtnAction(sender: AnyObject) {
         
-        signUp()
+        if let username = UsernameTxtFld.text where username != "", let password = PasswordTxtFld.text where password != "", let email = EmailTxtFld.text where email != "" {
+            let user = PFUser()
+            user.username = UsernameTxtFld.text
+            user.password = PasswordTxtFld.text
+            user.email = EmailTxtFld.text
+            
+            user["provider"] = "email"
+            
+            user.signUpInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
+                if error == nil {
+                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                } else {
+                    ShowAlert.sa.showErrorAlert("Could not create an account", msg: "\(error!.localizedDescription)", viewController: self)
+                }
+            }
+        } else {
+            ShowAlert.sa.showErrorAlert("Could not create an account", msg: "Please fill all fields", viewController: self)
+        }
         
     }
     

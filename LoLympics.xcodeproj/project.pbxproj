@@ -36,6 +36,13 @@
 		5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505E11C0D92D700819EE9 /* SignUpVC.swift */; };
 		5AF505E41C0DA53A00819EE9 /* RoundBtnViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505E31C0DA53A00819EE9 /* RoundBtnViewStyle.swift */; };
 		5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505E61C0DA72000819EE9 /* Constans.swift */; };
+		5AF505EA1C0DB37100819EE9 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505E91C0DB37100819EE9 /* DataService.swift */; };
+		5AF505EC1C0DDB7E00819EE9 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505EB1C0DDB7E00819EE9 /* ShowAlert.swift */; };
+		5AF505EE1C0DE33F00819EE9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505ED1C0DE33F00819EE9 /* MainVC.swift */; };
+		5AF505F01C0DE69900819EE9 /* HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */; };
+		5AF505FB1C0DF94000819EE9 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505F81C0DF94000819EE9 /* FBSDKCoreKit.framework */; };
+		5AF505FC1C0DF94000819EE9 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505F91C0DF94000819EE9 /* FBSDKLoginKit.framework */; };
+		5AF505FD1C0DF94000819EE9 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505FA1C0DF94000819EE9 /* FBSDKShareKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -70,6 +77,13 @@
 		5AF505E11C0D92D700819EE9 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		5AF505E31C0DA53A00819EE9 /* RoundBtnViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtnViewStyle.swift; sourceTree = "<group>"; };
 		5AF505E61C0DA72000819EE9 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
+		5AF505E91C0DB37100819EE9 /* DataService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		5AF505EB1C0DDB7E00819EE9 /* ShowAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
+		5AF505ED1C0DE33F00819EE9 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
+		5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenKeyboard.swift; sourceTree = "<group>"; };
+		5AF505F81C0DF94000819EE9 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
+		5AF505F91C0DF94000819EE9 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		5AF505FA1C0DF94000819EE9 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -79,12 +93,14 @@
 			files = (
 				5AF505E01C0D91C100819EE9 /* libsqlite3.tbd in Frameworks */,
 				5AF505DE1C0D91A100819EE9 /* libz.tbd in Frameworks */,
+				5AF505FC1C0DF94000819EE9 /* FBSDKLoginKit.framework in Frameworks */,
 				5AF505DC1C0D919500819EE9 /* SystemConfiguration.framework in Frameworks */,
 				5AF505DA1C0D918800819EE9 /* StoreKit.framework in Frameworks */,
 				5AF505D81C0D918000819EE9 /* Social.framework in Frameworks */,
 				5AF505D61C0D917700819EE9 /* Security.framework in Frameworks */,
 				5AF505D41C0D916E00819EE9 /* QuartzCore.framework in Frameworks */,
 				5AF505D21C0D916300819EE9 /* CoreLocation.framework in Frameworks */,
+				5AF505FB1C0DF94000819EE9 /* FBSDKCoreKit.framework in Frameworks */,
 				5AF505D01C0D915500819EE9 /* CoreGraphics.framework in Frameworks */,
 				5AF505CE1C0D914B00819EE9 /* CFNetwork.framework in Frameworks */,
 				5AF505CC1C0D914200819EE9 /* AudioToolbox.framework in Frameworks */,
@@ -92,6 +108,7 @@
 				5AF505C81C0D909E00819EE9 /* ParseUI.framework in Frameworks */,
 				5AF505C41C0D909E00819EE9 /* Parse.framework in Frameworks */,
 				5AF505C31C0D909E00819EE9 /* Bolts.framework in Frameworks */,
+				5AF505FD1C0DF94000819EE9 /* FBSDKShareKit.framework in Frameworks */,
 				5AF505C61C0D909E00819EE9 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				5AF505C51C0D909E00819EE9 /* ParseFacebookUtils.framework in Frameworks */,
 				5AF505C71C0D909E00819EE9 /* ParseTwitterUtils.framework in Frameworks */,
@@ -120,6 +137,7 @@
 		5A0545AF1C0C31E700961E23 /* LoLympics */ = {
 			isa = PBXGroup;
 			children = (
+				5AF505E81C0DB36200819EE9 /* Services */,
 				5AF505E51C0DA70600819EE9 /* Utils */,
 				5A0545C51C0C346F00961E23 /* Resources */,
 				5A0545C41C0C346800961E23 /* Model */,
@@ -140,6 +158,7 @@
 			children = (
 				5A0545B21C0C31E700961E23 /* LogInVC.swift */,
 				5AF505E11C0D92D700819EE9 /* SignUpVC.swift */,
+				5AF505ED1C0DE33F00819EE9 /* MainVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -172,6 +191,9 @@
 		5AF505BC1C0D905E00819EE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AF505F81C0DF94000819EE9 /* FBSDKCoreKit.framework */,
+				5AF505F91C0DF94000819EE9 /* FBSDKLoginKit.framework */,
+				5AF505FA1C0DF94000819EE9 /* FBSDKShareKit.framework */,
 				5AF505DF1C0D91C100819EE9 /* libsqlite3.tbd */,
 				5AF505DD1C0D91A100819EE9 /* libz.tbd */,
 				5AF505DB1C0D919500819EE9 /* SystemConfiguration.framework */,
@@ -200,6 +222,16 @@
 				5AF505E61C0DA72000819EE9 /* Constans.swift */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		5AF505E81C0DB36200819EE9 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5AF505E91C0DB37100819EE9 /* DataService.swift */,
+				5AF505EB1C0DDB7E00819EE9 /* ShowAlert.swift */,
+				5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */,
+			);
+			name = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -276,10 +308,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF505E41C0DA53A00819EE9 /* RoundBtnViewStyle.swift in Sources */,
+				5AF505EE1C0DE33F00819EE9 /* MainVC.swift in Sources */,
+				5AF505F01C0DE69900819EE9 /* HiddenKeyboard.swift in Sources */,
 				5A0545B31C0C31E700961E23 /* LogInVC.swift in Sources */,
 				5AF505BB1C0D89D400819EE9 /* BtnViewStyle.swift in Sources */,
 				5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */,
+				5AF505EC1C0DDB7E00819EE9 /* ShowAlert.swift in Sources */,
 				5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */,
+				5AF505EA1C0DB37100819EE9 /* DataService.swift in Sources */,
 				5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */,
 				5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */,
 			);
@@ -396,12 +432,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/LoLympics",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = LoLympics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.app.LoLympics;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.lolympics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -412,12 +448,12 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
 					"$(PROJECT_DIR)/LoLympics",
+					"$(inherited)",
 				);
 				INFOPLIST_FILE = LoLympics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.app.LoLympics;
+				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.lolympics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

@@ -78,21 +78,24 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8ZL-YV-GDV" userLabel="FacebookLoginBtn">
                                                 <rect key="frame" x="40" y="301" width="295" height="38"/>
+                                                <connections>
+                                                    <action selector="facebookLoginBtnAction:" destination="1Yd-68-KPb" eventType="touchUpInside" id="tLc-D4-EeK"/>
+                                                </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-vu-f4Z" userLabel="googleBGView" customClass="BtnViewStyle" customModule="LoLympics" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-vu-f4Z" userLabel="twitterBGView" customClass="BtnViewStyle" customModule="LoLympics" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="351" width="295" height="38"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-Pe-ptj" userLabel="GoogleLoginBtnTxt">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-Pe-ptj" userLabel="TwitterLoginBtnTxt">
                                                         <rect key="frame" x="66" y="0.0" width="162" height="38"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5F-O9-0vX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="21" height="38"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5F-O9-0vX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="24" height="38"/>
                                                                 <fontDescription key="fontDescription" name="Ionicons" family="Ionicons" pointSize="24"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Google+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u7-6H-AX5">
-                                                                <rect key="frame" x="36" y="0.0" width="126" height="38"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u7-6H-AX5">
+                                                                <rect key="frame" x="39" y="0.0" width="123" height="38"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -104,14 +107,14 @@
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.86274509803921573" green="0.27450980392156865" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="xqq-Pe-ptj" firstAttribute="centerX" secondItem="TE8-vu-f4Z" secondAttribute="centerX" id="Wh8-CO-987"/>
                                                     <constraint firstAttribute="height" constant="38" id="aSh-uz-SFT"/>
                                                     <constraint firstItem="xqq-Pe-ptj" firstAttribute="top" secondItem="TE8-vu-f4Z" secondAttribute="top" id="erF-MJ-Bfo"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-ca-l7j" userLabel="GoogleLoginBtn">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-ca-l7j" userLabel="TwitterLoginBtn">
                                                 <rect key="frame" x="40" y="351" width="295" height="38"/>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxq-YH-kb2">
@@ -253,6 +256,9 @@
                                             </view>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wcR-fy-cmA" userLabel="EmailLoginBtn">
                                                 <rect key="frame" x="40" y="530" width="295" height="38"/>
+                                                <connections>
+                                                    <action selector="EmailLoginBtnAction:" destination="1Yd-68-KPb" eventType="touchUpInside" id="GdO-7b-vC6"/>
+                                                </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CMW-my-2bi" userLabel="Don't have account Stack">
                                                 <rect key="frame" x="80" y="574" width="216" height="29"/>
@@ -375,6 +381,12 @@
                     <navigationItem key="navigationItem" id="1cR-d3-kNa"/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
+                    <connections>
+                        <outlet property="passwordTxtFld" destination="yJq-a2-Bth" id="m5W-of-hdp"/>
+                        <outlet property="scrollView" destination="nbc-dg-Mfa" id="9WA-ka-QpO"/>
+                        <outlet property="usernameTxtFld" destination="20a-b7-xKk" id="pSG-eT-Hbg"/>
+                        <segue destination="4Ha-oY-g2l" kind="show" identifier="loggedIn" id="4f7-EL-GCu"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BAL-bd-IEu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -479,7 +491,7 @@
                                                 </constraints>
                                                 <color key="textColor" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits"/>
+                                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 <userDefinedRuntimeAttributes>
                                                     <userDefinedRuntimeAttribute type="color" keyPath="_placeholderLabel.textColor">
                                                         <color key="value" red="0.46666666670000001" green="0.46666666670000001" blue="0.46666666670000001" alpha="1" colorSpace="calibratedRGB"/>
@@ -717,16 +729,17 @@
                         <outlet property="EmailTxtFld" destination="Bfx-CH-xam" id="TX7-R2-Sfz"/>
                         <outlet property="PasswordTxtFld" destination="T5g-ul-fTx" id="f8K-eh-zUr"/>
                         <outlet property="UsernameTxtFld" destination="OJh-2h-0e2" id="Bkd-JU-h5k"/>
+                        <segue destination="4Ha-oY-g2l" kind="show" identifier="loggedIn" id="9PQ-4b-BD4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zAE-Ir-CjL" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="382.5" y="989.5"/>
+            <point key="canvasLocation" x="1194.5" y="1061.5"/>
         </scene>
-        <!--View Controller-->
+        <!--MainVC-->
         <scene sceneID="5q3-DC-nJh">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="4Ha-oY-g2l" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" id="4Ha-oY-g2l" customClass="MainVC" customModule="LoLympics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ecy-7C-Gif"/>
                         <viewControllerLayoutGuide type="bottom" id="9vO-A7-9sN"/>
@@ -734,7 +747,7 @@
                     <view key="view" contentMode="scaleToFill" id="fOt-VN-s3J">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.064836777629999995" green="1" blue="0.099576476940000005" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
@@ -767,4 +780,7 @@
     <resources>
         <image name="login-logo" width="597" height="648"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="4f7-EL-GCu"/>
+    </inferredMetricsTieBreakers>
 </document>

@@ -7,6 +7,9 @@
 //
 
 import UIKit
+import Parse
+import FBSDKCoreKit
+import ParseFacebookUtilsV4
 
 class LogInVC: UIViewController, UITextFieldDelegate {
     
@@ -17,10 +20,54 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         self.navigationController?.navigationBar.hidden = true
     }
     
+    @IBOutlet weak var usernameTxtFld: UITextField!
+    
+    @IBOutlet weak var passwordTxtFld: UITextField!
+    
+    @IBAction func EmailLoginBtnAction(sender: AnyObject) {
+        
+        if let username = usernameTxtFld.text where username != "", let password = passwordTxtFld.text where password != "" {
+            
+                PFUser.logInWithUsernameInBackground (username, password:password) {
+                    (user: PFUser?, error: NSError?) -> Void in
+                if user != nil {
+                    self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                } else {
+                    ShowAlert.sa.showErrorAlert("Could not loggin", msg: "\(error!.localizedDescription)", viewController: self)
+                }
+            }
+        } else {
+            ShowAlert.sa.showErrorAlert("Could not loggin", msg: "Please fill all fields", viewController: self)
+        }
+        
+    }
+    
+    @IBAction func facebookLoginBtnAction(sender: AnyObject) {
+        let permissions = []
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions as? [String]) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if let user = user {
+                if user.isNew {
+                    print("User signed up and logged in through Facebook!")
+                } else {
+                    print("User logged in through Facebook!")
+                }
+            } else {
+                print("Uh oh. The user cancelled the Facebook login.")
+            }
+        }
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillBeHidden:", name: UIKeyboardWillHideNotification, object: nil)
+        
+        let currentUser = PFUser.currentUser()
+        if currentUser != nil {
+            self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
