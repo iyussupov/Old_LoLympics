@@ -8,19 +8,40 @@
 
 /* Begin PBXBuildFile section */
 		5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B01C0C31E700961E23 /* AppDelegate.swift */; };
-		5A0545B31C0C31E700961E23 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B21C0C31E700961E23 /* LoginViewController.swift */; };
+		5A0545B31C0C31E700961E23 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B21C0C31E700961E23 /* LogInVC.swift */; };
 		5A0545B61C0C31E700961E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B41C0C31E700961E23 /* Main.storyboard */; };
 		5A0545B81C0C31E700961E23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B71C0C31E700961E23 /* Assets.xcassets */; };
 		5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */; };
 		5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545C61C0C34D100961E23 /* ionicons.ttf */; };
 		5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545C81C0C375C00961E23 /* ButtonClass.swift */; };
 		5AF505BB1C0D89D400819EE9 /* BtnViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */; };
+		5AF505C31C0D909E00819EE9 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505BD1C0D909E00819EE9 /* Bolts.framework */; };
+		5AF505C41C0D909E00819EE9 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505BE1C0D909E00819EE9 /* Parse.framework */; };
+		5AF505C51C0D909E00819EE9 /* ParseFacebookUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505BF1C0D909E00819EE9 /* ParseFacebookUtils.framework */; };
+		5AF505C61C0D909E00819EE9 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505C01C0D909E00819EE9 /* ParseFacebookUtilsV4.framework */; };
+		5AF505C71C0D909E00819EE9 /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505C11C0D909E00819EE9 /* ParseTwitterUtils.framework */; };
+		5AF505C81C0D909E00819EE9 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505C21C0D909E00819EE9 /* ParseUI.framework */; };
+		5AF505CA1C0D911600819EE9 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505C91C0D911600819EE9 /* Accounts.framework */; };
+		5AF505CC1C0D914200819EE9 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505CB1C0D914200819EE9 /* AudioToolbox.framework */; };
+		5AF505CE1C0D914B00819EE9 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505CD1C0D914B00819EE9 /* CFNetwork.framework */; };
+		5AF505D01C0D915500819EE9 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505CF1C0D915500819EE9 /* CoreGraphics.framework */; };
+		5AF505D21C0D916300819EE9 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505D11C0D916300819EE9 /* CoreLocation.framework */; };
+		5AF505D41C0D916E00819EE9 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505D31C0D916E00819EE9 /* QuartzCore.framework */; };
+		5AF505D61C0D917700819EE9 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505D51C0D917700819EE9 /* Security.framework */; };
+		5AF505D81C0D918000819EE9 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505D71C0D918000819EE9 /* Social.framework */; };
+		5AF505DA1C0D918800819EE9 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505D91C0D918800819EE9 /* StoreKit.framework */; };
+		5AF505DC1C0D919500819EE9 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505DB1C0D919500819EE9 /* SystemConfiguration.framework */; };
+		5AF505DE1C0D91A100819EE9 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505DD1C0D91A100819EE9 /* libz.tbd */; };
+		5AF505E01C0D91C100819EE9 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AF505DF1C0D91C100819EE9 /* libsqlite3.tbd */; };
+		5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505E11C0D92D700819EE9 /* SignUpVC.swift */; };
+		5AF505E41C0DA53A00819EE9 /* RoundBtnViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505E31C0DA53A00819EE9 /* RoundBtnViewStyle.swift */; };
+		5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505E61C0DA72000819EE9 /* Constans.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		5A0545AD1C0C31E700961E23 /* LoLympics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLympics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0545B01C0C31E700961E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		5A0545B21C0C31E700961E23 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		5A0545B21C0C31E700961E23 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
 		5A0545B51C0C31E700961E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A0545B71C0C31E700961E23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A0545BA1C0C31E700961E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -28,6 +49,27 @@
 		5A0545C61C0C34D100961E23 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		5A0545C81C0C375C00961E23 /* ButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
 		5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnViewStyle.swift; sourceTree = "<group>"; };
+		5AF505BD1C0D909E00819EE9 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		5AF505BE1C0D909E00819EE9 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		5AF505BF1C0D909E00819EE9 /* ParseFacebookUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtils.framework; sourceTree = "<group>"; };
+		5AF505C01C0D909E00819EE9 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
+		5AF505C11C0D909E00819EE9 /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
+		5AF505C21C0D909E00819EE9 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseUI.framework; sourceTree = "<group>"; };
+		5AF505C91C0D911600819EE9 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		5AF505CB1C0D914200819EE9 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		5AF505CD1C0D914B00819EE9 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		5AF505CF1C0D915500819EE9 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		5AF505D11C0D916300819EE9 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		5AF505D31C0D916E00819EE9 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		5AF505D51C0D917700819EE9 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		5AF505D71C0D918000819EE9 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		5AF505D91C0D918800819EE9 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		5AF505DB1C0D919500819EE9 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		5AF505DD1C0D91A100819EE9 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		5AF505DF1C0D91C100819EE9 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		5AF505E11C0D92D700819EE9 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		5AF505E31C0DA53A00819EE9 /* RoundBtnViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RoundBtnViewStyle.swift; sourceTree = "<group>"; };
+		5AF505E61C0DA72000819EE9 /* Constans.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constans.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +77,24 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5AF505E01C0D91C100819EE9 /* libsqlite3.tbd in Frameworks */,
+				5AF505DE1C0D91A100819EE9 /* libz.tbd in Frameworks */,
+				5AF505DC1C0D919500819EE9 /* SystemConfiguration.framework in Frameworks */,
+				5AF505DA1C0D918800819EE9 /* StoreKit.framework in Frameworks */,
+				5AF505D81C0D918000819EE9 /* Social.framework in Frameworks */,
+				5AF505D61C0D917700819EE9 /* Security.framework in Frameworks */,
+				5AF505D41C0D916E00819EE9 /* QuartzCore.framework in Frameworks */,
+				5AF505D21C0D916300819EE9 /* CoreLocation.framework in Frameworks */,
+				5AF505D01C0D915500819EE9 /* CoreGraphics.framework in Frameworks */,
+				5AF505CE1C0D914B00819EE9 /* CFNetwork.framework in Frameworks */,
+				5AF505CC1C0D914200819EE9 /* AudioToolbox.framework in Frameworks */,
+				5AF505CA1C0D911600819EE9 /* Accounts.framework in Frameworks */,
+				5AF505C81C0D909E00819EE9 /* ParseUI.framework in Frameworks */,
+				5AF505C41C0D909E00819EE9 /* Parse.framework in Frameworks */,
+				5AF505C31C0D909E00819EE9 /* Bolts.framework in Frameworks */,
+				5AF505C61C0D909E00819EE9 /* ParseFacebookUtilsV4.framework in Frameworks */,
+				5AF505C51C0D909E00819EE9 /* ParseFacebookUtils.framework in Frameworks */,
+				5AF505C71C0D909E00819EE9 /* ParseTwitterUtils.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -60,7 +120,7 @@
 		5A0545AF1C0C31E700961E23 /* LoLympics */ = {
 			isa = PBXGroup;
 			children = (
-				5AF505BC1C0D905E00819EE9 /* Frameworks */,
+				5AF505E51C0DA70600819EE9 /* Utils */,
 				5A0545C51C0C346F00961E23 /* Resources */,
 				5A0545C41C0C346800961E23 /* Model */,
 				5A0545C31C0C346300961E23 /* View */,
@@ -70,6 +130,7 @@
 				5A0545B71C0C31E700961E23 /* Assets.xcassets */,
 				5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */,
 				5A0545BC1C0C31E700961E23 /* Info.plist */,
+				5AF505BC1C0D905E00819EE9 /* Frameworks */,
 			);
 			path = LoLympics;
 			sourceTree = "<group>";
@@ -77,7 +138,8 @@
 		5A0545C21C0C345B00961E23 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				5A0545B21C0C31E700961E23 /* LoginViewController.swift */,
+				5A0545B21C0C31E700961E23 /* LogInVC.swift */,
+				5AF505E11C0D92D700819EE9 /* SignUpVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -87,6 +149,7 @@
 			children = (
 				5A0545C81C0C375C00961E23 /* ButtonClass.swift */,
 				5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */,
+				5AF505E31C0DA53A00819EE9 /* RoundBtnViewStyle.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -109,8 +172,34 @@
 		5AF505BC1C0D905E00819EE9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5AF505DF1C0D91C100819EE9 /* libsqlite3.tbd */,
+				5AF505DD1C0D91A100819EE9 /* libz.tbd */,
+				5AF505DB1C0D919500819EE9 /* SystemConfiguration.framework */,
+				5AF505D91C0D918800819EE9 /* StoreKit.framework */,
+				5AF505D71C0D918000819EE9 /* Social.framework */,
+				5AF505D51C0D917700819EE9 /* Security.framework */,
+				5AF505D31C0D916E00819EE9 /* QuartzCore.framework */,
+				5AF505D11C0D916300819EE9 /* CoreLocation.framework */,
+				5AF505CF1C0D915500819EE9 /* CoreGraphics.framework */,
+				5AF505CD1C0D914B00819EE9 /* CFNetwork.framework */,
+				5AF505CB1C0D914200819EE9 /* AudioToolbox.framework */,
+				5AF505C91C0D911600819EE9 /* Accounts.framework */,
+				5AF505BD1C0D909E00819EE9 /* Bolts.framework */,
+				5AF505BE1C0D909E00819EE9 /* Parse.framework */,
+				5AF505BF1C0D909E00819EE9 /* ParseFacebookUtils.framework */,
+				5AF505C01C0D909E00819EE9 /* ParseFacebookUtilsV4.framework */,
+				5AF505C11C0D909E00819EE9 /* ParseTwitterUtils.framework */,
+				5AF505C21C0D909E00819EE9 /* ParseUI.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5AF505E51C0DA70600819EE9 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				5AF505E61C0DA72000819EE9 /* Constans.swift */,
+			);
+			name = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -186,9 +275,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5A0545B31C0C31E700961E23 /* LoginViewController.swift in Sources */,
+				5AF505E41C0DA53A00819EE9 /* RoundBtnViewStyle.swift in Sources */,
+				5A0545B31C0C31E700961E23 /* LogInVC.swift in Sources */,
 				5AF505BB1C0D89D400819EE9 /* BtnViewStyle.swift in Sources */,
 				5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */,
+				5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */,
+				5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */,
 				5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,6 +395,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LoLympics",
+				);
 				INFOPLIST_FILE = LoLympics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.app.LoLympics;
@@ -315,6 +411,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/LoLympics",
+				);
 				INFOPLIST_FILE = LoLympics/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.app.LoLympics;
