@@ -14,6 +14,7 @@
 		5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */; };
 		5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545C61C0C34D100961E23 /* ionicons.ttf */; };
 		5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545C81C0C375C00961E23 /* ButtonClass.swift */; };
+		5AF505BB1C0D89D400819EE9 /* BtnViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		5A0545BC1C0C31E700961E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A0545C61C0C34D100961E23 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		5A0545C81C0C375C00961E23 /* ButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
+		5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnViewStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		5A0545AF1C0C31E700961E23 /* LoLympics */ = {
 			isa = PBXGroup;
 			children = (
+				5AF505BC1C0D905E00819EE9 /* Frameworks */,
 				5A0545C51C0C346F00961E23 /* Resources */,
 				5A0545C41C0C346800961E23 /* Model */,
 				5A0545C31C0C346300961E23 /* View */,
@@ -83,6 +86,7 @@
 			isa = PBXGroup;
 			children = (
 				5A0545C81C0C375C00961E23 /* ButtonClass.swift */,
+				5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -100,6 +104,13 @@
 				5A0545C61C0C34D100961E23 /* ionicons.ttf */,
 			);
 			name = Resources;
+			sourceTree = "<group>";
+		};
+		5AF505BC1C0D905E00819EE9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,6 +187,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A0545B31C0C31E700961E23 /* LoginViewController.swift in Sources */,
+				5AF505BB1C0D89D400819EE9 /* BtnViewStyle.swift in Sources */,
 				5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */,
 				5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */,
 			);
@@ -329,6 +341,7 @@
 				5A0545C11C0C31E700961E23 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
