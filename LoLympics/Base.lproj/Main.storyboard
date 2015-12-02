@@ -820,7 +820,10 @@
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Another 10 places in the shooting competition at the Rio 2016 Olympic Games were confirmed at the Shotgun World ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPi-mu-CIe">
-                                                            <rect key="frame" x="16" y="95" width="343" height="70"/>
+                                                            <rect key="frame" x="16" y="95" width="343" height="36"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="jlM-5g-7sE"/>
+                                                            </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                             <nil key="highlightedColor"/>
@@ -840,9 +843,9 @@
                                                             </variation>
                                                         </label>
                                                         <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mask" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-02-6Kc">
-                                                            <rect key="frame" x="0.0" y="178" width="375" height="200"/>
+                                                            <rect key="frame" x="0.0" y="144" width="375" height="234"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="200" id="Eh0-wQ-fZu"/>
+                                                                <constraint firstAttribute="height" constant="234" id="Eh0-wQ-fZu"/>
                                                             </constraints>
                                                         </imageView>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-PV-L7V">
