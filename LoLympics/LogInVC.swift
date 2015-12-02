@@ -17,7 +17,7 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     weak var activeField: UITextField?
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBarHidden = true
     }
     
     @IBOutlet weak var usernameTxtFld: UITextField!
@@ -48,10 +48,38 @@ class LogInVC: UIViewController, UITextFieldDelegate {
             (user: PFUser?, error: NSError?) -> Void in
             if let user = user {
                 if user.isNew {
-                    print("User signed up and logged in through Facebook!")
-                } else {
-                    print("User logged in through Facebook!")
+                    // Create request for user's Facebook data
+                    let request = FBSDKGraphRequest(graphPath:"me", parameters:["fields":"id,email,link,first_name"])
+                    
+                    // Send request to Facebook
+                    request.startWithCompletionHandler {
+                        
+                        (connection, result, error) in
+                        
+                        if error != nil {
+                            // Some error checking here
+                            print("Facebook request issue")
+                        }
+                        else if let userData = result as? [String:AnyObject] {
+                            
+                            // Access user data
+                            user["username"] = userData["first_name"] as? String
+                            user["alt_email"] = userData["email"] as? String
+                            
+                            let userId = userData["id"] as! String
+                            let userAvatar = "http://graph.facebook.com/\(userId)/picture?type=square"
+                          
+                            user["avatar"] = userAvatar
+                            
+                            user["provider"] = "facebook"
+                            user.saveInBackground()
+                        }
+                    }
+                    
                 }
+                
+                self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
+                
             } else {
                 print("Uh oh. The user cancelled the Facebook login.")
             }

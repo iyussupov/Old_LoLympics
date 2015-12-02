@@ -17,7 +17,7 @@ class SignUpVC: UIViewController {
     
     
     override func viewWillAppear(animated: Bool) {
-        self.navigationController?.navigationBar.hidden = true
+        self.navigationController?.navigationBarHidden = true
     }
    
     override func viewDidLoad() {
