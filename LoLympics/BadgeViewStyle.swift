@@ -8,10 +8,11 @@
 
 import UIKit
 
-class BadgeViewStyle: UIView {
+class BadgeViewStyle: UILabel {
 
     override func awakeFromNib() {
         layer.cornerRadius = 9.0
+        layer.masksToBounds = true
     }
 
 }

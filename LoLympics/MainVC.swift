@@ -21,6 +21,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
+        tableView.allowsSelection = false
 
         // Do any additional setup after loading the view.
     }
@@ -35,6 +36,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        // cell.selectionStyle = UITableViewCellSelectionStyle.None
         return tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostCell
         
     }
