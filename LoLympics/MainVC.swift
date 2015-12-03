@@ -52,7 +52,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.allowsSelection = false
         
 
-        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -94,5 +93,27 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         return cell
         
     }
+    
+    @IBAction func TitleTapped(sender: AnyObject) {
+        moveToDetailsSegue()
+    }
+    
+    @IBAction func ExcerptTapped(sender: AnyObject) {
+        moveToDetailsSegue()
+    }
+    
+    func moveToDetailsSegue() {
+        self.performSegueWithIdentifier(SEGUE_DETAILS, sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if (segue.identifier == SEGUE_DETAILS) {
+            let svc = segue.destinationViewController as! DetailsVC
+            
+            svc.toPass = Posts
+            
+        }
+    }
+    
     
 }

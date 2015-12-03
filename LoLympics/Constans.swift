@@ -13,3 +13,5 @@ let SHADOW_COLOR: CGFloat = 0.0 / 255.0
 
 //Segues
 let SEGUE_LOGGED_IN = "loggedIn"
+
+let SEGUE_DETAILS = "detailsView"

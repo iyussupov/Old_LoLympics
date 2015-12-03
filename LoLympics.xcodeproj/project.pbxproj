@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26FF78CEA5C08AC27C7DCDB4 /* Pods_LoLympics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86021E96F96614F5F886CAC9 /* Pods_LoLympics.framework */; };
+		5A0305931C10886300F394AB /* DetailsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0305921C10886300F394AB /* DetailsVC.swift */; };
 		5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B01C0C31E700961E23 /* AppDelegate.swift */; };
 		5A0545B31C0C31E700961E23 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B21C0C31E700961E23 /* LogInVC.swift */; };
 		5A0545B61C0C31E700961E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B41C0C31E700961E23 /* Main.storyboard */; };
@@ -29,6 +30,7 @@
 
 /* Begin PBXFileReference section */
 		49525FE303982E1A2502061E /* Pods-LoLympics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLympics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLympics/Pods-LoLympics.debug.xcconfig"; sourceTree = "<group>"; };
+		5A0305921C10886300F394AB /* DetailsVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsVC.swift; sourceTree = "<group>"; };
 		5A0545AD1C0C31E700961E23 /* LoLympics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLympics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0545B01C0C31E700961E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A0545B21C0C31E700961E23 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				5A0545B21C0C31E700961E23 /* LogInVC.swift */,
 				5AF505E11C0D92D700819EE9 /* SignUpVC.swift */,
 				5AF505ED1C0DE33F00819EE9 /* MainVC.swift */,
+				5A0305921C10886300F394AB /* DetailsVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -307,6 +310,7 @@
 				5AF505EC1C0DDB7E00819EE9 /* ShowAlert.swift in Sources */,
 				5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */,
 				5AF505EA1C0DB37100819EE9 /* DataService.swift in Sources */,
+				5A0305931C10886300F394AB /* DetailsVC.swift in Sources */,
 				5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */,
 				5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */,
 			);
