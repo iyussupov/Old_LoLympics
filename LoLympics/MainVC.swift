@@ -49,7 +49,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
-        tableView.allowsSelection = false
+        //tableView.allowsSelection = false
         
 
     }
@@ -94,24 +94,20 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    @IBAction func TitleTapped(sender: AnyObject) {
-        moveToDetailsSegue()
-    }
-    
-    @IBAction func ExcerptTapped(sender: AnyObject) {
-        moveToDetailsSegue()
-    }
-    
-    func moveToDetailsSegue() {
-        self.performSegueWithIdentifier(SEGUE_DETAILS, sender: self)
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let post = indexPath.row
+        print(post)
+        
+        performSegueWithIdentifier(SEGUE_DETAILS, sender: post)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if (segue.identifier == SEGUE_DETAILS) {
-            let svc = segue.destinationViewController as! DetailsVC
-            
-            svc.toPass = Posts
-            
+        if segue.identifier == SEGUE_DETAILS {
+            if let detailsVC = segue.destinationViewController as? DetailsVC {
+                if let post = sender {
+                    detailsVC.passObject = post as! Int
+                }
+            }
         }
     }
     

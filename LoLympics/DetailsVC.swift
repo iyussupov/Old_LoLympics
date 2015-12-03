@@ -10,12 +10,12 @@ import UIKit
 
 class DetailsVC: UIViewController {
     
-    var toPass:NSMutableArray = NSMutableArray()
+    var passObject:Int!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(toPass)
+        print(passObject)
         
     }
 
