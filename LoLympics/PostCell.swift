@@ -12,6 +12,16 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var featuredImg: UIImageView!
 
+    @IBOutlet weak var titleLbl: UILabel!
+    
+    @IBOutlet weak var excerptLbl: UILabel!
+    
+    @IBOutlet weak var categoryLbl: BadgeViewStyle!
+    
+    @IBOutlet weak var dateLbl: UILabel!
+    
+    @IBOutlet weak var imageDescLbl: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

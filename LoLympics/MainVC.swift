@@ -7,11 +7,39 @@
 //
 
 import UIKit
+import Parse
 
 class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
+    
+    var Posts:NSMutableArray = NSMutableArray()
+    
+    func loadData() {
+    
+        
+        let PostsQuery: PFQuery =  PFQuery(className:"Post")
+        PostsQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                for object in objects! {
+                    
+                    let ParseObject:PFObject = object
+                    self.Posts.addObject(ParseObject)
+                    
+                }
+                
+                let Array:NSArray = self.Posts.reverseObjectEnumerator().allObjects
+                self.Posts = NSMutableArray(array: Array)
+                self.tableView.reloadData()
+                
+            }
+            
+        }
+        
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,8 +50,13 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
         tableView.allowsSelection = false
+        
 
         // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        self.loadData()
     }
 
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -31,13 +64,34 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return Posts.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         // cell.selectionStyle = UITableViewCellSelectionStyle.None
-        return tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostCell
+        let cell:PostCell =  tableView.dequeueReusableCellWithIdentifier("PostCell") as! PostCell
+        let postObject:PFObject = self.Posts.objectAtIndex(indexPath.row) as! PFObject
+        
+        cell.titleLbl.text = postObject.objectForKey("title") as? String
+        cell.excerptLbl.text = postObject.objectForKey("excerpt") as? String
+        cell.categoryLbl.text = postObject.objectForKey("category") as? String
+        cell.imageDescLbl.text = postObject.objectForKey("imageDesc") as? String
+        
+        let Date:NSDateFormatter = NSDateFormatter()
+        Date.dateFormat = "yyyy-MM-dd"
+        cell.dateLbl.text = Date.stringFromDate(postObject.createdAt!)
+        
+        let featuredImage = postObject.objectForKey("featuredImage") as! PFFile
+        
+        featuredImage.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+          if (error == nil) {
+            let image = UIImage(data:imageData!)
+            cell.featuredImg.image = image
+         }
+        }
+            
+        return cell
         
     }
     
