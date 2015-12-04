@@ -72,6 +72,10 @@ class Post {
         if let category = dictionary["category"] as? String {
             self._category = category
         }
+        
+        if let imageDesc = dictionary["imageDesc"] as? String {
+            self._imageDesc = imageDesc
+        }
     }
     
     

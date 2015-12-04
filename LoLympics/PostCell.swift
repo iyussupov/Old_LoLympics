@@ -58,6 +58,12 @@ class PostCell: UITableViewCell {
         } else {
             self.categoryLbl.hidden = true
         }
+        
+        if let imageDesc = post.imageDesc where imageDesc != "" {
+            self.imageDescLbl.text = imageDesc
+        } else {
+            self.imageDescLbl.hidden = true
+        }
     
     }
 
