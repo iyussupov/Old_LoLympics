@@ -26,6 +26,7 @@
 		5AF505EC1C0DDB7E00819EE9 /* ShowAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505EB1C0DDB7E00819EE9 /* ShowAlert.swift */; };
 		5AF505EE1C0DE33F00819EE9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505ED1C0DE33F00819EE9 /* MainVC.swift */; };
 		5AF505F01C0DE69900819EE9 /* HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */; };
+		5AF5A3E61C1192BE00AD7813 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5A3E51C1192BE00AD7813 /* Post.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		5AF505EB1C0DDB7E00819EE9 /* ShowAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowAlert.swift; sourceTree = "<group>"; };
 		5AF505ED1C0DE33F00819EE9 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenKeyboard.swift; sourceTree = "<group>"; };
+		5AF5A3E51C1192BE00AD7813 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		67B32F7BCC25368ABAD5527F /* Pods-LoLympics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLympics.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLympics/Pods-LoLympics.release.xcconfig"; sourceTree = "<group>"; };
 		86021E96F96614F5F886CAC9 /* Pods_LoLympics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLympics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 		5A0545C41C0C346800961E23 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				5AF5A3E51C1192BE00AD7813 /* Post.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */,
 				5AF505EC1C0DDB7E00819EE9 /* ShowAlert.swift in Sources */,
 				5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */,
+				5AF5A3E61C1192BE00AD7813 /* Post.swift in Sources */,
 				5AF505EA1C0DB37100819EE9 /* DataService.swift in Sources */,
 				5A0305931C10886300F394AB /* DetailsVC.swift in Sources */,
 				5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */,

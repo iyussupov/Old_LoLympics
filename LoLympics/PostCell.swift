@@ -22,6 +22,12 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var imageDescLbl: UILabel!
     
+    private var _post: Post?
+    
+    var post: Post? {
+        return _post
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -31,10 +37,28 @@ class PostCell: UITableViewCell {
         featuredImg.clipsToBounds = true
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCell(post: Post) {
+    
+        self._post = post
+        
+        if let title = post.title where title != "" {
+            self.titleLbl.text = title
+        } else {
+            self.titleLbl.hidden = true
+        }
+        
+        if let excerpt = post.excerpt where excerpt != "" {
+            self.excerptLbl.text = excerpt
+        } else {
+            self.excerptLbl.hidden = true
+        }
+        
+        if let category = post.category where category != "" {
+            self.categoryLbl.text = category
+        } else {
+            self.categoryLbl.hidden = true
+        }
+    
     }
 
     
