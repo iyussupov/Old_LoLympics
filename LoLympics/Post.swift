@@ -11,7 +11,7 @@ import Parse
 
 class Post {
     
-    private var _featuredImg: String?
+    private var _featuredImg: PFFile?
     
     private var _title: String?
     
@@ -19,7 +19,7 @@ class Post {
     
     private var _category: String?
     
-    private var _date: String?
+    private var _date: NSDate?
     
     private var _imageDesc: String?
     
@@ -33,7 +33,7 @@ class Post {
         return _excerpt
     }
     
-    var featuredImg: String? {
+    var featuredImg: PFFile? {
         return _featuredImg
     }
     
@@ -41,7 +41,7 @@ class Post {
         return _category
     }
     
-    var date: String? {
+    var date: NSDate? {
         return _date
     }
     
@@ -49,7 +49,7 @@ class Post {
         return _imageDesc
     }
     
-    init (title: String?, excerpt: String?, featuredImg: String?, category: String?, date: String?, imageDesc:String?) {
+    init (title: String?, excerpt: String?, featuredImg: PFFile?, category: String?, date: NSDate?, imageDesc:String?) {
         self._title = title
         self._excerpt = excerpt
         self._category = category
@@ -58,8 +58,10 @@ class Post {
         self._imageDesc = imageDesc
     }
     
-    init(postKey: String, dictionary: PFObject) {
+    init(postKey: String, date: NSDate, dictionary: PFObject) {
+        
         self._postKey = postKey
+        self._date = date
         
         if let title = dictionary["title"] as? String {
             self._title = title
@@ -76,6 +78,12 @@ class Post {
         if let imageDesc = dictionary["imageDesc"] as? String {
             self._imageDesc = imageDesc
         }
+        
+        if let featuredImg = dictionary["featuredImage"] as? PFFile {
+            self._featuredImg = featuredImg
+        }
+        
+
     }
     
     

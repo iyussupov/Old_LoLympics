@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class PostCell: UITableViewCell {
     
@@ -37,7 +38,7 @@ class PostCell: UITableViewCell {
         featuredImg.clipsToBounds = true
     }
 
-    func configureCell(post: Post) {
+    func configureCell(post: Post, img: UIImage?) {
     
         self._post = post
         
@@ -63,6 +64,42 @@ class PostCell: UITableViewCell {
             self.imageDescLbl.text = imageDesc
         } else {
             self.imageDescLbl.hidden = true
+        }
+        
+        if let imageDesc = post.imageDesc where imageDesc != "" {
+            self.imageDescLbl.text = imageDesc
+        } else {
+            self.imageDescLbl.hidden = true
+        }
+        
+        if let date = post.date where date != "" {
+        
+            let Date:NSDateFormatter = NSDateFormatter()
+            Date.dateFormat = "yyyy-MM-dd"
+            self.dateLbl.text = Date.stringFromDate(date)
+            
+        }
+        
+        if post.featuredImg != nil {
+           
+            if img != nil {
+                self.featuredImg.image = img
+            } else {
+            
+                let featuredImage = post.featuredImg
+                
+                featuredImage!.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                    if (error == nil) {
+                        let image = UIImage(data:imageData!)!
+                        self.featuredImg.image = image
+                        MainVC.imageCache.setObject(image, forKey: self.post!.featuredImg!)
+                    }
+                }
+                
+            }
+            
+        } else {
+            self.featuredImg.hidden = true
         }
     
     }

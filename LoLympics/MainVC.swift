@@ -15,6 +15,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
 
     var posts = [Post]()
+    static var imageCache = NSCache()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,7 +25,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
-        //tableView.allowsSelection = false
+        tableView.allowsSelection = false
         
         let PostsQuery: PFQuery =  PFQuery(className:"Post")
         
@@ -37,7 +38,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 for object in objects! {
                     
                     let key = object.objectId as String!
-                    let post = Post(postKey: key, dictionary: object)
+                    let date = object.createdAt as NSDate!
+                    let post = Post(postKey: key, date: date, dictionary: object)
                     self.posts.append(post)
                     
                 }
@@ -65,11 +67,20 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
+        let post = self.posts[indexPath.row]
+        
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             
-            let post = self.posts[indexPath.row]
+            var img: UIImage?
             
-            cell.configureCell(post)
+            if let url = post.featuredImg {
+            
+                img = MainVC.imageCache.objectForKey(url) as? UIImage
+                
+            }
+            
+            
+            cell.configureCell(post, img: img)
             
             return cell
         } else {
