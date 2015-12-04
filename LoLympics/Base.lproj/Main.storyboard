@@ -22,6 +22,7 @@
             <string>Ionicons</string>
             <string>Ionicons</string>
             <string>Ionicons</string>
+            <string>Ionicons</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1143,11 +1144,14 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="excerptTap" destination="OPi-mu-CIe" id="Nfw-99-3Sw"/>
                         <outlet property="tableView" destination="KfR-Qj-BWx" id="BOl-GP-fgL"/>
-                        <segue destination="Wc1-Ny-7z3" kind="show" identifier="detailsView" id="N29-9N-QxD"/>
+                        <outlet property="titleTap" destination="nz6-qT-EkE" id="ZJD-V0-g6F"/>
+                        <segue destination="Wc1-Ny-7z3" kind="show" identifier="DetailsVC" id="N29-9N-QxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxL-eY-nTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="uoY-au-I4O"/>
             </objects>
             <point key="canvasLocation" x="1652.5" y="209.5"/>
         </scene>
@@ -1162,7 +1166,56 @@
                     <view key="view" contentMode="scaleToFill" id="T07-jp-8Yu">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.38431372549999998" green="0.73333333329999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhe-zD-65Z" userLabel="RoundBtnViewStyle" customClass="RoundBtnViewStyle" customModule="LoLympics" customModuleProvider="target">
+                                <rect key="frame" x="25" y="24" width="49" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y52-Pn-1kB">
+                                        <rect key="frame" x="19" y="13" width="10" height="23"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="23" id="1LM-vL-gdf"/>
+                                            <constraint firstAttribute="width" constant="10" id="Ebh-6R-Ofb"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Ionicons" family="Ionicons" pointSize="20"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.47450980390000003" blue="0.1215686275" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstItem="y52-Pn-1kB" firstAttribute="centerY" secondItem="Jhe-zD-65Z" secondAttribute="centerY" id="8Gb-ix-PCm"/>
+                                    <constraint firstAttribute="width" constant="49" id="KKP-2E-F8F"/>
+                                    <constraint firstAttribute="height" constant="49" id="Sfc-RN-uiN"/>
+                                    <constraint firstItem="y52-Pn-1kB" firstAttribute="centerX" secondItem="Jhe-zD-65Z" secondAttribute="centerX" id="XYP-DU-4dN"/>
+                                </constraints>
+                            </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vNr-SG-ynL" userLabel="DetailsBackBtn">
+                                <rect key="frame" x="25" y="24" width="49" height="49"/>
+                                <connections>
+                                    <action selector="DetailsBackBtn:" destination="Wc1-Ny-7z3" eventType="touchUpInside" id="smR-sI-hBO"/>
+                                    <action selector="SignUpBackBtn:" destination="GhD-3g-RJP" eventType="touchUpInside" id="zAW-o7-FFf"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="leading" secondItem="T07-jp-8Yu" secondAttribute="leadingMargin" constant="25" id="2od-Ve-NHT"/>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="centerY" secondItem="T07-jp-8Yu" secondAttribute="centerY" id="Gx2-m3-cTS"/>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="top" secondItem="mbM-f4-YZC" secondAttribute="bottom" constant="4" id="IUw-Le-yAH"/>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="bottom" secondItem="vNr-SG-ynL" secondAttribute="bottom" id="KB6-Ov-0dy"/>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="top" secondItem="vNr-SG-ynL" secondAttribute="top" id="WNS-ae-6Qx"/>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="leading" secondItem="vNr-SG-ynL" secondAttribute="leading" id="X1x-Wf-ef1"/>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="centerX" secondItem="T07-jp-8Yu" secondAttribute="centerX" id="Z1o-ij-0cD"/>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="trailing" secondItem="vNr-SG-ynL" secondAttribute="trailing" id="mQe-H9-2S4"/>
+                            <constraint firstItem="Jhe-zD-65Z" firstAttribute="leading" secondItem="T07-jp-8Yu" secondAttribute="leading" constant="25" id="z9f-U9-c7U"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2od-Ve-NHT"/>
+                                <exclude reference="Gx2-m3-cTS"/>
+                                <exclude reference="Z1o-ij-0cD"/>
+                            </mask>
+                        </variation>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>

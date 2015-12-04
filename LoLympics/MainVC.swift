@@ -14,6 +14,10 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
 
+    @IBOutlet weak var titleTap: UILabel!
+    
+    @IBOutlet weak var excerptTap: UILabel!
+    
     var posts = [Post]()
     static var imageCache = NSCache()
     
@@ -28,6 +32,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.allowsSelection = false
         
         let PostsQuery: PFQuery =  PFQuery(className:"Post")
+        PostsQuery.addAscendingOrder("priority")
+        //PostsQuery.limit = 1
         
         posts = []
         
@@ -44,9 +50,9 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     
                 }
                 
+                self.tableView.reloadData()
             }
             
-            self.tableView.reloadData()
             
         }
         
@@ -79,7 +85,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 
             }
             
-            
             cell.configureCell(post, img: img)
             
             return cell
@@ -88,6 +93,26 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         
     }
+    
+    /*
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        let post = self.posts[indexPath.row]
+        print(post.title)
+        
+        performSegueWithIdentifier("DetailsVC", sender: post)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "DetailsVC" {
+            if let detailsVC = segue.destinationViewController as? DetailsVC {
+                if let post = sender as? Post {
+                    detailsVC.post = post
+                }
+            }
+        }
+    }
+    
+    */
     
     
 }

@@ -10,12 +10,12 @@ import UIKit
 
 class DetailsVC: UIViewController {
     
-    var passObject:Int!
+    var post: Post!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        print(passObject)
+        //print(post.title)
         
     }
 
@@ -25,4 +25,7 @@ class DetailsVC: UIViewController {
     }
     
 
+    @IBAction func DetailsBackBtn(sender: AnyObject) {
+        self.navigationController?.popViewControllerAnimated(true)
+    }
 }
