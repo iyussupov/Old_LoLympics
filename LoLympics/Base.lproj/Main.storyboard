@@ -892,7 +892,7 @@
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="431" id="suH-sr-8Qn" customClass="PostCell" customModule="LoLympics" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="431" id="suH-sr-8Qn" customClass="PostCell" customModule="LoLympics" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="431"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="suH-sr-8Qn" id="fLc-BZ-dTw">
@@ -1098,10 +1098,10 @@
                                         <connections>
                                             <outlet property="categoryLbl" destination="Nnl-P7-aIU" id="puB-Ug-abK"/>
                                             <outlet property="dateLbl" destination="iAd-vz-K59" id="kH1-cV-9Cd"/>
-                                            <outlet property="excerptLbl" destination="OPi-mu-CIe" id="N0w-OV-qb3"/>
+                                            <outlet property="excerptLbl" destination="OPi-mu-CIe" id="rAm-ok-3II"/>
                                             <outlet property="featuredImg" destination="yeV-02-6Kc" id="aKW-pR-1lH"/>
                                             <outlet property="imageDescLbl" destination="8X5-OZ-ukO" id="Z9Y-eK-SoC"/>
-                                            <outlet property="titleLbl" destination="nz6-qT-EkE" id="qqe-Lo-g2x"/>
+                                            <outlet property="titleLbl" destination="nz6-qT-EkE" id="WNV-BA-vJd"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1144,14 +1144,11 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
-                        <outlet property="excerptTap" destination="OPi-mu-CIe" id="Nfw-99-3Sw"/>
                         <outlet property="tableView" destination="KfR-Qj-BWx" id="BOl-GP-fgL"/>
-                        <outlet property="titleTap" destination="nz6-qT-EkE" id="ZJD-V0-g6F"/>
                         <segue destination="Wc1-Ny-7z3" kind="show" identifier="DetailsVC" id="N29-9N-QxD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxL-eY-nTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="uoY-au-I4O"/>
             </objects>
             <point key="canvasLocation" x="1652.5" y="209.5"/>
         </scene>

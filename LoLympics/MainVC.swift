@@ -13,10 +13,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBOutlet weak var tableView: UITableView!
-
-    @IBOutlet weak var titleTap: UILabel!
     
-    @IBOutlet weak var excerptTap: UILabel!
     
     var posts = [Post]()
     static var imageCache = NSCache()
@@ -29,8 +26,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
-        tableView.allowsSelection = false
-        
+        //tableView.allowsSelection = false
+       
         let PostsQuery: PFQuery =  PFQuery(className:"Post")
         PostsQuery.addAscendingOrder("priority")
         //PostsQuery.limit = 1
@@ -58,7 +55,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
 
     }
-    
+
     override func viewDidAppear(animated: Bool) {
       
     }
@@ -94,14 +91,13 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    /*
     func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
         
         let post = self.posts[indexPath.row]
-        print(post.title)
         
         performSegueWithIdentifier("DetailsVC", sender: post)
     }
+    
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "DetailsVC" {
             if let detailsVC = segue.destinationViewController as? DetailsVC {
@@ -111,8 +107,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             }
         }
     }
-    
-    */
     
     
 }

@@ -15,7 +15,7 @@ class DetailsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        //print(post.title)
+        print(post.title)
         
     }
 

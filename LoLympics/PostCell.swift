@@ -32,27 +32,13 @@ class PostCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-        let tapTitle = UITapGestureRecognizer(target: self, action: "detailsNavigate:")
-        tapTitle.numberOfTapsRequired = 1
-        titleLbl.addGestureRecognizer(tapTitle)
-        titleLbl.userInteractionEnabled = true
-        
-        let tapExcerpt = UITapGestureRecognizer(target: self, action: "detailsNavigate:")
-        tapExcerpt.numberOfTapsRequired = 1
-        excerptLbl.addGestureRecognizer(tapExcerpt)
-        excerptLbl.userInteractionEnabled = true
         
     }
     
     override func drawRect(rect: CGRect) {
         featuredImg.clipsToBounds = true
     }
-    
-    func detailsNavigate(sender: UITapGestureRecognizer) {
-        print("title tapped!")
-    }
-    
-    
+
 
     func configureCell(post: Post, img: UIImage?) {
     
