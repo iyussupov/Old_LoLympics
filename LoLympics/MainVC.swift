@@ -91,7 +91,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
-    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let post = self.posts[indexPath.row]
         

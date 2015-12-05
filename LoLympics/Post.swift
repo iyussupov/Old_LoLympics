@@ -17,6 +17,8 @@ class Post {
     
     private var _excerpt: String?
     
+    private var _content: String?
+    
     private var _category: String?
     
     private var _date: NSDate?
@@ -31,6 +33,10 @@ class Post {
     
     var excerpt: String? {
         return _excerpt
+    }
+    
+    var content: String? {
+        return _content
     }
     
     var featuredImg: PFFile? {
@@ -49,9 +55,10 @@ class Post {
         return _imageDesc
     }
     
-    init (title: String?, excerpt: String?, featuredImg: PFFile?, category: String?, date: NSDate?, imageDesc:String?) {
+    init (title: String?, excerpt: String?, content: String?, featuredImg: PFFile?, category: String?, date: NSDate?, imageDesc:String?) {
         self._title = title
         self._excerpt = excerpt
+        self._content = content
         self._category = category
         self._featuredImg = featuredImg
         self._date = date
@@ -69,6 +76,10 @@ class Post {
         
         if let excerpt = dictionary["excerpt"] as? String {
             self._excerpt = excerpt
+        }
+        
+        if let content = dictionary["content"] as? String {
+            self._content = content
         }
         
         if let category = dictionary["category"] as? String {
