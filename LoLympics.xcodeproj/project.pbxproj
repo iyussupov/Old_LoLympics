@@ -27,6 +27,7 @@
 		5AF505EE1C0DE33F00819EE9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505ED1C0DE33F00819EE9 /* MainVC.swift */; };
 		5AF505F01C0DE69900819EE9 /* HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */; };
 		5AF5A3E61C1192BE00AD7813 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5A3E51C1192BE00AD7813 /* Post.swift */; };
+		98F5F3771C1374DC006B70A5 /* SendBtnClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98F5F3761C1374DC006B70A5 /* SendBtnClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +55,7 @@
 		5AF5A3E51C1192BE00AD7813 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		67B32F7BCC25368ABAD5527F /* Pods-LoLympics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLympics.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLympics/Pods-LoLympics.release.xcconfig"; sourceTree = "<group>"; };
 		86021E96F96614F5F886CAC9 /* Pods_LoLympics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLympics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		98F5F3761C1374DC006B70A5 /* SendBtnClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SendBtnClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -123,6 +125,7 @@
 				5AF505E31C0DA53A00819EE9 /* RoundBtnViewStyle.swift */,
 				5AF0B3AB1C0EF56F0066F666 /* BadgeViewStyle.swift */,
 				5AF0B3AD1C0EFD440066F666 /* PostCell.swift */,
+				98F5F3761C1374DC006B70A5 /* SendBtnClass.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -303,6 +306,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF505E41C0DA53A00819EE9 /* RoundBtnViewStyle.swift in Sources */,
+				98F5F3771C1374DC006B70A5 /* SendBtnClass.swift in Sources */,
 				5AF505EE1C0DE33F00819EE9 /* MainVC.swift in Sources */,
 				5AF0B3AE1C0EFD440066F666 /* PostCell.swift in Sources */,
 				5AF0B3AC1C0EF56F0066F666 /* BadgeViewStyle.swift in Sources */,

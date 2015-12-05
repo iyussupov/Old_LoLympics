@@ -8,7 +8,7 @@
 
 import UIKit
 
-let offset_HeaderStop:CGFloat = 340.0 // At this offset the Header stops its transformations
+let offset_HeaderStop:CGFloat = 243.0 // At this offset the Header stops its transformations
 
 class DetailsVC: UIViewController, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
     
@@ -19,6 +19,9 @@ class DetailsVC: UIViewController, UIScrollViewDelegate, UITableViewDataSource, 
     @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var categoryLbl: BadgeViewStyle!
     @IBOutlet weak var backBtnLbl: RoundBtnViewStyle!
+    @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
+    
+
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -27,6 +30,7 @@ class DetailsVC: UIViewController, UIScrollViewDelegate, UITableViewDataSource, 
         scrollView.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -39,7 +43,7 @@ class DetailsVC: UIViewController, UIScrollViewDelegate, UITableViewDataSource, 
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 3
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
