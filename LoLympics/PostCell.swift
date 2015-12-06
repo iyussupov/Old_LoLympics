@@ -36,7 +36,7 @@ class PostCell: UITableViewCell {
     }
     
     override func drawRect(rect: CGRect) {
-        featuredImg.clipsToBounds = true
+        //featuredImg.clipsToBounds = true
     }
 
 

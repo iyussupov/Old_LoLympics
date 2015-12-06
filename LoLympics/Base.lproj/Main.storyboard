@@ -1353,7 +1353,7 @@
                                     </variation>
                                 </view>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="95" id="t71-aU-B8i">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CommentCell" rowHeight="95" id="t71-aU-B8i" customClass="CommentCell" customModule="LoLympics" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="505" width="375" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="t71-aU-B8i" id="bcF-GS-2fY">
@@ -1429,6 +1429,12 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
+                                        <connections>
+                                            <outlet property="author" destination="CKM-Eu-Au1" id="DWo-cU-Kwq"/>
+                                            <outlet property="avatar" destination="VRL-S2-MDt" id="RcJ-dH-7t1"/>
+                                            <outlet property="dateLbl" destination="IG9-Wx-z3Q" id="Ise-JY-4VB"/>
+                                            <outlet property="textLbl" destination="Mb4-6J-bsV" id="kHH-cL-PqR"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

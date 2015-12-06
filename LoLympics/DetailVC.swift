@@ -20,6 +20,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var post: Post!
     var comments = [Comment]()
+    static var imageCache = NSCache()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerImage: UIImageView!
@@ -45,8 +46,6 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if error == nil {
                 
                 for object in objects! {
-                    
-                    print(object)
                     
                     let date = object.createdAt as NSDate!
                     let comment = Comment(date: date, dictionary: object)
@@ -76,7 +75,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         if let url = post.featuredImg {
             
-            img = MainVC.imageCache.objectForKey(url) as? UIImage
+            img = DetailVC.imageCache.objectForKey(url) as? UIImage
             
             if img != nil {
                 self.headerImage.image = img
@@ -88,7 +87,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     if (error == nil) {
                         let image = UIImage(data:imageData!)!
                         self.headerImage.image = image
-                        MainVC.imageCache.setObject(image, forKey: self.post!.featuredImg!)
+                        DetailVC.imageCache.setObject(image, forKey: self.post!.featuredImg!)
                     }
                 }
                 
@@ -114,7 +113,25 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         
-        return tableView.dequeueReusableCellWithIdentifier("cell")!
+        let comment = self.comments[indexPath.row]
+        
+        if let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell") as? CommentCell {
+            
+         
+            var img: UIImage?
+            
+            if let url = post.featuredImg {
+                
+                img = DetailVC.imageCache.objectForKey(url) as? UIImage
+                
+            }
+            
+            cell.configureCommentCell(comment, img: img)
+            
+            return cell
+        } else {
+            return PostCell()
+        }
         
         
     }

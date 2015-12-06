@@ -11,9 +11,7 @@ import Parse
 
 class Comment {
     
-    private var _avatar: PFFile?
-    
-    private var _author: String?
+    private var _author: PFUser?
     
     private var _text: String?
     
@@ -24,11 +22,7 @@ class Comment {
         return _text
     }
     
-    var avatar: PFFile? {
-        return _avatar
-    }
-    
-    var author: String? {
+    var author: PFUser? {
         return _author
     }
     
@@ -36,10 +30,9 @@ class Comment {
         return _date
     }
     
-    init (text: String?, avatar: PFFile?, author:String?, date: NSDate?) {
+    init (text: String?, author:PFUser?, date: NSDate?) {
         self._text = text
         self._author = author
-        self._avatar = avatar
         self._date = date
     }
     
@@ -51,15 +44,10 @@ class Comment {
             self._text = text
         }
         
-        if let author = dictionary["author"] as? String {
+        if let author = dictionary["author"] as? PFUser {
             self._author = author
-        }
-        
-        if let avatar = dictionary["avatar"] as? PFFile {
-            self._avatar = avatar
         }
         
         
     }
-
 }
