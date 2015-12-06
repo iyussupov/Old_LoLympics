@@ -55,6 +55,10 @@ class Post {
         return _imageDesc
     }
     
+    var postKey: String? {
+        return _postKey
+    }
+    
     init (title: String?, excerpt: String?, content: String?, featuredImg: PFFile?, category: String?, date: NSDate?, imageDesc:String?) {
         self._title = title
         self._excerpt = excerpt

@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 let offset_HeaderStop:CGFloat = 243.0 // At this offset the Header stops its transformations
 
@@ -18,6 +19,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     var post: Post!
+    var comments = [Comment]()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerImage: UIImageView!
@@ -31,6 +33,32 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 90.0
+        
+        let CommentsQuery: PFQuery =  PFQuery(className:"Comment")
+        CommentsQuery.whereKey("post", equalTo: PFObject(withoutDataWithClassName: "Post", objectId: self.post.postKey))
+        CommentsQuery.addAscendingOrder("createdAt")
+        
+        comments = []
+        
+        CommentsQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error: NSError?) -> Void in
+            
+            if error == nil {
+                
+                for object in objects! {
+                    
+                    print(object)
+                    
+                    let date = object.createdAt as NSDate!
+                    let comment = Comment(date: date, dictionary: object)
+                    self.comments.append(comment)
+                    
+                }
+                
+                self.tableView.reloadData()
+            }
+            
+            
+        }
         
         self.updateUI()
     }
@@ -80,7 +108,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return comments.count
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {

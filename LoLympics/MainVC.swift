@@ -26,7 +26,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
-        //tableView.allowsSelection = false
        
         let PostsQuery: PFQuery =  PFQuery(className:"Post")
         PostsQuery.addAscendingOrder("priority")
