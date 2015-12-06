@@ -95,14 +95,14 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let post = self.posts[indexPath.row]
         
-        performSegueWithIdentifier("DetailsVC", sender: post)
+        performSegueWithIdentifier("DetailVC", sender: post)
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        if segue.identifier == "DetailsVC" {
-            if let detailsVC = segue.destinationViewController as? DetailsVC {
+        if segue.identifier == "DetailVC" {
+            if let detailVC = segue.destinationViewController as? DetailVC {
                 if let post = sender as? Post {
-                    detailsVC.post = post
+                    detailVC.post = post
                 }
             }
         }

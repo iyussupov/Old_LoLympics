@@ -1,8 +1,8 @@
 //
-//  DetailsVC.swift
+//  CustomDetailVC.swift
 //  LoLympics
 //
-//  Created by Dev1 on 12/3/15.
+//  Created by Ingwar on 12/6/15.
 //  Copyright © 2015 FXoffice. All rights reserved.
 //
 
@@ -10,27 +10,24 @@ import UIKit
 
 let offset_HeaderStop:CGFloat = 243.0 // At this offset the Header stops its transformations
 
-class DetailsVC: UIViewController, UIScrollViewDelegate, UITableViewDataSource, UITableViewDelegate {
-    
+class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+
     var post: Post!
-
-    @IBOutlet var scrollView:UIScrollView!
-    @IBOutlet var header: UIView!
-    @IBOutlet weak var headerImage: UIImageView!
-    @IBOutlet weak var categoryLbl: BadgeViewStyle!
-    @IBOutlet weak var backBtnLbl: RoundBtnViewStyle!
-    @IBOutlet weak var tableHeightConstraint: NSLayoutConstraint!
-    
-
     
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var headerImage: UIImageView!
+    
+    @IBOutlet weak var categoryLbl: BadgeViewStyle!
+    @IBOutlet weak var backBtnLbl: RoundBtnViewStyle!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        scrollView.delegate = self
         tableView.delegate = self
         tableView.dataSource = self
-        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 90.0
+
+        // Do any additional setup after loading the view.
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -47,10 +44,10 @@ class DetailsVC: UIViewController, UIScrollViewDelegate, UITableViewDataSource, 
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-
         
-        return tableView.dequeueReusableCellWithIdentifier("CommentCell")!
-            
+        
+        return tableView.dequeueReusableCellWithIdentifier("cell")!
+        
         
     }
     
@@ -88,7 +85,28 @@ class DetailsVC: UIViewController, UIScrollViewDelegate, UITableViewDataSource, 
         headerImage.layer.transform = headerTransform
     }
 
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        sizeHeaderToFit()
+    }
+    
+    func sizeHeaderToFit() {
+        let headerView = tableView.tableHeaderView!
+        
+        headerView.setNeedsLayout()
+        headerView.layoutIfNeeded()
+        
+        let height = headerView.systemLayoutSizeFittingSize(UILayoutFittingCompressedSize).height
+        var frame = headerView.frame
+        frame.size.height = height
+        headerView.frame = frame
+        
+        tableView.tableHeaderView = headerView
+    }
+    
     @IBAction func DetailsBackBtn(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
     }
+
+
 }
