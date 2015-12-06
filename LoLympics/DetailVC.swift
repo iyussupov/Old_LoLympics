@@ -1,5 +1,5 @@
 //
-//  CustomDetailVC.swift
+//  DetailVC.swift
 //  LoLympics
 //
 //  Created by Ingwar on 12/6/15.
@@ -12,6 +12,11 @@ let offset_HeaderStop:CGFloat = 243.0 // At this offset the Header stops its tra
 
 class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var postDate: UILabel!
+    @IBOutlet weak var titleLbl: UILabel!
+    @IBOutlet weak var contentField: UILabel!
+    
+    
     var post: Post!
     
     @IBOutlet weak var tableView: UITableView!
@@ -26,8 +31,43 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 90.0
-
-        // Do any additional setup after loading the view.
+        
+        self.updateUI()
+    }
+    
+    func updateUI() {
+    
+        let Date:NSDateFormatter = NSDateFormatter()
+        Date.dateFormat = "yyyy-MM-dd"
+        postDate.text = Date.stringFromDate(post.date!)
+        
+        titleLbl.text = post.title
+        contentField.text = post.content
+    
+        var img: UIImage?
+        
+        if let url = post.featuredImg {
+            
+            img = MainVC.imageCache.objectForKey(url) as? UIImage
+            
+            if img != nil {
+                self.headerImage.image = img
+            } else {
+                
+                let featuredImage = post.featuredImg
+                
+                featuredImage!.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
+                    if (error == nil) {
+                        let image = UIImage(data:imageData!)!
+                        self.headerImage.image = image
+                        MainVC.imageCache.setObject(image, forKey: self.post!.featuredImg!)
+                    }
+                }
+                
+            }
+            
+        }
+        
     }
     
     override func viewDidAppear(animated: Bool) {
