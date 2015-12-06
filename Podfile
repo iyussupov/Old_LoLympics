@@ -9,4 +9,5 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKMessengerShareKit'
+pod 'Alamofire', '~> 3.0'
 end

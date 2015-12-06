@@ -8,8 +8,11 @@
 
 import UIKit
 import Parse
+import Alamofire
 
 class CommentCell: UITableViewCell {
+    
+    var request: Request?
     
     @IBOutlet weak var textLbl: UILabel!
     
@@ -62,6 +65,31 @@ class CommentCell: UITableViewCell {
             if error == nil {
                 for user in objects! {
                     
+                    self.author.text = user["username"] as? String
+                    
+                    let userAvatar = user["avatar"]
+                    
+                    if userAvatar != nil {
+                        //Use the cached image if there is one, otherwise download the image
+                        if img != nil {
+                            self.avatar.image = img!
+                        } else {
+                            //Must store the request so we can cancel it later if this cell is now out of the users view
+                            request = Alamofire.request(.GET!, userAvatar!).validate(contentType: ["image/*"]).response(completionHandler: { request, response, data, err in
+                                
+                                if err == nil {
+                                    let img = UIImage(data: data!)!
+                                    self.avatar.image = img
+                                    //DetailVC.imageCache.setObject(img, forKey: self.post!.imageUrl!)
+                                }
+                            })
+                            
+                        }
+                        
+                    } else {
+                        self.avatar.hidden = true
+                    }
+                   
                     
                 }
             } else {
@@ -69,30 +97,6 @@ class CommentCell: UITableViewCell {
             }
         })
         
-        
-        /*
-        if comment.avatar != nil {
-            
-            if img != nil {
-                self.avatar.image = img
-            } else {
-                
-                let avatarImage = comment.avatar
-                
-                avatarImage!.getDataInBackgroundWithBlock { (imageData: NSData?, error: NSError?) -> Void in
-                    if (error == nil) {
-                        let image = UIImage(data:imageData!)!
-                        self.avatar.image = image
-                        MainVC.imageCache.setObject(image, forKey: self.comment!.avatar!)
-                    }
-                }
-                
-            }
-            
-        } else {
-            self.avatar.hidden = true
-        }
-        */
         
     }
 

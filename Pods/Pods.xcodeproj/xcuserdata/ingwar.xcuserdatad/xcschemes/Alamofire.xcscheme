@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6CE4BCABDEC05A569CBB6F34'
-               BlueprintName = 'FBSDKMessengerShareKit'
+               BlueprintIdentifier = '24552F9B50C24C051B028DC2'
+               BlueprintName = 'Alamofire'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FBSDKMessengerShareKit.framework'>
+               BuildableName = 'Alamofire.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
