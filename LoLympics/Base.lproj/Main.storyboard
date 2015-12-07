@@ -1154,7 +1154,7 @@
                     <connections>
                         <outlet property="tableView" destination="KfR-Qj-BWx" id="BOl-GP-fgL"/>
                         <segue destination="iap-FA-Wmr" kind="show" identifier="DetailVC" id="idt-5R-7GN"/>
-                        <segue destination="Yu8-mF-eP9" kind="presentation" identifier="ViewerVC" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="tqm-Hi-gbU"/>
+                        <segue destination="Yu8-mF-eP9" kind="presentation" identifier="ViewerVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tqm-Hi-gbU"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxL-eY-nTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1584,7 +1584,7 @@
                         <outlet property="postDate" destination="71W-YC-9sQ" id="VtP-pD-O3r"/>
                         <outlet property="tableView" destination="0XQ-z1-eaP" id="iRu-2W-1ux"/>
                         <outlet property="titleLbl" destination="WYt-yG-hQQ" id="IHb-lf-ycV"/>
-                        <segue destination="Yu8-mF-eP9" kind="presentation" identifier="ViewerVC" modalPresentationStyle="fullScreen" modalTransitionStyle="partialCurl" id="9OC-pK-jr8"/>
+                        <segue destination="Yu8-mF-eP9" kind="presentation" identifier="ViewerVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="9OC-pK-jr8"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ssq-GF-25Z" userLabel="First Responder" sceneMemberID="firstResponder"/>
