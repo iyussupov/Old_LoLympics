@@ -21,6 +21,7 @@ class CommentCell: UITableViewCell {
     @IBOutlet weak var author: UILabel!
     
     @IBOutlet weak var avatar: UIImageView!
+   
     
     private var _comment: Comment?
     

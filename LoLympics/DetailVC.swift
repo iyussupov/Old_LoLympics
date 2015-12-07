@@ -17,6 +17,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var titleLbl: UILabel!
     @IBOutlet weak var contentField: UILabel!
     
+    @IBOutlet weak var commentTextField: UITextField!
     
     var post: Post!
     var comments = [Comment]()
@@ -34,6 +35,13 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 90.0
+        
+        self.loadComments()
+        
+        self.updateUI()
+    }
+    
+    func loadComments() {
         
         let CommentsQuery: PFQuery =  PFQuery(className:"Comment")
         CommentsQuery.whereKey("post", equalTo: PFObject(withoutDataWithClassName: "Post", objectId: self.post.postKey))
@@ -58,9 +66,8 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             
         }
-        
-        self.updateUI()
     }
+    
     
     func updateUI() {
     
@@ -189,6 +196,23 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         tableView.tableHeaderView = headerView
     }
+    
+    @IBAction func sendCommentAction(sender: AnyObject) {
+        
+        if commentTextField.text != "" {
+            
+            let newComment = PFObject(className:"Comment")
+            newComment["text"] = commentTextField.text
+            newComment["post"] = PFObject(withoutDataWithClassName:"Post", objectId: post.postKey)
+            newComment["author"] = PFUser.currentUser()
+            newComment.saveInBackground()
+            commentTextField.text = ""
+            self.loadComments()
+        }
+        
+    }
+    
+    
     
     @IBAction func DetailsBackBtn(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)

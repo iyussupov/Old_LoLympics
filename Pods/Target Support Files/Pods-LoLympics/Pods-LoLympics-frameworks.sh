@@ -84,7 +84,6 @@ strip_invalid_archs() {
 
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_framework "Pods-LoLympics/Alamofire.framework"
   install_framework "Pods-LoLympics/Bolts.framework"
   install_framework "Pods-LoLympics/FBSDKCoreKit.framework"
   install_framework "Pods-LoLympics/FBSDKLoginKit.framework"
@@ -94,7 +93,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-LoLympics/ParseFacebookUtilsV4.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_framework "Pods-LoLympics/Alamofire.framework"
   install_framework "Pods-LoLympics/Bolts.framework"
   install_framework "Pods-LoLympics/FBSDKCoreKit.framework"
   install_framework "Pods-LoLympics/FBSDKLoginKit.framework"

@@ -11,7 +11,7 @@ import UIKit
 class AvatarView: UIImageView {
 
     override func awakeFromNib() {
-        layer.cornerRadius = 24.0
+        layer.cornerRadius = 24.5
     }
 
 }

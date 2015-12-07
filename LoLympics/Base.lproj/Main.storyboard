@@ -1369,7 +1369,7 @@
                                                     </constraints>
                                                 </view>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-S2-MDt" customClass="AvatarView" customModule="LoLympics" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="15" width="49" height="49"/>
+                                                    <rect key="frame" x="16" y="11" width="49" height="49"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="49" id="fbV-oD-WUL"/>
@@ -1377,7 +1377,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="Bill Farrow" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CKM-Eu-Au1">
-                                                    <rect key="frame" x="73" y="19" width="168" height="17"/>
+                                                    <rect key="frame" x="73" y="16" width="168" height="17"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="17" id="BcP-A4-dBS"/>
@@ -1387,14 +1387,14 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="If you are a web or a graphic designer you might use Patterns and Textures" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mb4-6J-bsV">
-                                                    <rect key="frame" x="73" y="41" width="286" height="38"/>
+                                                    <rect key="frame" x="73" y="38" width="286" height="41"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.46666666666666667" green="0.46666666666666667" blue="0.46666666666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2015-09-18" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IG9-Wx-z3Q">
-                                                    <rect key="frame" x="291" y="22" width="68" height="12"/>
+                                                    <rect key="frame" x="291" y="19" width="68" height="12"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="12" id="DIR-Lc-i3m"/>
@@ -1415,8 +1415,8 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="IG9-Wx-z3Q" secondAttribute="trailing" constant="8" id="4uu-pD-Miy"/>
                                                 <constraint firstItem="GX6-gg-1qs" firstAttribute="leading" secondItem="bcF-GS-2fY" secondAttribute="leading" id="F5F-fX-e3g"/>
                                                 <constraint firstItem="Mb4-6J-bsV" firstAttribute="top" secondItem="CKM-Eu-Au1" secondAttribute="bottom" constant="5" id="PEK-e6-Sm2"/>
-                                                <constraint firstItem="CKM-Eu-Au1" firstAttribute="top" secondItem="GX6-gg-1qs" secondAttribute="bottom" constant="18" id="SwR-Iq-W7z"/>
-                                                <constraint firstItem="VRL-S2-MDt" firstAttribute="top" secondItem="GX6-gg-1qs" secondAttribute="bottom" constant="14" id="Vhr-ic-H9c"/>
+                                                <constraint firstItem="CKM-Eu-Au1" firstAttribute="top" secondItem="GX6-gg-1qs" secondAttribute="bottom" constant="15" id="SwR-Iq-W7z"/>
+                                                <constraint firstItem="VRL-S2-MDt" firstAttribute="top" secondItem="GX6-gg-1qs" secondAttribute="bottom" constant="10" id="Vhr-ic-H9c"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="Mb4-6J-bsV" secondAttribute="bottom" constant="8" id="Z9f-jv-0dd"/>
                                                 <constraint firstAttribute="trailing" secondItem="GX6-gg-1qs" secondAttribute="trailing" id="ZW5-73-dZr"/>
                                                 <constraint firstItem="IG9-Wx-z3Q" firstAttribute="leading" secondItem="CKM-Eu-Au1" secondAttribute="trailing" constant="50" id="ae1-ae-GDj"/>
@@ -1457,6 +1457,9 @@
                                         <state key="normal" title="SEND">
                                             <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </state>
+                                        <connections>
+                                            <action selector="sendCommentAction:" destination="iap-FA-Wmr" eventType="touchUpInside" id="A5d-sk-E5M"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Leave a comment" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bAl-hu-ME2">
                                         <rect key="frame" x="16" y="17" width="262" height="30"/>
@@ -1563,6 +1566,7 @@
                     <connections>
                         <outlet property="backBtnLbl" destination="Jhe-zD-65Z" id="BS3-K2-hTc"/>
                         <outlet property="categoryLbl" destination="OMe-8C-O9Z" id="1dZ-pe-38S"/>
+                        <outlet property="commentTextField" destination="bAl-hu-ME2" id="7WZ-pM-CQ8"/>
                         <outlet property="contentField" destination="tWp-PC-pEp" id="kNx-Cg-g59"/>
                         <outlet property="headerImage" destination="wsd-aa-f3j" id="Ky6-mS-ZL4"/>
                         <outlet property="postDate" destination="71W-YC-9sQ" id="VtP-pD-O3r"/>
