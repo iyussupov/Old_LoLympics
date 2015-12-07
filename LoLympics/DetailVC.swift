@@ -25,6 +25,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerImage: UIImageView!
+    @IBOutlet weak var imageViewer: UIView!
     
     @IBOutlet weak var categoryLbl: BadgeViewStyle!
     @IBOutlet weak var backBtnLbl: RoundBtnViewStyle!
@@ -39,6 +40,14 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.loadComments()
         
         self.updateUI()
+        
+        let tap = UITapGestureRecognizer(target: self, action: "showImageViewer")
+        imageViewer.addGestureRecognizer(tap)
+    }
+    
+    func showImageViewer() {
+        let currentPost = post
+        performSegueWithIdentifier("ViewerVC", sender: currentPost)
     }
     
     func loadComments() {
@@ -241,6 +250,16 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBAction func DetailsBackBtn(sender: AnyObject) {
         self.navigationController?.popViewControllerAnimated(true)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ViewerVC" {
+            if let viewerVC = segue.destinationViewController as? ViewerVC {
+                if let post = sender as? Post {
+                    viewerVC.post = post
+                }
+            }
+        }
     }
 
 

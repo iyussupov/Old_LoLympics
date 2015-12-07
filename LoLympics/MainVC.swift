@@ -73,6 +73,10 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("PostCell") as? PostCell {
             
+            let tap = UITapGestureRecognizer(target: self, action: "showImageViewer:")
+            cell.featuredImg.addGestureRecognizer(tap)
+            cell.featuredImg.tag = indexPath.row
+            
             var img: UIImage?
             
             if let url = post.featuredImg {
@@ -90,6 +94,12 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    func showImageViewer(sender:AnyObject) {
+        let id = sender.view!.tag
+        let post = self.posts[id]
+        performSegueWithIdentifier("ViewerVC", sender: post)
+    }
+    
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         let post = self.posts[indexPath.row]
@@ -102,6 +112,13 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if let detailVC = segue.destinationViewController as? DetailVC {
                 if let post = sender as? Post {
                     detailVC.post = post
+                }
+            }
+        }
+        if segue.identifier == "ViewerVC" {
+            if let viewerVC = segue.destinationViewController as? ViewerVC {
+                if let post = sender as? Post {
+                    viewerVC.post = post
                 }
             }
         }
