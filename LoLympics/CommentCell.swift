@@ -35,11 +35,11 @@ class CommentCell: UITableViewCell {
     }
     
     override func drawRect(rect: CGRect) {
-        //featuredImg.clipsToBounds = true
+        avatar.clipsToBounds = true
     }
     
     
-    func configureCommentCell(comment: Comment, img: UIImage?) {
+    func configureCommentCell(comment: Comment) {
         
         self._comment = comment
         
@@ -70,27 +70,15 @@ class CommentCell: UITableViewCell {
                     let userAvatar = user["avatar"]
                     
                     if userAvatar != nil {
-                        //Use the cached image if there is one, otherwise download the image
-                        if img != nil {
-                            self.avatar.image = img!
-                        } else {
-                            //Must store the request so we can cancel it later if this cell is now out of the users view
-                            request = Alamofire.request(.GET!, userAvatar!).validate(contentType: ["image/*"]).response(completionHandler: { request, response, data, err in
-                                
-                                if err == nil {
-                                    let img = UIImage(data: data!)!
-                                    self.avatar.image = img
-                                    //DetailVC.imageCache.setObject(img, forKey: self.post!.imageUrl!)
-                                }
-                            })
-                            
-                        }
+                        
+                        self.avatar.downloadedFrom(link: userAvatar as! String, contentMode: UIViewContentMode.ScaleAspectFill)
                         
                     } else {
-                        self.avatar.hidden = true
+                        
+                        self.avatar.image = UIImage(named: "avatar")
+                        
                     }
                    
-                    
                 }
             } else {
                 print(error)
