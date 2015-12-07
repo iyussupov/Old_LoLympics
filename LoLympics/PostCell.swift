@@ -65,13 +65,7 @@ class PostCell: UITableViewCell {
         if let imageDesc = post.imageDesc where imageDesc != "" {
             self.imageDescLbl.text = imageDesc
         } else {
-            self.imageDescLbl.hidden = true
-        }
-        
-        if let imageDesc = post.imageDesc where imageDesc != "" {
-            self.imageDescLbl.text = imageDesc
-        } else {
-            self.imageDescLbl.hidden = true
+            self.imageDescLbl.text = " "
         }
         
         if let date = post.date where date != "" {
