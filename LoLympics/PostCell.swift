@@ -36,7 +36,6 @@ class PostCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-    
         
     }
     
@@ -62,7 +61,7 @@ class PostCell: UITableViewCell {
         }
         
         if let category = post.category where category != "" {
-            self.categoryLbl.text = category
+            self.categoryLbl.text = category.uppercaseString
         } else {
             self.categoryLbl.hidden = true
         }

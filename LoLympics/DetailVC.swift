@@ -77,6 +77,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         titleLbl.text = post.title
         contentField.text = post.content
+        categoryLbl.text = post.category!.uppercaseString
     
         var img: UIImage?
         

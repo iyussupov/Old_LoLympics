@@ -38,6 +38,10 @@ class CommentCell: UITableViewCell {
     
     
     func configureCommentCell(comment: Comment) {
+        self.textLbl.text = ""
+        self.dateLbl.text = ""
+        self.author.text = ""
+        self.avatar.image = UIImage(named: "avatar")
         
         self._comment = comment
         
@@ -70,10 +74,6 @@ class CommentCell: UITableViewCell {
                     if userAvatar != nil {
                         
                         self.avatar.downloadedFrom(link: userAvatar as! String, contentMode: UIViewContentMode.ScaleAspectFill)
-                        
-                    } else {
-                        
-                        self.avatar.image = UIImage(named: "avatar")
                         
                     }
                    

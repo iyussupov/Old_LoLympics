@@ -26,6 +26,7 @@
 		5AF505EE1C0DE33F00819EE9 /* MainVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505ED1C0DE33F00819EE9 /* MainVC.swift */; };
 		5AF505F01C0DE69900819EE9 /* HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */; };
 		5AF5A3E61C1192BE00AD7813 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5A3E51C1192BE00AD7813 /* Post.swift */; };
+		5AFD817D1C15C6140098D0F0 /* ViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD817C1C15C6140098D0F0 /* ViewerVC.swift */; };
 		98ED70B91C142C8300D1C5C0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED70B81C142C8300D1C5C0 /* DetailVC.swift */; };
 		98ED70BB1C14634F00D1C5C0 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED70BA1C14634F00D1C5C0 /* Comment.swift */; };
 		98ED70BD1C147FA600D1C5C0 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED70BC1C147FA600D1C5C0 /* CommentCell.swift */; };
@@ -56,6 +57,7 @@
 		5AF505ED1C0DE33F00819EE9 /* MainVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainVC.swift; sourceTree = "<group>"; };
 		5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenKeyboard.swift; sourceTree = "<group>"; };
 		5AF5A3E51C1192BE00AD7813 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
+		5AFD817C1C15C6140098D0F0 /* ViewerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewerVC.swift; sourceTree = "<group>"; };
 		67B32F7BCC25368ABAD5527F /* Pods-LoLympics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLympics.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLympics/Pods-LoLympics.release.xcconfig"; sourceTree = "<group>"; };
 		86021E96F96614F5F886CAC9 /* Pods_LoLympics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLympics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		98ED70B81C142C8300D1C5C0 /* DetailVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailVC.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				5AF505E11C0D92D700819EE9 /* SignUpVC.swift */,
 				5AF505ED1C0DE33F00819EE9 /* MainVC.swift */,
 				98ED70B81C142C8300D1C5C0 /* DetailVC.swift */,
+				5AFD817C1C15C6140098D0F0 /* ViewerVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -321,6 +324,7 @@
 				98F5F3771C1374DC006B70A5 /* SendBtnClass.swift in Sources */,
 				98ED70B91C142C8300D1C5C0 /* DetailVC.swift in Sources */,
 				5AF505EE1C0DE33F00819EE9 /* MainVC.swift in Sources */,
+				5AFD817D1C15C6140098D0F0 /* ViewerVC.swift in Sources */,
 				5AF0B3AE1C0EFD440066F666 /* PostCell.swift in Sources */,
 				98ED70BD1C147FA600D1C5C0 /* CommentCell.swift in Sources */,
 				98ED70BB1C14634F00D1C5C0 /* Comment.swift in Sources */,
