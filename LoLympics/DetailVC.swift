@@ -107,6 +107,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidAppear(animated: Bool) {
         
         headerImage.clipsToBounds = true
+        
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
@@ -148,6 +149,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let offset = scrollView.contentOffset.y
         var headerTransform = CATransform3DIdentity
+        var labelsTransform = CATransform3DIdentity
         
         // PULL DOWN -----------------
         
@@ -168,14 +170,16 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             // Header -----------
             
             headerTransform = CATransform3DTranslate(headerTransform, 0, max(-offset_HeaderStop, -offset), 0)
+            labelsTransform = CATransform3DTranslate(headerTransform, 0, max(-offset_HeaderStop, -offset), 0)
             
-            categoryLbl.layer.transform = headerTransform
-            backBtnLbl.layer.transform = headerTransform
         }
         
         // Apply Transformations
         
         headerImage.layer.transform = headerTransform
+        
+        categoryLbl.layer.transform = labelsTransform
+        backBtnLbl.layer.transform = labelsTransform
     }
 
     override func viewDidLayoutSubviews() {
@@ -212,6 +216,26 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    @IBAction func postShareAction(sender: AnyObject) {
+        
+        var textToShare = ""
+        
+        if let title = post!.title where title != "" {
+            textToShare = "\(post!.title!)"
+        }
+        
+        if let myWebsite = NSURL(string: "http://lololympics.com/")
+        {
+            let objectsToShare = [textToShare, myWebsite]
+            let activityVC = UIActivityViewController(activityItems: objectsToShare, applicationActivities: nil)
+            
+            //New Excluded Activities Code
+            activityVC.excludedActivityTypes = [UIActivityTypeAirDrop, UIActivityTypeAddToReadingList]
+            //
+            
+            self.presentViewController(activityVC, animated: true, completion: nil)
+        }
+    }
     
     
     @IBAction func DetailsBackBtn(sender: AnyObject) {

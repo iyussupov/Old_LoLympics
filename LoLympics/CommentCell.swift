@@ -8,11 +8,8 @@
 
 import UIKit
 import Parse
-import Alamofire
 
 class CommentCell: UITableViewCell {
-    
-    var request: Request?
     
     @IBOutlet weak var textLbl: UILabel!
     
