@@ -1136,6 +1136,7 @@
                                         <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                         <connections>
                                             <outlet property="categoryLbl" destination="Nnl-P7-aIU" id="puB-Ug-abK"/>
+                                            <outlet property="cellFooterView" destination="pfK-MJ-sVN" id="gep-8C-uWC"/>
                                             <outlet property="commentCount" destination="022-SA-5WX" id="Z38-0P-qe4"/>
                                             <outlet property="commentCountStack" destination="GoB-nb-E5q" id="fa9-Eh-TdZ"/>
                                             <outlet property="commentIcon" destination="ibp-PV-L7V" id="1Pt-4U-RRa"/>

@@ -29,6 +29,9 @@ class PostCell: UITableViewCell {
     
     @IBOutlet weak var commentCountStack: UIStackView!
     
+    @IBOutlet weak var cellFooterView: UIStackView!
+    
+    
     private var _post: Post?
     
     var post: Post? {
@@ -119,9 +122,10 @@ class PostCell: UITableViewCell {
             (count: Int32, error: NSError?) -> Void in
             if error == nil {
                 if count > 0 {
-                    self.commentCount.text = "\(count)"
+                   self.commentCount.text = "\(count)"
+                    self.commentCountStack.hidden = false
                 } else {
-                    self.commentCountStack.removeFromSuperview()
+                   self.commentCountStack.hidden = true
                 }
             }
         }

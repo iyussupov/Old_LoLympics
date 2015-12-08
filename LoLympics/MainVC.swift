@@ -18,8 +18,10 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     static var imageCache = NSCache()
     let postLimit = 2
     var postSkip = 0
+    var postCount = 0
     var refreshControl:UIRefreshControl!
     var loadMoreStatus = false
+    var isRefreshing = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +37,25 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.estimatedRowHeight = 160.0
        
         posts = []
+        self.postsCount()
         self.parseDataFromParse()
         
 
     }
     
+    func postsCount() {
+        let predicate = NSPredicate(format: "published = 1")
+        let PostsQuery: PFQuery =  PFQuery(className:"Post", predicate: predicate)
+        PostsQuery.countObjectsInBackgroundWithBlock {
+            (count: Int32, error: NSError?) -> Void in
+            if error == nil {
+                self.postCount = Int(count)
+            }
+        }
+    }
+    
     func parseDataFromParse() {
+        
         
         let predicate = NSPredicate(format: "published = 1")
         let PostsQuery: PFQuery =  PFQuery(className:"Post", predicate: predicate)
@@ -58,7 +73,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     let date = object.createdAt as NSDate!
                     let post = Post(postKey: key, date: date, dictionary: object)
                     self.posts.append(post)
-                    
                 }
                 
                 self.tableView.reloadData()
@@ -68,6 +82,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     func refresh(sender:AnyObject) {
+        self.isRefreshing = true
         refreshBegin("Refresh",
             refreshEnd: {(x:Int) -> () in
                 self.refreshControl.endRefreshing()
@@ -85,6 +100,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             sleep(2)
             
             dispatch_async(dispatch_get_main_queue()) {
+                self.isRefreshing = false
                 refreshEnd(0)
             }
         }
@@ -93,19 +109,16 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func scrollViewDidScroll(scrollView: UIScrollView) {
         let currentOffset = scrollView.contentOffset.y
         let maximumOffset = scrollView.contentSize.height - scrollView.frame.size.height
-        let deltaOffset = maximumOffset - currentOffset
-        
-        if deltaOffset <= 0 {
+        if (maximumOffset - currentOffset) <= 40 {
             loadMore()
         }
     }
     
     func loadMore() {
-        if ( !loadMoreStatus ) {
+        if !loadMoreStatus && !isRefreshing {
             self.loadMoreStatus = true
             loadMoreBegin("Load more",
                 loadMoreEnd: {(x:Int) -> () in
-                    self.tableView.reloadData()
                     self.loadMoreStatus = false
             })
         }
@@ -115,7 +128,11 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
                 self.postSkip += self.postLimit
-                self.parseDataFromParse()
+                if self.postSkip <= self.postCount {
+                    self.parseDataFromParse()
+                } else {
+                    self.loadMoreStatus = true
+                }
             }
             sleep(2)
             
