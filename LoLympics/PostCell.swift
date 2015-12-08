@@ -115,19 +115,11 @@ class PostCell: UITableViewCell {
             self.featuredImg.hidden = true
         }
         
-        let query = PFQuery(className:"Comment")
-        let postObject = PFObject(withoutDataWithClassName:"Post", objectId:post.postKey)
-        query.whereKey("post", equalTo: postObject)
-        query.countObjectsInBackgroundWithBlock {
-            (count: Int32, error: NSError?) -> Void in
-            if error == nil {
-                if count > 0 {
-                   self.commentCount.text = "\(count)"
-                    self.commentCountStack.hidden = false
-                } else {
-                   self.commentCountStack.hidden = true
-                }
-            }
+        if let commentCount = post.commentCount where commentCount > 0 {
+            self.commentCount.text = "\(commentCount)"
+            self.commentCountStack.hidden = false
+        } else {
+            self.commentCountStack.hidden = true
         }
     
     }
