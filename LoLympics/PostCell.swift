@@ -27,6 +27,8 @@ class PostCell: UITableViewCell {
    
     @IBOutlet weak var commentIcon: UILabel!
     
+    @IBOutlet weak var commentCountStack: UIStackView!
+    
     private var _post: Post?
     
     var post: Post? {
@@ -52,17 +54,24 @@ class PostCell: UITableViewCell {
         if let title = post.title where title != "" {
             self.titleLbl.text = title
         } else {
-            self.titleLbl.hidden = true
+            self.titleLbl.text = nil
         }
         
         if let excerpt = post.excerpt where excerpt != "" {
             self.excerptLbl.text = excerpt
         } else {
-            self.excerptLbl.hidden = true
+            self.excerptLbl.text = nil
         }
         
         if let category = post.category where category != "" {
-            self.categoryLbl.text = "   \(category.uppercaseString)   "
+            self.categoryLbl.text = "     \(category.uppercaseString)     "
+            if category == "fun" {
+                self.categoryLbl.backgroundColor = UIColor(red: 244/255, green: 121/255, blue: 31/255, alpha: 1)
+            } else if category == "history" {
+                self.categoryLbl.backgroundColor = UIColor(red: 0, green: 174/255, blue: 230/255, alpha: 1)
+            } else if category == "video" {
+                self.categoryLbl.backgroundColor = UIColor(red: 237/255, green: 28/255, blue: 36/255, alpha: 1)
+            }
         } else {
             self.categoryLbl.hidden = true
         }
@@ -111,10 +120,8 @@ class PostCell: UITableViewCell {
             if error == nil {
                 if count > 0 {
                     self.commentCount.text = "\(count)"
-                    self.commentIcon.hidden = false
                 } else {
-                    self.commentCount.hidden = true
-                    self.commentIcon.hidden = true
+                    self.commentCountStack.removeFromSuperview()
                 }
             }
         }

@@ -14,6 +14,8 @@ class ViewerVC: UIViewController, UIScrollViewDelegate {
    
     @IBOutlet weak var imageView: UIImageView!
     
+    @IBOutlet weak var imageDesc: UILabel!
+    
     var post: Post!
     static var imageCache = NSCache()
     
@@ -22,6 +24,8 @@ class ViewerVC: UIViewController, UIScrollViewDelegate {
 
         self.scrollView.minimumZoomScale = 1.0
         self.scrollView.maximumZoomScale = 6.0
+        
+        self.imageDesc.text = post.imageDesc
         
         var img: UIImage?
         
@@ -56,6 +60,7 @@ class ViewerVC: UIViewController, UIScrollViewDelegate {
     @IBAction func closeViewerAction(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
     }
+    
     
     
 }

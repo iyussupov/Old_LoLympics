@@ -86,8 +86,20 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         titleLbl.text = post.title
         contentField.text = post.content
-        categoryLbl.text = post.category!.uppercaseString
     
+        if let category = post.category where category != "" {
+            self.categoryLbl.text = "     \(category.uppercaseString)     "
+            if category == "fun" {
+                self.categoryLbl.backgroundColor = UIColor(red: 244/255, green: 121/255, blue: 31/255, alpha: 1)
+            } else if category == "history" {
+                self.categoryLbl.backgroundColor = UIColor(red: 0, green: 174/255, blue: 230/255, alpha: 1)
+            } else if category == "video" {
+                self.categoryLbl.backgroundColor = UIColor(red: 237/255, green: 28/255, blue: 36/255, alpha: 1)
+            }
+        } else {
+            self.categoryLbl.hidden = true
+        }
+        
         var img: UIImage?
         
         if let url = post.featuredImg {
