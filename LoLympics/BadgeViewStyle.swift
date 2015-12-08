@@ -14,5 +14,6 @@ class BadgeViewStyle: UILabel {
         layer.cornerRadius = 9.0
         layer.masksToBounds = true
     }
+    
 
 }

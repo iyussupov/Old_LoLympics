@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eG7-pg-TJz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eG7-pg-TJz">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -926,17 +926,25 @@
                                                             <color key="textColor" red="0.60392156862745094" green="0.60392156862745094" blue="0.60392156862745094" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Story" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnl-P7-aIU" customClass="BadgeViewStyle" customModule="LoLympics" customModuleProvider="target">
-                                                            <rect key="frame" x="279" y="15" width="80" height="18"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="User Story" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Nnl-P7-aIU" customClass="BadgeViewStyle" customModule="LoLympics" customModuleProvider="target">
+                                                            <rect key="frame" x="311" y="15" width="48" height="18"/>
                                                             <animations/>
                                                             <color key="backgroundColor" red="0.38431372549999998" green="0.73333333329999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="18" id="NlE-m9-iXO"/>
+                                                                <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="30" id="jyX-gz-gpM"/>
                                                                 <constraint firstAttribute="width" constant="80" id="rEl-94-AUT"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                                             <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
+                                                            <size key="shadowOffset" width="0.0" height="0.0"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="jyX-gz-gpM"/>
+                                                                    <exclude reference="rEl-94-AUT"/>
+                                                                </mask>
+                                                            </variation>
                                                         </label>
                                                         <label opaque="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Kuwait wins two Rio Olympic Games places at Shotgun World Championship" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nz6-qT-EkE">
                                                             <rect key="frame" x="16" y="44" width="343" height="43"/>
@@ -1498,7 +1506,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="USER STORY" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OMe-8C-O9Z" customClass="BadgeViewStyle" customModule="LoLympics" customModuleProvider="target">
-                                <rect key="frame" x="279" y="36" width="80" height="18"/>
+                                <rect key="frame" x="296" y="36" width="63" height="18"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.38431372549999998" green="0.73333333329999995" blue="0.27450980390000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -1508,6 +1516,11 @@
                                 <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="agy-nb-LWq"/>
+                                    </mask>
+                                </variation>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Jhe-zD-65Z" userLabel="RoundBtnViewStyle" customClass="RoundBtnViewStyle" customModule="LoLympics" customModuleProvider="target">
                                 <rect key="frame" x="16" y="20" width="49" height="49"/>
@@ -1609,8 +1622,10 @@
                                 <subviews>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login-logo" translatesAutoresizingMaskIntoConstraints="NO" id="3WI-gk-Dm7">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="500"/>
+                                        <animations/>
                                     </imageView>
                                 </subviews>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="bottom" secondItem="3WI-gk-Dm7" secondAttribute="bottom" id="BUr-21-Scb"/>
                                     <constraint firstItem="3WI-gk-Dm7" firstAttribute="centerX" secondItem="gC7-UR-6Ap" secondAttribute="centerX" id="Cy4-JL-hwf"/>
@@ -1625,6 +1640,7 @@
                             </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ohv-FE-uhD">
                                 <rect key="frame" x="325" y="20" width="50" height="50"/>
+                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="e15-1w-dPl"/>
                                     <constraint firstAttribute="width" constant="50" id="xzS-4L-ZJk"/>
@@ -1638,6 +1654,7 @@
                                 </connections>
                             </button>
                         </subviews>
+                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="gC7-UR-6Ap" firstAttribute="leading" secondItem="7ck-k6-7Nz" secondAttribute="leading" id="0KD-S4-Yxr"/>
@@ -1665,7 +1682,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dFh-aA-eJw" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1686.5" y="-567"/>
+            <point key="canvasLocation" x="1850.5" y="-437"/>
         </scene>
     </scenes>
     <resources>
@@ -1676,7 +1693,7 @@
         <image name="mask" width="750" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4f7-EL-GCu"/>
-        <segue reference="9OC-pK-jr8"/>
+        <segue reference="9PQ-4b-BD4"/>
+        <segue reference="tqm-Hi-gbU"/>
     </inferredMetricsTieBreakers>
 </document>
