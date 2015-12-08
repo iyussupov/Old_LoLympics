@@ -16,7 +16,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     var posts = [Post]()
     static var imageCache = NSCache()
-    var range = Range<Int>(start: 0, end: 2)
+    let postLimit = 2
+    var postSkip = 0
     var refreshControl:UIRefreshControl!
     var loadMoreStatus = false
     
@@ -44,10 +45,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let predicate = NSPredicate(format: "published = 1")
         let PostsQuery: PFQuery =  PFQuery(className:"Post", predicate: predicate)
         PostsQuery.addAscendingOrder("priority")
-        //PostsQuery.limit = 2
-        PostsQuery.skip = range.startIndex
-        
-        PostsQuery.limit = range.endIndex - range.startIndex
+        PostsQuery.skip = postSkip
+        PostsQuery.limit = postLimit
         
         PostsQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error: NSError?) -> Void in
             
@@ -65,7 +64,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 self.tableView.reloadData()
             }
             
-            
         }
     }
     
@@ -80,6 +78,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
                 self.posts = []
+                self.postSkip = 0
                 self.parseDataFromParse()
                 self.tableView.reloadData()
             }
@@ -115,8 +114,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func loadMoreBegin(newtext:String, loadMoreEnd:(Int) -> ()) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
-                
-                
+                self.postSkip += self.postLimit
                 self.parseDataFromParse()
             }
             sleep(2)
