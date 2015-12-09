@@ -169,7 +169,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell") as? CommentCell {
             
-         /*
+         
             var img: UIImage?
             
             if let url = post.featuredImg {
@@ -177,9 +177,8 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 img = DetailVC.imageCache.objectForKey(url) as? UIImage
                 
             }
-        */
             
-            cell.configureCommentCell(comment)
+            cell.configureCommentCell(comment, img: img)
             
             return cell
         } else {
