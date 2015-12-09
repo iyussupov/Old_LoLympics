@@ -16,6 +16,10 @@ class Comment {
     private var _text: String?
     
     private var _date: NSDate?
+    
+    private var _authorName: String?
+    
+    private var _authorAvatar: String?
 
     
     var text: String? {
@@ -30,15 +34,29 @@ class Comment {
         return _date
     }
     
-    init (text: String?, author:PFUser?, date: NSDate?) {
+    var authorName: String? {
+        return _authorName
+    }
+    
+    var authorAvatar: String? {
+        return _authorAvatar
+    }
+    
+    init (text: String?, author:PFUser?, date: NSDate?, authorName: String?, authorAvatar: String?) {
         self._text = text
         self._author = author
         self._date = date
+        self._authorName = authorName
+        self._authorAvatar = authorAvatar
     }
     
-    init(date: NSDate, dictionary: PFObject) {
+    init(date: NSDate, authorName: String, authorAvatar: String, dictionary: PFObject) {
         
         self._date = date
+        
+        self._authorName = authorName
+        
+        self._authorAvatar = authorAvatar
         
         if let text = dictionary["text"] as? String {
             self._text = text

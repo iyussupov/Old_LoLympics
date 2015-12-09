@@ -36,7 +36,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 160.0
        
-        posts = []
         self.postsCount()
         self.parseDataFromParse()
         
@@ -64,7 +63,9 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         PostsQuery.limit = postLimit
         PostsQuery.cachePolicy = .NetworkElseCache
         PostsQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error: NSError?) -> Void in
-            
+            if !self.loadMoreStatus {
+                self.posts = []
+            }
             if error == nil {
                 
                 for object in objects! {
@@ -72,8 +73,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     let key = object.objectId as String!
                     let date = object.createdAt as NSDate!
                     var commentCount:Int32! = 0
-                    
-                    
                     
                     let query = PFQuery(className:"Comment")
                     let postObject = PFObject(withoutDataWithClassName:"Post", objectId:key)
@@ -107,7 +106,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func refreshBegin(newtext:String, refreshEnd:(Int) -> ()) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
-                self.posts = []
                 self.postSkip = 0
                 self.parseDataFromParse()
                 self.tableView.reloadData()

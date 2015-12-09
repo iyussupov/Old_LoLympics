@@ -41,7 +41,6 @@ class CommentCell: UITableViewCell {
         self.textLbl.text = ""
         self.dateLbl.text = ""
         self.author.text = ""
-        self.avatar.image = UIImage(named: "avatar")
         
         self._comment = comment
         
@@ -58,30 +57,18 @@ class CommentCell: UITableViewCell {
             self.dateLbl.text = Date.stringFromDate(date)
             
         }
+        if let author = comment.authorName where author != "" {
+            self.author.text = author
+        } else {
+            self.author.hidden = true
+        }
         
-        let userId = comment.author?.objectId as String!
-        
-        let query = PFUser.query()
-        query?.whereKey("objectId", equalTo: userId)
-        query?.findObjectsInBackgroundWithBlock({ (NSArray objects, NSError error) -> Void in
-            if error == nil {
-                for user in objects! {
                     
-                    self.author.text = user["username"] as? String
-                    
-                    let userAvatar = user["avatar"]
-                    
-                    if userAvatar != nil {
+        if let avatar = comment.authorAvatar where avatar != "" {
                         
-                        self.avatar.downloadedFrom(link: userAvatar as! String, contentMode: UIViewContentMode.ScaleAspectFill)
+             self.avatar.downloadedFrom(link: avatar, contentMode: UIViewContentMode.ScaleAspectFill)
                         
-                    }
-                   
-                }
-            } else {
-                print(error)
-            }
-        })
+        }
         
         
     }

@@ -65,12 +65,34 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 for object in objects! {
                     
                     let date = object.createdAt as NSDate!
-                    let comment = Comment(date: date, dictionary: object)
-                    self.comments.append(comment)
+                    
+                    let userId = object["author"].objectId as String!
+                    
+                    let query = PFUser.query()
+                    query?.whereKey("objectId", equalTo: userId)
+                    query?.findObjectsInBackgroundWithBlock({ (NSArray objects, NSError error) -> Void in
+                        if error == nil {
+                            for user in objects! {
+                                
+                                let authorName = user["username"] as! String!
+                                let authorAvatar = user["avatar"] as! String!
+                                
+                                let comment = Comment(date: date, authorName: authorName, authorAvatar: authorAvatar, dictionary: object)
+                                
+                                self.comments.append(comment)
+
+                                self.tableView.reloadData()
+                                
+                            }
+                        } else {
+                            print(error)
+                        }
+                    })
+                    
+                    
                     
                 }
                 
-                self.tableView.reloadData()
             }
             
             
