@@ -35,8 +35,8 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 90.0
         
         self.loadComments()
         
@@ -163,7 +163,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         if !preventAnimation.contains(indexPath) {
             preventAnimation.insert(indexPath)
             cell.alpha = 0
-            UIView.animateWithDuration(1.0, animations: { () -> Void in
+            UIView.animateWithDuration(0.75, animations: { () -> Void in
                 cell.alpha = 1
             })
         }

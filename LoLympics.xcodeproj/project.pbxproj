@@ -10,11 +10,13 @@
 		26FF78CEA5C08AC27C7DCDB4 /* Pods_LoLympics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86021E96F96614F5F886CAC9 /* Pods_LoLympics.framework */; };
 		5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B01C0C31E700961E23 /* AppDelegate.swift */; };
 		5A0545B31C0C31E700961E23 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B21C0C31E700961E23 /* LogInVC.swift */; };
-		5A0545B61C0C31E700961E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B41C0C31E700961E23 /* Main.storyboard */; };
 		5A0545B81C0C31E700961E23 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B71C0C31E700961E23 /* Assets.xcassets */; };
 		5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */; };
 		5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545C61C0C34D100961E23 /* ionicons.ttf */; };
 		5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545C81C0C375C00961E23 /* ButtonClass.swift */; };
+		5A0FC1201C1985EF0044F584 /* LeftSideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FC11F1C1985EF0044F584 /* LeftSideVC.swift */; };
+		5A0FC1221C1986070044F584 /* RightSideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0FC1211C1986070044F584 /* RightSideVC.swift */; };
+		5A0FC1531C19B96D0044F584 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0FC1521C19B96D0044F584 /* Main.storyboard */; };
 		5AF0B3AC1C0EF56F0066F666 /* BadgeViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0B3AB1C0EF56F0066F666 /* BadgeViewStyle.swift */; };
 		5AF0B3AE1C0EFD440066F666 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0B3AD1C0EFD440066F666 /* PostCell.swift */; };
 		5AF505BB1C0D89D400819EE9 /* BtnViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */; };
@@ -40,12 +42,14 @@
 		5A0545AD1C0C31E700961E23 /* LoLympics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLympics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0545B01C0C31E700961E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A0545B21C0C31E700961E23 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
-		5A0545B51C0C31E700961E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5A0545B71C0C31E700961E23 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5A0545BA1C0C31E700961E23 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5A0545BC1C0C31E700961E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A0545C61C0C34D100961E23 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		5A0545C81C0C375C00961E23 /* ButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
+		5A0FC11F1C1985EF0044F584 /* LeftSideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideVC.swift; sourceTree = "<group>"; };
+		5A0FC1211C1986070044F584 /* RightSideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideVC.swift; sourceTree = "<group>"; };
+		5A0FC1521C19B96D0044F584 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5AF0B3AB1C0EF56F0066F666 /* BadgeViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeViewStyle.swift; sourceTree = "<group>"; };
 		5AF0B3AD1C0EFD440066F666 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnViewStyle.swift; sourceTree = "<group>"; };
@@ -108,7 +112,7 @@
 				5A0545C31C0C346300961E23 /* View */,
 				5A0545C21C0C345B00961E23 /* Controller */,
 				5A0545B01C0C31E700961E23 /* AppDelegate.swift */,
-				5A0545B41C0C31E700961E23 /* Main.storyboard */,
+				5A0FC1521C19B96D0044F584 /* Main.storyboard */,
 				5A0545B71C0C31E700961E23 /* Assets.xcassets */,
 				5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */,
 				5A0545BC1C0C31E700961E23 /* Info.plist */,
@@ -124,6 +128,8 @@
 				5AF505ED1C0DE33F00819EE9 /* MainVC.swift */,
 				98ED70B81C142C8300D1C5C0 /* DetailVC.swift */,
 				5AFD817C1C15C6140098D0F0 /* ViewerVC.swift */,
+				5A0FC11F1C1985EF0044F584 /* LeftSideVC.swift */,
+				5A0FC1211C1986070044F584 /* RightSideVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -261,7 +267,7 @@
 				5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */,
 				5A0545B81C0C31E700961E23 /* Assets.xcassets in Resources */,
 				5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */,
-				5A0545B61C0C31E700961E23 /* Main.storyboard in Resources */,
+				5A0FC1531C19B96D0044F584 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -321,6 +327,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5AF505E41C0DA53A00819EE9 /* RoundBtnViewStyle.swift in Sources */,
+				5A0FC1221C1986070044F584 /* RightSideVC.swift in Sources */,
 				98F5F3771C1374DC006B70A5 /* SendBtnClass.swift in Sources */,
 				98ED70B91C142C8300D1C5C0 /* DetailVC.swift in Sources */,
 				5AF505EE1C0DE33F00819EE9 /* MainVC.swift in Sources */,
@@ -338,6 +345,7 @@
 				5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */,
 				98F92E791C15473F007C1402 /* ImageFromUrl.swift in Sources */,
 				5AF5A3E61C1192BE00AD7813 /* Post.swift in Sources */,
+				5A0FC1201C1985EF0044F584 /* LeftSideVC.swift in Sources */,
 				5AF505EA1C0DB37100819EE9 /* DataService.swift in Sources */,
 				5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */,
 				5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */,
@@ -347,14 +355,6 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		5A0545B41C0C31E700961E23 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				5A0545B51C0C31E700961E23 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -454,6 +454,7 @@
 			baseConfigurationReference = 49525FE303982E1A2502061E /* Pods-LoLympics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/LoLympics",
@@ -463,6 +464,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.lolympics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -471,6 +474,7 @@
 			baseConfigurationReference = 67B32F7BCC25368ABAD5527F /* Pods-LoLympics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/LoLympics",
@@ -480,6 +484,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.lolympics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 			};
 			name = Release;
 		};

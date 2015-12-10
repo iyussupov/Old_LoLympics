@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="eG7-pg-TJz">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="14F1021" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="dUp-j8-zyh">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
@@ -1211,6 +1211,66 @@
             </objects>
             <point key="canvasLocation" x="1652.5" y="209.5"/>
         </scene>
+        <!--Left SideVC-->
+        <scene sceneID="ZrT-4F-jvX">
+            <objects>
+                <viewController storyboardIdentifier="LeftSideVC" id="yNP-td-RPL" customClass="LeftSideVC" customModule="LoLympics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Hzh-ZM-NHQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="uH9-u8-0CD"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="XDP-QF-PyM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="TxM-1W-HDg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="753.5" y="-515"/>
+        </scene>
+        <!--Right SideVC-->
+        <scene sceneID="SFP-1C-QPb">
+            <objects>
+                <viewController storyboardIdentifier="RightSideVC" id="isd-Oi-G2G" customClass="RightSideVC" customModule="LoLympics" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="eNc-ad-3q9"/>
+                        <viewControllerLayoutGuide type="bottom" id="4JW-4y-q3K"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="aJd-PF-q5N">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A5s-3c-iec" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1187.5" y="-508"/>
+        </scene>
+        <!--Dynamics Drawer View Controller-->
+        <scene sceneID="4UE-Bf-VSL">
+            <objects>
+                <viewController id="dUp-j8-zyh" customClass="MSDynamicsDrawerViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="YeQ-xI-f5f"/>
+                        <viewControllerLayoutGuide type="bottom" id="FaK-Ac-WLI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UUy-bh-kJh">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+                    <size key="freeformSize" width="375" height="600"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xav-qe-PNW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="270.5" y="-223"/>
+        </scene>
         <!--Navigation Controller-->
         <scene sceneID="BVF-Wj-t3L">
             <objects>
@@ -1747,7 +1807,7 @@
         <image name="mask" width="750" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="tqm-Hi-gbU"/>
         <segue reference="9PQ-4b-BD4"/>
-        <segue reference="9OC-pK-jr8"/>
     </inferredMetricsTieBreakers>
 </document>

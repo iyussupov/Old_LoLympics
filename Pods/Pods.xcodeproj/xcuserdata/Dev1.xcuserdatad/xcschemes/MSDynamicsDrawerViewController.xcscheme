@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '8717F7170BF9ACC803CFA2F8'
-               BlueprintName = 'Pods-LoLympics'
+               BlueprintIdentifier = 'F70849A44F399C85D16DB2E7'
+               BlueprintName = 'MSDynamicsDrawerViewController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'Pods_LoLympics.framework'>
+               BuildableName = 'MSDynamicsDrawerViewController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
