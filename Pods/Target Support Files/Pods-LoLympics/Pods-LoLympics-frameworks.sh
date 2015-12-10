@@ -89,7 +89,6 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-LoLympics/FBSDKLoginKit.framework"
   install_framework "Pods-LoLympics/FBSDKMessengerShareKit.framework"
   install_framework "Pods-LoLympics/FBSDKShareKit.framework"
-  install_framework "Pods-LoLympics/MSDynamicsDrawerViewController.framework"
   install_framework "Pods-LoLympics/Parse.framework"
   install_framework "Pods-LoLympics/ParseFacebookUtilsV4.framework"
 fi
@@ -99,7 +98,6 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-LoLympics/FBSDKLoginKit.framework"
   install_framework "Pods-LoLympics/FBSDKMessengerShareKit.framework"
   install_framework "Pods-LoLympics/FBSDKShareKit.framework"
-  install_framework "Pods-LoLympics/MSDynamicsDrawerViewController.framework"
   install_framework "Pods-LoLympics/Parse.framework"
   install_framework "Pods-LoLympics/ParseFacebookUtilsV4.framework"
 fi

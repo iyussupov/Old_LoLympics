@@ -186,7 +186,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             if !preventAnimation.contains(indexPath) {
                 preventAnimation.insert(indexPath)
                 cell.alpha = 0
-                UIView.animateWithDuration(0.75, animations: { () -> Void in
+                UIView.animateWithDuration(1.0, animations: { () -> Void in
                     cell.alpha = 1
                 })
             }
