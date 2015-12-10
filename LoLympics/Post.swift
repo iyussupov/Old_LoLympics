@@ -27,7 +27,7 @@ class Post {
     
     private var _postKey: String!
     
-    private var _commentCount: Int32!
+    private var _commentCount: Int!
     
     var title: String? {
         return _title
@@ -61,11 +61,11 @@ class Post {
         return _postKey
     }
     
-    var commentCount: Int32! {
+    var commentCount: Int? {
         return _commentCount
     }
     
-    init (title: String?, excerpt: String?, content: String?, featuredImg: PFFile?, category: String?, date: NSDate?, imageDesc:String?, commentCount:Int32) {
+    init (title: String?, excerpt: String?, content: String?, featuredImg: PFFile?, category: String?, date: NSDate?, imageDesc:String?, commentCount:Int?) {
         self._title = title
         self._excerpt = excerpt
         self._content = content
@@ -76,11 +76,10 @@ class Post {
         self._commentCount = commentCount
     }
     
-    init(postKey: String, date: NSDate, commentCount:Int32, dictionary: PFObject) {
+    init(postKey: String, date: NSDate, dictionary: PFObject) {
         
         self._postKey = postKey
         self._date = date
-        self._commentCount = commentCount
         
         if let title = dictionary["title"] as? String {
             self._title = title
@@ -104,6 +103,10 @@ class Post {
         
         if let featuredImg = dictionary["featuredImage"] as? PFFile {
             self._featuredImg = featuredImg
+        }
+        
+        if let commentCount = dictionary["comments"] as? Int {
+            self._commentCount = commentCount
         }
         
 

@@ -226,9 +226,13 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         if commentTextField.text != "" {
             
+            let postObject = PFObject(withoutDataWithClassName: "Post", objectId: post.postKey)
+            postObject.incrementKey("comments", byAmount: 1)
+            postObject.saveInBackground()
+            
             let newComment = PFObject(className:"Comment")
             newComment["text"] = commentTextField.text
-            newComment["post"] = PFObject(withoutDataWithClassName:"Post", objectId: post.postKey)
+            newComment["post"] = postObject
             newComment["author"] = PFUser.currentUser()
             newComment.saveInBackground()
             commentTextField.text = ""

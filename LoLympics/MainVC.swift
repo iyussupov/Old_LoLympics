@@ -72,23 +72,14 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     
                     let key = object.objectId as String!
                     let date = object.createdAt as NSDate!
-                    var commentCount:Int32! = 0
+                    let post = Post(postKey: key, date: date, dictionary: object)
+                    self.posts.append(post)
                     
-                    let query = PFQuery(className:"Comment")
-                    let postObject = PFObject(withoutDataWithClassName:"Post", objectId:key)
-                    query.whereKey("post", equalTo: postObject)
-                    query.countObjectsInBackgroundWithBlock {
-                        (count: Int32, error: NSError?) -> Void in
-                        if error == nil {
-                            commentCount = count
-                            let post = Post(postKey: key, date: date, commentCount: commentCount, dictionary: object)
-                            self.posts.append(post)
-                            self.tableView.reloadData()
-                        }
-                    }
                 }
                 
             }
+            
+            self.tableView.reloadData()
             
         }
     }
