@@ -148,15 +148,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell") as? CommentCell {
             
-            var avatar: UIImage?
-            
-            if let avatarUrl = comment.authorAvatar {
-                
-                avatar = DetailVC.imageCache.objectForKey(avatarUrl) as? UIImage
-                
-            }
-            
-            cell.configureCommentCell(comment, img: avatar)
+            cell.configureCommentCell(comment)
             
             return cell
         } else {

@@ -37,7 +37,7 @@ class CommentCell: UITableViewCell {
     }
     
     
-    func configureCommentCell(comment: Comment, img: UIImage?) {
+    func configureCommentCell(comment: Comment) {
         self.textLbl.text = ""
         self.dateLbl.text = ""
         self.author.text = ""
@@ -65,18 +65,11 @@ class CommentCell: UITableViewCell {
         }
         
         
-        if let avatar = comment.authorAvatar where avatar != "" {
-            print(img)
-            print(avatar)
-            if img != nil {
-                self.avatar.image = img
-                
-            } else {
-                print("loading image")
-                self.avatar.downloadedFrom(link: avatar, contentMode: UIViewContentMode.ScaleAspectFill)
-                DetailVC.imageCache.setObject(avatar, forKey: self.comment!.authorAvatar!)
-              
-            }
+        if let avatarUrl = comment.authorAvatar where avatar != "" {
+            
+            ImageLoader.sharedLoader.imageForUrl(avatarUrl, completionHandler:{(image: UIImage?, url: String) in
+                self.avatar.image = image
+            })
             
         } else {
             self.avatar.image = UIImage(named: "avatar")
