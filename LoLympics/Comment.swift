@@ -50,20 +50,20 @@ class Comment {
         self._authorAvatar = authorAvatar
     }
     
-    init(date: NSDate, authorName: String, authorAvatar: String, dictionary: PFObject) {
+    init(date: NSDate, dictionary: PFObject) {
         
         self._date = date
-        
-        self._authorName = authorName
-        
-        self._authorAvatar = authorAvatar
         
         if let text = dictionary["text"] as? String {
             self._text = text
         }
         
-        if let author = dictionary["author"] as? PFUser {
-            self._author = author
+        if let authorName = dictionary["author"]["username"] as? String {
+            self._authorName = authorName
+        }
+        
+        if let authorAvatar = dictionary["author"]["avatar"] as? String {
+            self._authorAvatar = authorAvatar
         }
         
         

@@ -57,24 +57,20 @@ class CommentCell: UITableViewCell {
             self.dateLbl.text = Date.stringFromDate(date)
             
         }
+        
         if let author = comment.authorName where author != "" {
             self.author.text = author
         } else {
             self.author.hidden = true
         }
         
-                    
-        if let avatar = comment.authorAvatar where avatar != "" {
-                        
-             self.avatar.downloadedFrom(link: avatar, contentMode: UIViewContentMode.ScaleAspectFill)
-                        
-        }
         
         if let avatar = comment.authorAvatar where avatar != "" {
-            
+            print(img)
+            print(avatar)
             if img != nil {
                 self.avatar.image = img
-                print(img)
+                
             } else {
                 print("loading image")
                 self.avatar.downloadedFrom(link: avatar, contentMode: UIViewContentMode.ScaleAspectFill)

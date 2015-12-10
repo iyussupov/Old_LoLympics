@@ -54,6 +54,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let CommentsQuery: PFQuery =  PFQuery(className:"Comment")
         CommentsQuery.whereKey("post", equalTo: PFObject(withoutDataWithClassName: "Post", objectId: self.post.postKey))
+        CommentsQuery.includeKey("author")
         CommentsQuery.addAscendingOrder("createdAt")
         
         comments = []
@@ -66,35 +67,13 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                     
                     let date = object.createdAt as NSDate!
                     
-                    let userId = object["author"].objectId as String!
+                    let comment = Comment(date: date, dictionary: object)
                     
-                    let query = PFUser.query()
-                    query?.whereKey("objectId", equalTo: userId)
-                    query?.findObjectsInBackgroundWithBlock({ (NSArray objects, NSError error) -> Void in
-                        if error == nil {
-                            for user in objects! {
-                                
-                                let authorName = user["username"] as! String!
-                                let authorAvatar = user["avatar"] as! String!
-                                
-                                let comment = Comment(date: date, authorName: authorName, authorAvatar: authorAvatar, dictionary: object)
-                                
-                                self.comments.append(comment)
-
-                                self.tableView.reloadData()
-                                
-                            }
-                        } else {
-                            print(error)
-                        }
-                    })
-                    
-                    
+                    self.comments.append(comment)
                     
                 }
-                
             }
-            
+            self.tableView.reloadData()
             
         }
     }
@@ -169,16 +148,15 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         if let cell = tableView.dequeueReusableCellWithIdentifier("CommentCell") as? CommentCell {
             
-         
-            var img: UIImage?
+            var avatar: UIImage?
             
-            if let url = post.featuredImg {
+            if let avatarUrl = comment.authorAvatar {
                 
-                img = DetailVC.imageCache.objectForKey(url) as? UIImage
+                avatar = DetailVC.imageCache.objectForKey(avatarUrl) as? UIImage
                 
             }
             
-            cell.configureCommentCell(comment, img: img)
+            cell.configureCommentCell(comment, img: avatar)
             
             return cell
         } else {
