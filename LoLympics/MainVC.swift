@@ -22,6 +22,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var refreshControl:UIRefreshControl!
     var loadMoreStatus = false
     var isRefreshing = false
+    var preventAnimation = Set<NSIndexPath>()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -33,8 +34,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         
+        tableView.estimatedRowHeight = tableView.rowHeight
         tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 160.0
        
         self.postsCount()
         self.parseDataFromParse()
@@ -97,6 +98,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     func refreshBegin(newtext:String, refreshEnd:(Int) -> ()) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0)) {
             dispatch_async(dispatch_get_main_queue()) {
+                self.preventAnimation.removeAll()
                 self.postSkip = 0
                 self.parseDataFromParse()
                 self.tableView.reloadData()
@@ -178,6 +180,16 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             return PostCell()
         }
         
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+            if !preventAnimation.contains(indexPath) {
+                preventAnimation.insert(indexPath)
+                cell.alpha = 0
+                UIView.animateWithDuration(1.0, animations: { () -> Void in
+                    cell.alpha = 1
+                })
+            }
     }
     
     func showImageViewer(sender:AnyObject) {

@@ -61,14 +61,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="8eE-wK-L3x" userLabel="FacebookLoginBtnTxt">
                                                         <rect key="frame" x="68" y="0.0" width="158" height="38"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-MY-sFT">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fqa-MY-sFT">
                                                                 <rect key="frame" x="0.0" y="0.0" width="9" height="38"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" name="Ionicons" family="Ionicons" pointSize="24"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login with Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drE-TZ-GBE">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Facebook" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="drE-TZ-GBE">
                                                                 <rect key="frame" x="25" y="0.0" width="133" height="38"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -104,14 +104,14 @@
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-Pe-ptj" userLabel="TwitterLoginBtnTxt">
                                                         <rect key="frame" x="70" y="0.0" width="155" height="38"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5F-O9-0vX">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5F-O9-0vX">
                                                                 <rect key="frame" x="0.0" y="0.0" width="23" height="38"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" name="Ionicons" family="Ionicons" pointSize="24"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login with Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u7-6H-AX5">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u7-6H-AX5">
                                                                 <rect key="frame" x="38" y="0.0" width="117" height="38"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -251,17 +251,17 @@
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2aW-Nr-2Uh" userLabel="LoginBGView" customClass="BtnViewStyle" customModule="LoLympics" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="510" width="295" height="38"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cnT-XP-bh7" userLabel="EmailLoginBtnTxt">
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="cnT-XP-bh7" userLabel="EmailLoginBtnTxt">
                                                         <rect key="frame" x="123" y="0.0" width="49" height="38"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-dZ-T39">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y6R-dZ-T39">
                                                                 <rect key="frame" x="0.0" y="0.0" width="36" height="38"/>
                                                                 <animations/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-La-aMp">
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abd-La-aMp">
                                                                 <rect key="frame" x="44" y="0.0" width="5" height="38"/>
                                                                 <animations/>
                                                                 <constraints>
@@ -617,17 +617,17 @@
                                                     <constraint firstAttribute="height" constant="38" id="0l2-s6-WGP"/>
                                                 </constraints>
                                             </view>
-                                            <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hnd-3U-F1y" userLabel="EmailLoginBtnTxt">
+                                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Hnd-3U-F1y" userLabel="EmailLoginBtnTxt">
                                                 <rect key="frame" x="156" y="465" width="64" height="38"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbo-ud-cQC">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sign Up" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zbo-ud-cQC">
                                                         <rect key="frame" x="0.0" y="0.0" width="51" height="38"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                         <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UB-AX-vIX">
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3UB-AX-vIX">
                                                         <rect key="frame" x="59" y="0.0" width="5" height="38"/>
                                                         <animations/>
                                                         <constraints>
@@ -903,7 +903,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HcI-Wj-hUz">
-                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="430"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="431"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DZA-cx-WcO">
                                                             <rect key="frame" x="16" y="19" width="10" height="14"/>
@@ -954,15 +954,30 @@
                                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Another 10 places in the shooting competition at the Rio 2016 Olympic Games were confirmed at the Shotgun World ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPi-mu-CIe">
+                                                            <rect key="frame" x="16" y="95" width="343" height="32"/>
+                                                            <animations/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="height" constant="36" id="jlM-5g-7sE"/>
+                                                            </constraints>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                            <variation key="default">
+                                                                <mask key="constraints">
+                                                                    <exclude reference="jlM-5g-7sE"/>
+                                                                </mask>
+                                                            </variation>
+                                                        </label>
                                                         <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="mask" translatesAutoresizingMaskIntoConstraints="NO" id="yeV-02-6Kc">
-                                                            <rect key="frame" x="0.0" y="139" width="375" height="234"/>
+                                                            <rect key="frame" x="0.0" y="140" width="375" height="234"/>
                                                             <animations/>
                                                             <constraints>
                                                                 <constraint firstAttribute="height" constant="234" id="Eh0-wQ-fZu"/>
                                                             </constraints>
                                                         </imageView>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K71-0r-j1d" customClass="RoundBtnViewStyle" customModule="LoLympics" customModuleProvider="target">
-                                                            <rect key="frame" x="310" y="347" width="49" height="49"/>
+                                                            <rect key="frame" x="310" y="348" width="49" height="49"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bJg-Da-giu">
                                                                     <rect key="frame" x="0.0" y="0.0" width="49" height="49"/>
@@ -986,19 +1001,19 @@
                                                             </constraints>
                                                         </view>
                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DHL-fE-3S8" userLabel="postShareBtn">
-                                                            <rect key="frame" x="310" y="347" width="49" height="49"/>
+                                                            <rect key="frame" x="310" y="348" width="49" height="49"/>
                                                             <animations/>
                                                             <connections>
                                                                 <action selector="postShareAction:" destination="suH-sr-8Qn" eventType="touchUpInside" id="0St-MM-oeE"/>
                                                             </connections>
                                                         </button>
                                                         <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="pfK-MJ-sVN">
-                                                            <rect key="frame" x="16" y="387" width="294" height="29"/>
+                                                            <rect key="frame" x="16" y="388" width="294" height="29"/>
                                                             <subviews>
-                                                                <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GoB-nb-E5q">
+                                                                <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="GoB-nb-E5q">
                                                                     <rect key="frame" x="0.0" y="0.0" width="23" height="15"/>
                                                                     <subviews>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-PV-L7V">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ibp-PV-L7V">
                                                                             <rect key="frame" x="0.0" y="0.0" width="10" height="15"/>
                                                                             <animations/>
                                                                             <constraints>
@@ -1015,7 +1030,7 @@
                                                                                 </mask>
                                                                             </variation>
                                                                         </label>
-                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="022-SA-5WX">
+                                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" text="4" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="022-SA-5WX">
                                                                             <rect key="frame" x="15" y="0.0" width="8" height="15"/>
                                                                             <animations/>
                                                                             <constraints>
@@ -1047,7 +1062,7 @@
                                                                         </mask>
                                                                     </variation>
                                                                 </stackView>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Rio Olympic Games 2016 Rio Olympic Games 2016 Rio Olympic Games 2016" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-OZ-ukO">
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rio Olympic Games 2016 Rio Olympic Games 2016 Rio Olympic Games 2016" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8X5-OZ-ukO">
                                                                     <rect key="frame" x="31" y="0.0" width="263" height="29"/>
                                                                     <animations/>
                                                                     <constraints>
@@ -1067,21 +1082,13 @@
                                                             </subviews>
                                                             <animations/>
                                                         </stackView>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalCompressionResistancePriority="749" text="Another 10 places in the shooting competition at the Rio 2016 Olympic Games were confirmed at the Shotgun World ..." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OPi-mu-CIe">
-                                                            <rect key="frame" x="16" y="95" width="343" height="31"/>
-                                                            <animations/>
+                                                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SP9-pj-0JT">
+                                                            <rect key="frame" x="0.0" y="430" width="375" height="1"/>
+                                                            <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
                                                             <constraints>
-                                                                <constraint firstAttribute="height" constant="36" id="jlM-5g-7sE"/>
+                                                                <constraint firstAttribute="height" constant="1" id="AfX-eQ-taQ"/>
                                                             </constraints>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                            <nil key="highlightedColor"/>
-                                                            <variation key="default">
-                                                                <mask key="constraints">
-                                                                    <exclude reference="jlM-5g-7sE"/>
-                                                                </mask>
-                                                            </variation>
-                                                        </label>
+                                                        </view>
                                                     </subviews>
                                                     <animations/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1092,7 +1099,9 @@
                                                         <constraint firstItem="iAd-vz-K59" firstAttribute="baseline" secondItem="DZA-cx-WcO" secondAttribute="baseline" id="38V-GW-lzD"/>
                                                         <constraint firstItem="iAd-vz-K59" firstAttribute="leading" secondItem="DZA-cx-WcO" secondAttribute="trailing" constant="3" id="3OS-ck-ljT"/>
                                                         <constraint firstItem="DZA-cx-WcO" firstAttribute="top" secondItem="HcI-Wj-hUz" secondAttribute="top" constant="19" id="42c-Cd-fQI"/>
+                                                        <constraint firstItem="SP9-pj-0JT" firstAttribute="top" secondItem="pfK-MJ-sVN" secondAttribute="bottom" constant="13" id="9mS-Ej-0zI"/>
                                                         <constraint firstItem="DHL-fE-3S8" firstAttribute="top" secondItem="OPi-mu-CIe" secondAttribute="bottom" constant="2" id="FBZ-Zv-ME0"/>
+                                                        <constraint firstAttribute="trailing" secondItem="SP9-pj-0JT" secondAttribute="trailing" id="IjH-eT-1li"/>
                                                         <constraint firstItem="OPi-mu-CIe" firstAttribute="top" secondItem="nz6-qT-EkE" secondAttribute="bottom" constant="8" id="K8c-dk-00i"/>
                                                         <constraint firstItem="pfK-MJ-sVN" firstAttribute="top" secondItem="yeV-02-6Kc" secondAttribute="bottom" constant="14" id="MXa-F4-nxT"/>
                                                         <constraint firstAttribute="bottom" secondItem="K71-0r-j1d" secondAttribute="bottom" constant="14" id="Rvh-ff-E9Y"/>
@@ -1101,10 +1110,12 @@
                                                         <constraint firstAttribute="trailing" secondItem="pfK-MJ-sVN" secondAttribute="trailing" constant="65" id="XrJ-UE-SzM"/>
                                                         <constraint firstItem="pfK-MJ-sVN" firstAttribute="leading" secondItem="HcI-Wj-hUz" secondAttribute="leading" constant="16" id="cai-hT-oSr"/>
                                                         <constraint firstItem="iAd-vz-K59" firstAttribute="top" secondItem="HcI-Wj-hUz" secondAttribute="top" constant="20" id="g5c-zO-cna"/>
+                                                        <constraint firstItem="SP9-pj-0JT" firstAttribute="leading" secondItem="HcI-Wj-hUz" secondAttribute="leading" id="gdP-3H-SoM"/>
                                                         <constraint firstItem="DZA-cx-WcO" firstAttribute="leading" secondItem="HcI-Wj-hUz" secondAttribute="leading" constant="16" id="jlw-jE-4yn"/>
                                                         <constraint firstItem="K71-0r-j1d" firstAttribute="centerY" secondItem="DHL-fE-3S8" secondAttribute="centerY" id="jxD-0z-dO0"/>
                                                         <constraint firstAttribute="bottom" secondItem="pfK-MJ-sVN" secondAttribute="bottom" constant="14" id="lJc-rb-AcZ"/>
                                                         <constraint firstItem="yeV-02-6Kc" firstAttribute="leading" secondItem="HcI-Wj-hUz" secondAttribute="leading" id="lKU-4E-RQy"/>
+                                                        <constraint firstAttribute="bottom" secondItem="SP9-pj-0JT" secondAttribute="bottom" id="nk7-jK-mNs"/>
                                                         <constraint firstAttribute="trailing" secondItem="K71-0r-j1d" secondAttribute="trailing" constant="16" id="nlJ-AP-G4S"/>
                                                         <constraint firstItem="K71-0r-j1d" firstAttribute="height" secondItem="DHL-fE-3S8" secondAttribute="height" id="peR-Tp-PoD"/>
                                                         <constraint firstAttribute="trailing" secondItem="yeV-02-6Kc" secondAttribute="trailing" id="pqd-yU-p9H"/>
@@ -1120,6 +1131,7 @@
                                                         <mask key="constraints">
                                                             <exclude reference="38V-GW-lzD"/>
                                                             <exclude reference="3OS-ck-ljT"/>
+                                                            <exclude reference="lJc-rb-AcZ"/>
                                                             <exclude reference="FBZ-Zv-ME0"/>
                                                             <exclude reference="Rvh-ff-E9Y"/>
                                                         </mask>
@@ -1128,14 +1140,14 @@
                                             </subviews>
                                             <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="bottom" secondItem="HcI-Wj-hUz" secondAttribute="bottom" constant="1" id="Nhj-bo-w8F"/>
+                                                <constraint firstAttribute="bottom" secondItem="HcI-Wj-hUz" secondAttribute="bottom" id="Nhj-bo-w8F"/>
                                                 <constraint firstItem="HcI-Wj-hUz" firstAttribute="leading" secondItem="fLc-BZ-dTw" secondAttribute="leading" id="Oho-Pf-qTB"/>
                                                 <constraint firstAttribute="trailing" secondItem="HcI-Wj-hUz" secondAttribute="trailing" id="PLP-dd-4bn"/>
                                                 <constraint firstItem="HcI-Wj-hUz" firstAttribute="top" secondItem="fLc-BZ-dTw" secondAttribute="top" id="Wtn-w2-hyb"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
-                                        <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="categoryLbl" destination="Nnl-P7-aIU" id="puB-Ug-abK"/>
                                             <outlet property="cellFooterView" destination="pfK-MJ-sVN" id="gep-8C-uWC"/>
@@ -1736,6 +1748,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9PQ-4b-BD4"/>
-        <segue reference="9OC-pK-jr8"/>
+        <segue reference="tqm-Hi-gbU"/>
     </inferredMetricsTieBreakers>
 </document>
