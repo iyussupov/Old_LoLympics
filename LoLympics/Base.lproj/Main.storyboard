@@ -1461,8 +1461,8 @@
                                                         </mask>
                                                     </variation>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="avatar_mask" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-S2-MDt" customClass="AvatarView" customModule="LoLympics" customModuleProvider="target">
-                                                    <rect key="frame" x="16" y="9" width="49" height="49"/>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar_mask" translatesAutoresizingMaskIntoConstraints="NO" id="VRL-S2-MDt" customClass="AvatarView" customModule="LoLympics" customModuleProvider="target">
+                                                    <rect key="frame" x="16" y="11" width="50" height="50"/>
                                                     <animations/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="50" id="fbV-oD-WUL"/>
@@ -1748,6 +1748,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="9PQ-4b-BD4"/>
-        <segue reference="tqm-Hi-gbU"/>
+        <segue reference="9OC-pK-jr8"/>
     </inferredMetricsTieBreakers>
 </document>

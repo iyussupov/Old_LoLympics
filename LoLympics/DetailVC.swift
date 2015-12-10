@@ -22,6 +22,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var post: Post!
     var comments = [Comment]()
     static var imageCache = NSCache()
+    var preventAnimation = Set<NSIndexPath>()
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var headerImage: UIImageView!
@@ -156,6 +157,16 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         
         
+    }
+    
+    func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+        if !preventAnimation.contains(indexPath) {
+            preventAnimation.insert(indexPath)
+            cell.alpha = 0
+            UIView.animateWithDuration(1.0, animations: { () -> Void in
+                cell.alpha = 1
+            })
+        }
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {
