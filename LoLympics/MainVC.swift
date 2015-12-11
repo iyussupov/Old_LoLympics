@@ -27,6 +27,8 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "contentSizeDidChangeNotification:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
+        
         self.refreshControl = UIRefreshControl()
         self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
         self.tableView.addSubview(refreshControl)
@@ -220,6 +222,14 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
                 }
             }
         }
+    }
+    
+    @IBAction func openMenu(sender: AnyObject) {
+        self.evo_drawerController?.toggleDrawerSide(.Left, animated: true, completion: nil)
+    }
+    
+    @IBAction func openSearch(sender: AnyObject) {
+        self.evo_drawerController?.toggleDrawerSide(.Right, animated: true, completion: nil)
     }
     
     

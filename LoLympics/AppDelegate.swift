@@ -10,11 +10,13 @@ import UIKit
 import Parse
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
+import DrawerController
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    var drawerController: DrawerController!
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
@@ -22,6 +24,33 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("DWyFUzP1IVWsazJyqA1q0NwLMdTPyTo4ypLNxzKg", clientKey: "wjw3nYXfyejxTIc1sFLkLS80h7lO8GUFJTuVID8H")
         PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        
+        let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        
+        let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainVC") as! MainVC
+        
+        let rightSideNavController = mainStoryboard.instantiateViewControllerWithIdentifier("RightSideVC") as! RightSideVC
+        
+        let leftSideNavController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftSideVC") as! LeftSideVC
+        
+        self.drawerController = DrawerController(centerViewController: centerViewController, leftDrawerViewController: leftSideNavController, rightDrawerViewController: rightSideNavController)
+        
+        
+        
+        self.drawerController.showsShadows = true
+        self.drawerController.restorationIdentifier = "Drawer"
+        self.drawerController.openDrawerGestureModeMask = .All
+        self.drawerController.closeDrawerGestureModeMask = .All
+        
+        self.drawerController.drawerVisualStateBlock = { (drawerController, drawerSide, percentVisible) in
+            let block = ExampleDrawerVisualStateManager.sharedManager.drawerVisualStateBlockForDrawerSide(drawerSide)
+            block?(drawerController, drawerSide, percentVisible)
+        }
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = self.drawerController
+        self.window?.makeKeyAndVisible()
         
         return true
     }

@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-LoLympics/Bolts.framework"
+  install_framework "Pods-LoLympics/DrawerController.framework"
   install_framework "Pods-LoLympics/FBSDKCoreKit.framework"
   install_framework "Pods-LoLympics/FBSDKLoginKit.framework"
   install_framework "Pods-LoLympics/FBSDKMessengerShareKit.framework"
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-LoLympics/Bolts.framework"
+  install_framework "Pods-LoLympics/DrawerController.framework"
   install_framework "Pods-LoLympics/FBSDKCoreKit.framework"
   install_framework "Pods-LoLympics/FBSDKLoginKit.framework"
   install_framework "Pods-LoLympics/FBSDKMessengerShareKit.framework"

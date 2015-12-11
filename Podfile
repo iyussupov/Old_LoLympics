@@ -9,4 +9,5 @@ pod 'FBSDKCoreKit'
 pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKMessengerShareKit'
+pod 'DrawerController', '~> 1.0'
 end
