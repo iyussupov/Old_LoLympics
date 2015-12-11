@@ -27,11 +27,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
         
-        //let navigationController = UINavigationController()
+        var centerViewController:UIViewController = UIViewController()
         
-        //let loginViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LogInVC") as! LogInVC
-        
-        let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainVC") as! MainVC
+        if PFUser.currentUser() != nil {
+            centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainVC") as! MainVC
+        } else {
+            centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LogInVC") as! LogInVC
+        }
         
         let rightSideNavController = mainStoryboard.instantiateViewControllerWithIdentifier("RightSideVC") as! RightSideVC
         
@@ -47,17 +49,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         self.drawerController.restorationIdentifier = "Drawer"
         self.drawerController.openDrawerGestureModeMask = .All
         self.drawerController.closeDrawerGestureModeMask = .All
-        
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        //self.window?.rootViewController = self.drawerController
-        //self.window?.makeKeyAndVisible()
-        
-        if PFUser.currentUser() != nil {
-           // navigationController.pushViewController(centerViewController, animated: false)
-        } else {
-          //  navigationController.pushViewController(loginViewController, animated: false)
-        }
-        
+     
         self.window?.rootViewController = self.drawerController
         self.window?.makeKeyAndVisible()
         
