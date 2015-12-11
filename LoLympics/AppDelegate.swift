@@ -26,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let navigationController = UINavigationController()
         
-        let loginViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LogInVC") as! LogInVC
+        //let navigationController = UINavigationController()
+        
+        //let loginViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LogInVC") as! LogInVC
         
         let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainVC") as! MainVC
         
@@ -36,27 +37,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let leftSideNavController = mainStoryboard.instantiateViewControllerWithIdentifier("LeftSideVC") as! LeftSideVC
         
-        self.drawerController = DrawerController(centerViewController: centerViewController, leftDrawerViewController: leftSideNavController, rightDrawerViewController: rightSideNavController)
+        let leftSideNav = UINavigationController(rootViewController: leftSideNavController)
+        let centerNav = UINavigationController(rootViewController: centerViewController)
+        let rightNav = UINavigationController(rootViewController: rightSideNavController)
         
-       // self.drawerController.showsShadows = true
-       // self.drawerController.restorationIdentifier = "Drawer"
-       // self.drawerController.openDrawerGestureModeMask = .All
-      //  self.drawerController.closeDrawerGestureModeMask = .All
+        self.drawerController = DrawerController(centerViewController: centerNav, leftDrawerViewController: leftSideNav, rightDrawerViewController: rightNav)
         
-        //self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.drawerController.showsShadows = true
+        self.drawerController.restorationIdentifier = "Drawer"
+        self.drawerController.openDrawerGestureModeMask = .All
+        self.drawerController.closeDrawerGestureModeMask = .All
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
         //self.window?.rootViewController = self.drawerController
         //self.window?.makeKeyAndVisible()
         
         if PFUser.currentUser() != nil {
-            
-            navigationController.pushViewController(centerViewController, animated: false)
-            
+           // navigationController.pushViewController(centerViewController, animated: false)
         } else {
-            
-            navigationController.pushViewController(loginViewController, animated: false)
+          //  navigationController.pushViewController(loginViewController, animated: false)
         }
         
-        self.window?.rootViewController = navigationController
+        self.window?.rootViewController = self.drawerController
         self.window?.makeKeyAndVisible()
         
         return true

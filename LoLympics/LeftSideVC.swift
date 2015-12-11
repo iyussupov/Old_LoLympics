@@ -16,9 +16,11 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBarHidden = true
         //
         self.navigationController?.view.setNeedsLayout()
         //
+        
     }
     
     override func viewDidLoad() {

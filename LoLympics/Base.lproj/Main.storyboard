@@ -808,7 +808,7 @@
         <!--MainVC-->
         <scene sceneID="5q3-DC-nJh">
             <objects>
-                <viewController storyboardIdentifier="MainVC" id="4Ha-oY-g2l" customClass="MainVC" customModule="LoLympics" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="MainVC" useStoryboardIdentifierAsRestorationIdentifier="YES" id="4Ha-oY-g2l" customClass="MainVC" customModule="LoLympics" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Ecy-7C-Gif"/>
                         <viewControllerLayoutGuide type="bottom" id="9vO-A7-9sN"/>
@@ -1215,7 +1215,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xxL-eY-nTM" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="IOY-AV-RZ4"/>
             </objects>
-            <point key="canvasLocation" x="1652.5" y="209.5"/>
+            <point key="canvasLocation" x="1744.5" y="209.5"/>
         </scene>
         <!--Left SideVC-->
         <scene sceneID="5jj-xE-mhn">
@@ -1309,6 +1309,7 @@
         <!--Navigation Controller-->
         <scene sceneID="BVF-Wj-t3L">
             <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="byZ-N6-mjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="eG7-pg-TJz" sceneMemberID="viewController">
                     <toolbarItems/>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
@@ -1323,7 +1324,6 @@
                         <segue destination="1Yd-68-KPb" kind="relationship" relationship="rootViewController" id="6wG-Ap-hga"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="byZ-N6-mjO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="677.5" y="211"/>
         </scene>
@@ -1898,7 +1898,7 @@
         <image name="mask" width="750" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4f7-EL-GCu"/>
+        <segue reference="9PQ-4b-BD4"/>
         <segue reference="tqm-Hi-gbU"/>
     </inferredMetricsTieBreakers>
 </document>
