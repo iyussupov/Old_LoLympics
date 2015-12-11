@@ -11,6 +11,7 @@
 		5A03EC5D1C1ACAE30000FCA9 /* RightSideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03EC5C1C1ACAE30000FCA9 /* RightSideVC.swift */; };
 		5A03EC5F1C1ACAF20000FCA9 /* LeftSideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03EC5E1C1ACAF20000FCA9 /* LeftSideVC.swift */; };
 		5A03EC611C1ACB670000FCA9 /* DrawerVisualStateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03EC601C1ACB670000FCA9 /* DrawerVisualStateManager.swift */; };
+		5A03EC661C1AE1A80000FCA9 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03EC651C1AE1A80000FCA9 /* MenuCell.swift */; };
 		5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B01C0C31E700961E23 /* AppDelegate.swift */; };
 		5A0545B31C0C31E700961E23 /* LogInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545B21C0C31E700961E23 /* LogInVC.swift */; };
 		5A0545B61C0C31E700961E23 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B41C0C31E700961E23 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		5A03EC5C1C1ACAE30000FCA9 /* RightSideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideVC.swift; sourceTree = "<group>"; };
 		5A03EC5E1C1ACAF20000FCA9 /* LeftSideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideVC.swift; sourceTree = "<group>"; };
 		5A03EC601C1ACB670000FCA9 /* DrawerVisualStateManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DrawerVisualStateManager.swift; sourceTree = "<group>"; };
+		5A03EC651C1AE1A80000FCA9 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		5A0545AD1C0C31E700961E23 /* LoLympics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoLympics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5A0545B01C0C31E700961E23 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5A0545B21C0C31E700961E23 /* LogInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInVC.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				98F5F3761C1374DC006B70A5 /* SendBtnClass.swift */,
 				98ED70BC1C147FA600D1C5C0 /* CommentCell.swift */,
 				98F92E7C1C154A47007C1402 /* AvatarView.swift */,
+				5A03EC651C1AE1A80000FCA9 /* MenuCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -350,6 +353,7 @@
 				5AF5A3E61C1192BE00AD7813 /* Post.swift in Sources */,
 				5AF505EA1C0DB37100819EE9 /* DataService.swift in Sources */,
 				5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */,
+				5A03EC661C1AE1A80000FCA9 /* MenuCell.swift in Sources */,
 				5A03EC5D1C1ACAE30000FCA9 /* RightSideVC.swift in Sources */,
 				5A03EC611C1ACB670000FCA9 /* DrawerVisualStateManager.swift in Sources */,
 				5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */,
