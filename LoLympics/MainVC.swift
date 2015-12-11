@@ -14,6 +14,10 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+    }
+    
     var posts = [Post]()
     static var imageCache = NSCache()
     let postLimit = 2

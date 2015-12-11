@@ -26,7 +26,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         
         let mainStoryboard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let navigationController = UINavigationController()
         
+        let loginViewController = mainStoryboard.instantiateViewControllerWithIdentifier("LogInVC") as! LogInVC
         
         let centerViewController = mainStoryboard.instantiateViewControllerWithIdentifier("MainVC") as! MainVC
         
@@ -36,20 +38,25 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         self.drawerController = DrawerController(centerViewController: centerViewController, leftDrawerViewController: leftSideNavController, rightDrawerViewController: rightSideNavController)
         
+       // self.drawerController.showsShadows = true
+       // self.drawerController.restorationIdentifier = "Drawer"
+       // self.drawerController.openDrawerGestureModeMask = .All
+      //  self.drawerController.closeDrawerGestureModeMask = .All
         
+        //self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        //self.window?.rootViewController = self.drawerController
+        //self.window?.makeKeyAndVisible()
         
-        self.drawerController.showsShadows = true
-        self.drawerController.restorationIdentifier = "Drawer"
-        self.drawerController.openDrawerGestureModeMask = .All
-        self.drawerController.closeDrawerGestureModeMask = .All
-        
-        self.drawerController.drawerVisualStateBlock = { (drawerController, drawerSide, percentVisible) in
-            let block = ExampleDrawerVisualStateManager.sharedManager.drawerVisualStateBlockForDrawerSide(drawerSide)
-            block?(drawerController, drawerSide, percentVisible)
+        if PFUser.currentUser() != nil {
+            
+            navigationController.pushViewController(centerViewController, animated: false)
+            
+        } else {
+            
+            navigationController.pushViewController(loginViewController, animated: false)
         }
         
-        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
-        self.window?.rootViewController = self.drawerController
+        self.window?.rootViewController = navigationController
         self.window?.makeKeyAndVisible()
         
         return true
@@ -83,6 +90,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 openURL: url,
                 sourceApplication: sourceApplication,
                 annotation: annotation)
+    }
+    
+    func application(application: UIApplication, viewControllerWithRestorationIdentifierPath identifierComponents: [AnyObject], coder: NSCoder) -> UIViewController? {
+        print(identifierComponents)
+        if let key = identifierComponents.last as? String {
+            print(key)
+        }
+        
+        return nil
     }
 
     

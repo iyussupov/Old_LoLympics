@@ -64,7 +64,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
         case 1:
             
-            let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HistoryVC") as! UIViewController!
+            let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("HistoryVC") as UIViewController!
             
             
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

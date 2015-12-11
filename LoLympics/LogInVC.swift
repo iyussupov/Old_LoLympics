@@ -91,11 +91,6 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardDidShow:", name: UIKeyboardDidShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "keyboardWillBeHidden:", name: UIKeyboardWillHideNotification, object: nil)
-        
-        let currentUser = PFUser.currentUser()
-        if currentUser != nil {
-            self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
-        }
     }
     
     func textFieldShouldReturn(textField: UITextField) -> Bool {
