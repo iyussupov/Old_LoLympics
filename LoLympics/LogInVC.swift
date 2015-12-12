@@ -18,6 +18,7 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     
     override func viewWillAppear(animated: Bool) {
         self.navigationController?.navigationBarHidden = true
+        self.evo_drawerController?.openDrawerGestureModeMask = .Custom
     }
     
     @IBOutlet weak var usernameTxtFld: UITextField!

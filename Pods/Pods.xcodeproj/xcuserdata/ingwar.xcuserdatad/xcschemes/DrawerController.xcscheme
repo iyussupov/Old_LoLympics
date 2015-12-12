@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = 'primary'
-               BlueprintIdentifier = '6C54F1E6695FAE1C7FE0BF6C'
-               BlueprintName = 'FBSDKLoginKit'
+               BlueprintIdentifier = '8C4BCE3FA62CD62A84C30615'
+               BlueprintName = 'DrawerController'
                ReferencedContainer = 'container:Pods.xcodeproj'
-               BuildableName = 'FBSDKLoginKit.framework'>
+               BuildableName = 'DrawerController.framework'>
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
