@@ -130,8 +130,8 @@
 				5AF505ED1C0DE33F00819EE9 /* MainVC.swift */,
 				98ED70B81C142C8300D1C5C0 /* DetailVC.swift */,
 				5AFD817C1C15C6140098D0F0 /* ViewerVC.swift */,
-				5A03EC5C1C1ACAE30000FCA9 /* RightSideVC.swift */,
 				5A03EC5E1C1ACAF20000FCA9 /* LeftSideVC.swift */,
+				5A03EC5C1C1ACAE30000FCA9 /* RightSideVC.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";

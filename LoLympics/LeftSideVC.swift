@@ -12,7 +12,13 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var tableView: UITableView!
     
-    var menuItems:[String] = ["Fun Facts","History"];
+    @IBOutlet weak var countDaysLbl: UILabel!
+    @IBOutlet weak var countHoursLbl: UILabel!
+    @IBOutlet weak var countMinutesLbl: UILabel!
+    
+    var timer = NSTimer()
+    
+    var menuItems:[String] = ["Fun Facts","History","Sports","Events","Contacts","Log Out"];
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -20,7 +26,6 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         //
         self.navigationController?.view.setNeedsLayout()
         //
-        
     }
     
     override func viewDidLoad() {
@@ -32,6 +37,13 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         tableView.dataSource = self
         tableView.delegate = self
         
+        scheduledTimerWithTimeInterval()
+        
+    }
+    
+    func scheduledTimerWithTimeInterval(){
+        // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
+        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -84,5 +96,52 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
         
     }
+    
+    func countDown() {
+    
+        // here we set the current date
+        
+        let date = NSDate()
+        let calendar = NSCalendar.currentCalendar()
+        let components = calendar.components([.Hour, .Minute, .Month, .Year, .Day], fromDate: date)
+     
+        let currentDate = calendar.dateFromComponents(components)
+        
+        // here we set the due date. When the timer is supposed to finish
+        
+        let userCalendar = NSCalendar.currentCalendar()
+        
+        
+        let competitionDate = NSDateComponents()
+        competitionDate.year = 2016
+        competitionDate.month = 8
+        competitionDate.day = 6
+        competitionDate.hour = 01
+        competitionDate.minute = 00
+        let competitionDay = userCalendar.dateFromComponents(competitionDate)!
+        
+        
+        // Here we compare the two dates
+        competitionDay.timeIntervalSinceDate(currentDate!)
+        
+        let dayCalendarUnit: NSCalendarUnit = ([.Day, .Hour, .Minute])
+        
+        //here we change the seconds to hours,minutes and days
+        let CompetitionDayDifference = userCalendar.components(
+            dayCalendarUnit, fromDate: currentDate!, toDate: competitionDay,
+            options: [])
+        //finally, here we set the variable to our remaining time
+        let daysLeft = CompetitionDayDifference.day
+        let hoursLeft = CompetitionDayDifference.hour
+        let minutesLeft = CompetitionDayDifference.minute
+        
+        
+        self.countDaysLbl.text = "\(daysLeft)"
+        self.countHoursLbl.text = "\(hoursLeft)"
+        self.countMinutesLbl.text = "\(minutesLeft)"
+    
+    }
+    
+    
 
 }
