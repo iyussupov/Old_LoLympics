@@ -57,9 +57,10 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         case 0:
             
             let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! MainVC
+            let centerNav = UINavigationController(rootViewController: centerViewController)
             
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
-            appDelegate.drawerController!.centerViewController = centerViewController
+            appDelegate.drawerController!.centerViewController = centerNav
             appDelegate.drawerController!.toggleDrawerSide(.Left, animated: true, completion: nil)
             
             break;
