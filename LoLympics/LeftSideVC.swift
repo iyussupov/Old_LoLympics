@@ -137,8 +137,8 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         
         self.countDaysLbl.text = "\(daysLeft)"
-        self.countHoursLbl.text = "\(hoursLeft)"
-        self.countMinutesLbl.text = "\(minutesLeft)"
+        self.countHoursLbl.text = String(format: "%02d", hoursLeft)
+        self.countMinutesLbl.text = String(format: "%02d", minutesLeft)
     
     }
     

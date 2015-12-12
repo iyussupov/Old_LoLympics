@@ -1280,7 +1280,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AK1-Vb-OSn">
-                                        <rect key="frame" x="101" y="33" width="1" height="84"/>
+                                        <rect key="frame" x="98" y="33" width="1" height="84"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1289,7 +1289,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Hours" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xAY-kM-TCH">
-                                        <rect key="frame" x="110" y="48" width="45" height="21"/>
+                                        <rect key="frame" x="107" y="48" width="45" height="21"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="45" id="1NX-pC-0KY"/>
@@ -1308,7 +1308,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="16" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LXW-3L-bIh">
-                                        <rect key="frame" x="110" y="72" width="45" height="37"/>
+                                        <rect key="frame" x="107" y="72" width="45" height="37"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="37" id="3aR-uB-mpG"/>
@@ -1325,7 +1325,7 @@
                                         </variation>
                                     </label>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Hzn-gP-v7k">
-                                        <rect key="frame" x="163" y="33" width="1" height="84"/>
+                                        <rect key="frame" x="160" y="33" width="1" height="84"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
@@ -1336,7 +1336,7 @@
                                         </constraints>
                                     </view>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Minutes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7VO-Rq-Heb">
-                                        <rect key="frame" x="172" y="48" width="55" height="21"/>
+                                        <rect key="frame" x="169" y="48" width="55" height="21"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="21" id="PIu-ut-24P"/>
@@ -1357,7 +1357,7 @@
                                         </variation>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="47" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FYm-hU-zus">
-                                        <rect key="frame" x="172" y="72" width="45" height="37"/>
+                                        <rect key="frame" x="169" y="72" width="45" height="37"/>
                                         <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="70" id="0x1-pn-Dyx"/>
@@ -1381,7 +1381,7 @@
                                     <constraint firstItem="FYm-hU-zus" firstAttribute="leading" secondItem="Hzn-gP-v7k" secondAttribute="trailing" constant="8" id="3wl-aK-cYY"/>
                                     <constraint firstItem="Hzn-gP-v7k" firstAttribute="top" secondItem="ptT-lT-tWe" secondAttribute="top" constant="33" id="5hl-Zh-c8C"/>
                                     <constraint firstItem="ri2-7K-NLN" firstAttribute="leading" secondItem="c7g-b0-RAK" secondAttribute="trailing" constant="8" id="8gm-BS-EQj"/>
-                                    <constraint firstItem="AK1-Vb-OSn" firstAttribute="leading" secondItem="nuu-YG-CUt" secondAttribute="trailing" constant="6" id="Bds-Ve-743"/>
+                                    <constraint firstItem="AK1-Vb-OSn" firstAttribute="leading" secondItem="nuu-YG-CUt" secondAttribute="trailing" constant="3" id="Bds-Ve-743"/>
                                     <constraint firstItem="AK1-Vb-OSn" firstAttribute="top" secondItem="ptT-lT-tWe" secondAttribute="top" constant="33" id="CNF-vn-Jl9"/>
                                     <constraint firstItem="Hzn-gP-v7k" firstAttribute="leading" secondItem="LXW-3L-bIh" secondAttribute="trailing" constant="8" id="IwH-Ub-DoL"/>
                                     <constraint firstItem="7VO-Rq-Heb" firstAttribute="leading" secondItem="Hzn-gP-v7k" secondAttribute="trailing" constant="8" id="Vbb-Ch-gXj"/>
