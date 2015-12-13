@@ -20,6 +20,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var timer = NSTimer()
     
     var menuItems:[String] = ["Fun Facts","History","Sports","Events","Contacts","Log Out"];
+    var menuItemsIcons:[String] = ["","","","","",""];
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -58,6 +59,11 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let cell = tableView.dequeueReusableCellWithIdentifier("MenuCell", forIndexPath: indexPath) as! MenuCell
         
         cell.menuItemLbl.text = menuItems[indexPath.row]
+        cell.menuItemIcon.text = menuItemsIcons[indexPath.row]
+        
+        if indexPath.row == 5 {
+            cell.cellSeparatorView.hidden = true
+        }
         
         return cell;
         
