@@ -15,6 +15,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var countDaysLbl: UILabel!
     @IBOutlet weak var countHoursLbl: UILabel!
     @IBOutlet weak var countMinutesLbl: UILabel!
+    @IBOutlet weak var countSecondsLbl: UILabel!
     
     var timer = NSTimer()
     
@@ -43,7 +44,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     func scheduledTimerWithTimeInterval(){
         // Scheduling timer to Call the function **Countdown** with the interval of 1 seconds
-        timer = NSTimer.scheduledTimerWithTimeInterval(1, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
+        timer = NSTimer.scheduledTimerWithTimeInterval(1.0, target: self, selector: Selector("countDown"), userInfo: nil, repeats: true)
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -103,7 +104,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let date = NSDate()
         let calendar = NSCalendar.currentCalendar()
-        let components = calendar.components([.Hour, .Minute, .Month, .Year, .Day], fromDate: date)
+        let components = calendar.components([.Hour, .Minute, .Second, .Month, .Year, .Day], fromDate: date)
      
         let currentDate = calendar.dateFromComponents(components)
         
@@ -124,7 +125,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         // Here we compare the two dates
         competitionDay.timeIntervalSinceDate(currentDate!)
         
-        let dayCalendarUnit: NSCalendarUnit = ([.Day, .Hour, .Minute])
+        let dayCalendarUnit: NSCalendarUnit = ([.Day, .Hour, .Minute, .Second])
         
         //here we change the seconds to hours,minutes and days
         let CompetitionDayDifference = userCalendar.components(
@@ -134,11 +135,13 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let daysLeft = CompetitionDayDifference.day
         let hoursLeft = CompetitionDayDifference.hour
         let minutesLeft = CompetitionDayDifference.minute
+        let secondsLeft = CompetitionDayDifference.second
         
         
         self.countDaysLbl.text = "\(daysLeft)"
         self.countHoursLbl.text = String(format: "%02d", hoursLeft)
         self.countMinutesLbl.text = String(format: "%02d", minutesLeft)
+        self.countSecondsLbl.text = String(format: "%02d", secondsLeft)
     
     }
     
