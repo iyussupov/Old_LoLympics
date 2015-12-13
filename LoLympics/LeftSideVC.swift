@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
@@ -61,7 +62,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.menuItemLbl.text = menuItems[indexPath.row]
         cell.menuItemIcon.text = menuItemsIcons[indexPath.row]
         
-        if indexPath.row == 5 {
+        if indexPath.row == menuItems.count - 1 {
             cell.cellSeparatorView.hidden = true
         }
         
@@ -93,6 +94,41 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             appDelegate.drawerController!.centerViewController = aboutViewController
             appDelegate.drawerController!.toggleDrawerSide(.Left, animated: true, completion: nil)
+            
+            break;
+            
+        case 4:
+            
+            let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("ContactsVC") as UIViewController!
+            
+            
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            
+            appDelegate.drawerController!.centerViewController = aboutViewController
+            appDelegate.drawerController!.toggleDrawerSide(.Left, animated: true, completion: nil)
+            
+            break;
+            
+        case 5:
+            
+            let refreshAlert = UIAlertController(title: "Log Out", message: "Log out baby. Log out...", preferredStyle: UIAlertControllerStyle.Alert)
+            
+            refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
+                PFUser.logOut()
+                let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LogInVC") as UIViewController!
+                
+                
+                let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+                
+                appDelegate.drawerController!.centerViewController = aboutViewController
+                appDelegate.drawerController!.toggleDrawerSide(.Left, animated: true, completion: nil)
+            }))
+            
+            refreshAlert.addAction(UIAlertAction(title: "Cancel", style: .Default, handler: { (action: UIAlertAction!) in
+                
+            }))
+            
+            presentViewController(refreshAlert, animated: true, completion: nil)
             
             break;
             
