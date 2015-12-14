@@ -16,7 +16,7 @@ class ShowAlert {
 
     func showErrorAlert(title: String, msg: String, viewController: UIViewController) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .Alert)
-        let action = UIAlertAction(title: "Ok", style: .Default, handler: nil)
+        let action = UIAlertAction(title: "OK", style: .Default, handler: nil)
         alert.addAction(action)
         viewController.presentViewController(alert, animated: true, completion: nil)
     }

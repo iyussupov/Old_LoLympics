@@ -3449,6 +3449,14 @@
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0700;
+				TargetAttributes = {
+					57ADC05E440A960212657DE6DA1FEDD5 = {
+						DevelopmentTeam = TRX47M4KT5;
+					};
+					E002C26D3D67A7A45492E941CB73D185 = {
+						DevelopmentTeam = TRX47M4KT5;
+					};
+				};
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -3968,6 +3976,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55DD7F443F2D3EF3E4830A6027ED041F /* Bolts.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -3983,6 +3992,7 @@
 				MODULEMAP_FILE = "Target Support Files/Bolts/Bolts.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = Bolts;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4212,6 +4222,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E540B4C49C8F8BDBB4ED12A2B9DE1F1B /* FBSDKMessengerShareKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -4227,6 +4238,7 @@
 				MODULEMAP_FILE = "Target Support Files/FBSDKMessengerShareKit/FBSDKMessengerShareKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = FBSDKMessengerShareKit;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4366,6 +4378,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = E540B4C49C8F8BDBB4ED12A2B9DE1F1B /* FBSDKMessengerShareKit.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -4381,6 +4394,7 @@
 				MODULEMAP_FILE = "Target Support Files/FBSDKMessengerShareKit/FBSDKMessengerShareKit.modulemap";
 				MTL_ENABLE_DEBUG_INFO = YES;
 				PRODUCT_NAME = FBSDKMessengerShareKit;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -4420,6 +4434,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 55DD7F443F2D3EF3E4830A6027ED041F /* Bolts.xcconfig */;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CURRENT_PROJECT_VERSION = 1;
 				DEFINES_MODULE = YES;
@@ -4435,6 +4450,7 @@
 				MODULEMAP_FILE = "Target Support Files/Bolts/Bolts.modulemap";
 				MTL_ENABLE_DEBUG_INFO = NO;
 				PRODUCT_NAME = Bolts;
+				PROVISIONING_PROFILE = "";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

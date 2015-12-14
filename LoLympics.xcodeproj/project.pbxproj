@@ -18,6 +18,7 @@
 		5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */; };
 		5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545C61C0C34D100961E23 /* ionicons.ttf */; };
 		5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545C81C0C375C00961E23 /* ButtonClass.swift */; };
+		5A9082DD1C1EFBCF006CAA3B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9082DC1C1EFBCF006CAA3B /* MessageUI.framework */; };
 		5AF0B3AC1C0EF56F0066F666 /* BadgeViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0B3AB1C0EF56F0066F666 /* BadgeViewStyle.swift */; };
 		5AF0B3AE1C0EFD440066F666 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0B3AD1C0EFD440066F666 /* PostCell.swift */; };
 		5AF505BB1C0D89D400819EE9 /* BtnViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */; };
@@ -30,6 +31,7 @@
 		5AF505F01C0DE69900819EE9 /* HiddenKeyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */; };
 		5AF5A3E61C1192BE00AD7813 /* Post.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF5A3E51C1192BE00AD7813 /* Post.swift */; };
 		5AFD817D1C15C6140098D0F0 /* ViewerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFD817C1C15C6140098D0F0 /* ViewerVC.swift */; };
+		5AFE036C1C1EF24D00D4C83E /* ContactsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AFE036B1C1EF24C00D4C83E /* ContactsCell.swift */; };
 		985BEA771C1DD886002E4068 /* HistoryVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985BEA761C1DD886002E4068 /* HistoryVC.swift */; };
 		985BEA791C1DE4AA002E4068 /* ContactsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 985BEA781C1DE4AA002E4068 /* ContactsVC.swift */; };
 		98ED70B91C142C8300D1C5C0 /* DetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 98ED70B81C142C8300D1C5C0 /* DetailVC.swift */; };
@@ -54,6 +56,7 @@
 		5A0545BC1C0C31E700961E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A0545C61C0C34D100961E23 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		5A0545C81C0C375C00961E23 /* ButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
+		5A9082DC1C1EFBCF006CAA3B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5AF0B3AB1C0EF56F0066F666 /* BadgeViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeViewStyle.swift; sourceTree = "<group>"; };
 		5AF0B3AD1C0EFD440066F666 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
 		5AF505BA1C0D89D400819EE9 /* BtnViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BtnViewStyle.swift; sourceTree = "<group>"; };
@@ -66,6 +69,7 @@
 		5AF505EF1C0DE69900819EE9 /* HiddenKeyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HiddenKeyboard.swift; sourceTree = "<group>"; };
 		5AF5A3E51C1192BE00AD7813 /* Post.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Post.swift; sourceTree = "<group>"; };
 		5AFD817C1C15C6140098D0F0 /* ViewerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewerVC.swift; sourceTree = "<group>"; };
+		5AFE036B1C1EF24C00D4C83E /* ContactsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsCell.swift; sourceTree = "<group>"; };
 		67B32F7BCC25368ABAD5527F /* Pods-LoLympics.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLympics.release.xcconfig"; path = "Pods/Target Support Files/Pods-LoLympics/Pods-LoLympics.release.xcconfig"; sourceTree = "<group>"; };
 		86021E96F96614F5F886CAC9 /* Pods_LoLympics.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_LoLympics.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		985BEA761C1DD886002E4068 /* HistoryVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryVC.swift; sourceTree = "<group>"; };
@@ -83,6 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5A9082DD1C1EFBCF006CAA3B /* MessageUI.framework in Frameworks */,
 				26FF78CEA5C08AC27C7DCDB4 /* Pods_LoLympics.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -154,6 +159,7 @@
 				98ED70BC1C147FA600D1C5C0 /* CommentCell.swift */,
 				98F92E7C1C154A47007C1402 /* AvatarView.swift */,
 				5A03EC651C1AE1A80000FCA9 /* MenuCell.swift */,
+				5AFE036B1C1EF24C00D4C83E /* ContactsCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -197,6 +203,7 @@
 		BB8ADE5AE9709C8297C01B45 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				5A9082DC1C1EFBCF006CAA3B /* MessageUI.framework */,
 				86021E96F96614F5F886CAC9 /* Pods_LoLympics.framework */,
 			);
 			name = Frameworks;
@@ -349,6 +356,7 @@
 				5A0545B31C0C31E700961E23 /* LogInVC.swift in Sources */,
 				5AF505BB1C0D89D400819EE9 /* BtnViewStyle.swift in Sources */,
 				5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */,
+				5AFE036C1C1EF24D00D4C83E /* ContactsCell.swift in Sources */,
 				5AF505EC1C0DDB7E00819EE9 /* ShowAlert.swift in Sources */,
 				98F92E7D1C154A47007C1402 /* AvatarView.swift in Sources */,
 				5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */,
