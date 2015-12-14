@@ -21,7 +21,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     var timer = NSTimer()
     
     var menuItems:[String] = ["Fun Facts","History","Sports","Events","Contacts","Log Out"];
-    var menuItemsIcons:[String] = ["","","","","",""];
+    var menuItemsIcons:[String] = ["","","","","",""];
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -53,6 +53,10 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         return menuItems.count;
         
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 48.0
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
