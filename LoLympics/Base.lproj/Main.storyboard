@@ -2016,6 +2016,9 @@
                                                 <constraint firstItem="a55-SU-Aq8" firstAttribute="leading" secondItem="RLb-xa-pYc" secondAttribute="leading" constant="16" id="mMy-eb-cus"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="categoryLbl" destination="rTM-Nn-Wwb" id="yxd-wZ-dZq"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -2081,6 +2084,7 @@
                     <connections>
                         <outlet property="categoryTableView" destination="ORD-B6-GJO" id="p8j-Q9-s3M"/>
                         <outlet property="searchTableView" destination="DoZ-b6-WXE" id="0Yx-KH-dpJ"/>
+                        <segue destination="4Ha-oY-g2l" kind="show" identifier="MainVC" id="IhS-C5-udh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lH9-LH-0o7" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2728,7 +2732,7 @@
         <image name="mask" width="750" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="4f7-EL-GCu"/>
+        <segue reference="IhS-C5-udh"/>
         <segue reference="9OC-pK-jr8"/>
     </inferredMetricsTieBreakers>
 </document>

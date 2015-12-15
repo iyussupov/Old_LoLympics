@@ -20,6 +20,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     }
     
     var posts = [Post]()
+    var category: Category!
     static var imageCache = NSCache()
     let postLimit = 2
     var postSkip = 0
@@ -46,17 +47,19 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
        
         self.postsCount()
         self.parseDataFromParse()
-        
-
     }
     
     func postsCount() {
         let predicate = NSPredicate(format: "published = 1")
         let PostsQuery: PFQuery =  PFQuery(className:"Post", predicate: predicate)
+        if category != nil {
+            PostsQuery.whereKey("category", equalTo: PFObject(withoutDataWithClassName: "Category", objectId: category.categoryId!))
+        }
         PostsQuery.countObjectsInBackgroundWithBlock {
             (count: Int32, error: NSError?) -> Void in
             if error == nil {
                 self.postCount = Int(count)
+                print(self.postCount)
             }
         }
     }
@@ -68,6 +71,9 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         let PostsQuery: PFQuery =  PFQuery(className:"Post", predicate: predicate)
         PostsQuery.includeKey("category")
         PostsQuery.addAscendingOrder("priority")
+        if category != nil {
+            PostsQuery.whereKey("category", equalTo: PFObject(withoutDataWithClassName: "Category", objectId: category.categoryId!))
+        }
         PostsQuery.skip = postSkip
         PostsQuery.limit = postLimit
         PostsQuery.cachePolicy = .NetworkElseCache

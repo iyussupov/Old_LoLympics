@@ -10,15 +10,29 @@ import UIKit
 
 class CategoryCell: UITableViewCell {
 
+    @IBOutlet weak var categoryLbl: UILabel!
+    
+    private var _category: Category?
+    
+    var category: Category? {
+        return _category
+    }
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
     }
 
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    func configureCategoryCell(category: Category) {
+    
+        self._category = category
+        
+        if let categoryName = category.categoryName where categoryName != "" {
+            self.categoryLbl.text = categoryName.capitalizedString
+        } else {
+            self.categoryLbl.text = nil
+        }
+    
     }
-
+    
 }
