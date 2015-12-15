@@ -32,6 +32,7 @@
             <string>Ionicons</string>
             <string>Ionicons</string>
             <string>Ionicons</string>
+            <string>Ionicons</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1393,6 +1394,19 @@
                                         <constraint firstAttribute="height" constant="20" id="fev-UC-Hi1"/>
                                     </constraints>
                                 </view>
+                                <view key="tableFooterView" contentMode="scaleToFill" id="btj-L1-u7y">
+                                    <rect key="frame" x="0.0" y="92" width="375" height="19"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="20" id="y2H-rA-fvX"/>
+                                    </constraints>
+                                    <variation key="default">
+                                        <mask key="constraints">
+                                            <exclude reference="y2H-rA-fvX"/>
+                                        </mask>
+                                    </variation>
+                                </view>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="MenuCell" selectionStyle="none" indentationWidth="10" reuseIdentifier="MenuCell" id="qkc-Um-5ye" customClass="MenuCell" customModule="LoLympics" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="48" width="375" height="44"/>
@@ -1909,24 +1923,165 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RightSide" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lF3-W5-33b">
-                                <rect key="frame" x="235" y="289" width="89" height="21"/>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QBf-ZX-gBo">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="count_bg" translatesAutoresizingMaskIntoConstraints="NO" id="EOb-eL-Dqc">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="233"/>
+                                    </imageView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="itH-OF-Az4" customClass="TextFieldViewStyle" customModule="LoLympics" customModuleProvider="target">
+                                        <rect key="frame" x="111" y="40" width="248" height="32"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O4D-3L-59r">
+                                                <rect key="frame" x="4" y="6" width="21" height="21"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="21" id="bWw-is-7wH"/>
+                                                    <constraint firstAttribute="width" constant="21" id="rai-R1-FyM"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Ionicons" family="Ionicons" pointSize="17"/>
+                                                <color key="textColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="8QR-ZL-INe">
+                                                <rect key="frame" x="27" y="2" width="221" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="30" id="9eY-mv-Ktk"/>
+                                                    <constraint firstAttribute="width" constant="173" id="pj1-NV-NOZ"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits"/>
+                                                <variation key="default">
+                                                    <mask key="constraints">
+                                                        <exclude reference="pj1-NV-NOZ"/>
+                                                    </mask>
+                                                </variation>
+                                            </textField>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="248" id="7TO-om-hfa"/>
+                                            <constraint firstItem="O4D-3L-59r" firstAttribute="leading" secondItem="itH-OF-Az4" secondAttribute="leading" constant="4" id="RmU-oD-QQL"/>
+                                            <constraint firstItem="8QR-ZL-INe" firstAttribute="leading" secondItem="O4D-3L-59r" secondAttribute="trailing" constant="2" id="V7B-Sv-oeD"/>
+                                            <constraint firstAttribute="height" constant="32" id="Yki-V0-Smx"/>
+                                            <constraint firstAttribute="bottom" secondItem="8QR-ZL-INe" secondAttribute="bottom" id="hmp-cM-ZNg"/>
+                                            <constraint firstAttribute="trailing" secondItem="8QR-ZL-INe" secondAttribute="trailing" id="iWN-nd-Q6U"/>
+                                            <constraint firstAttribute="bottom" secondItem="O4D-3L-59r" secondAttribute="bottom" constant="5" id="nsn-72-uWc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="89" id="E6Q-rx-pAq"/>
+                                    <constraint firstItem="itH-OF-Az4" firstAttribute="top" secondItem="QBf-ZX-gBo" secondAttribute="top" constant="40" id="TUC-Qd-gsl"/>
+                                    <constraint firstAttribute="trailing" secondItem="itH-OF-Az4" secondAttribute="trailing" constant="16" id="wCa-5k-qdW"/>
+                                    <constraint firstAttribute="height" constant="80" id="xHJ-dR-grB"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            </view>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ORD-B6-GJO">
+                                <rect key="frame" x="111" y="100" width="248" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="tIw-rE-R5F"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="CategoryCell" rowHeight="50" id="qw0-5a-Vst" customClass="CategoryCell" customModule="LoLympics" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="248" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="qw0-5a-Vst" id="RLb-xa-pYc">
+                                            <rect key="frame" x="0.0" y="0.0" width="248" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTM-Nn-Wwb">
+                                                    <rect key="frame" x="16" y="14" width="216" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="84y-cj-3cy"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a55-SU-Aq8">
+                                                    <rect key="frame" x="16" y="49" width="216" height="1"/>
+                                                    <color key="backgroundColor" red="0.85098039215686272" green="0.85098039215686272" blue="0.85098039215686272" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="zb3-bR-mHd"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="rTM-Nn-Wwb" secondAttribute="trailing" constant="16" id="DVw-Tm-TEA"/>
+                                                <constraint firstItem="rTM-Nn-Wwb" firstAttribute="leading" secondItem="RLb-xa-pYc" secondAttribute="leading" constant="16" id="N3f-8n-Ocd"/>
+                                                <constraint firstItem="rTM-Nn-Wwb" firstAttribute="centerY" secondItem="RLb-xa-pYc" secondAttribute="centerY" id="VAk-ep-Hwn"/>
+                                                <constraint firstAttribute="trailing" secondItem="a55-SU-Aq8" secondAttribute="trailing" constant="16" id="WV8-kL-Ihk"/>
+                                                <constraint firstAttribute="bottom" secondItem="a55-SU-Aq8" secondAttribute="bottom" id="gpT-vv-i4D"/>
+                                                <constraint firstItem="a55-SU-Aq8" firstAttribute="leading" secondItem="RLb-xa-pYc" secondAttribute="leading" constant="16" id="mMy-eb-cus"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                            <tableView hidden="YES" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="50" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="DoZ-b6-WXE" userLabel="Search Table View">
+                                <rect key="frame" x="111" y="100" width="248" height="500"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="248" id="0uN-YI-GGR"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="SearchCell" rowHeight="50" id="efz-S0-4Jv" customClass="SearchCell" customModule="LoLympics" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="248" height="50"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="efz-S0-4Jv" id="Ec0-sO-7Yk">
+                                            <rect key="frame" x="0.0" y="0.0" width="248" height="50"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Search Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8pg-oD-HUB">
+                                                    <rect key="frame" x="16" y="14" width="216" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="xzk-vs-Fq8"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c81-Oz-Ea8">
+                                                    <rect key="frame" x="16" y="49" width="216" height="1"/>
+                                                    <color key="backgroundColor" red="0.85098039219999999" green="0.85098039219999999" blue="0.85098039219999999" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="1" id="TSk-K2-nOo"/>
+                                                    </constraints>
+                                                </view>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="trailing" secondItem="8pg-oD-HUB" secondAttribute="trailing" constant="16" id="GD2-Ei-Y6f"/>
+                                                <constraint firstItem="8pg-oD-HUB" firstAttribute="leading" secondItem="Ec0-sO-7Yk" secondAttribute="leading" constant="16" id="JO4-Md-AZK"/>
+                                                <constraint firstItem="8pg-oD-HUB" firstAttribute="centerY" secondItem="Ec0-sO-7Yk" secondAttribute="centerY" id="YRb-KB-Fh4"/>
+                                                <constraint firstAttribute="bottom" secondItem="c81-Oz-Ea8" secondAttribute="bottom" id="acF-pc-WEf"/>
+                                                <constraint firstAttribute="trailing" secondItem="c81-Oz-Ea8" secondAttribute="trailing" constant="16" id="dxv-aL-LjL"/>
+                                                <constraint firstItem="c81-Oz-Ea8" firstAttribute="leading" secondItem="Ec0-sO-7Yk" secondAttribute="leading" constant="16" id="gab-VW-NY4"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="lF3-W5-33b" firstAttribute="centerY" secondItem="4sL-zx-aGJ" secondAttribute="centerY" id="4jI-wb-ufw"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="lF3-W5-33b" secondAttribute="trailing" constant="35" id="Jip-Fj-muy"/>
+                            <constraint firstItem="ORD-B6-GJO" firstAttribute="top" secondItem="jk2-6W-tAr" secondAttribute="bottom" constant="80" id="6fp-yu-f3B"/>
+                            <constraint firstAttribute="trailing" secondItem="DoZ-b6-WXE" secondAttribute="trailing" constant="16" id="Gbt-43-3GU"/>
+                            <constraint firstItem="QBf-ZX-gBo" firstAttribute="leading" secondItem="4sL-zx-aGJ" secondAttribute="leading" id="Mp8-l8-WkZ"/>
+                            <constraint firstItem="CQ9-kD-ccp" firstAttribute="top" secondItem="ORD-B6-GJO" secondAttribute="bottom" id="OrZ-7M-ImS"/>
+                            <constraint firstItem="QBf-ZX-gBo" firstAttribute="top" secondItem="4sL-zx-aGJ" secondAttribute="top" id="bV0-VG-2ow"/>
+                            <constraint firstItem="DoZ-b6-WXE" firstAttribute="top" secondItem="jk2-6W-tAr" secondAttribute="bottom" constant="80" id="e6I-oH-JSn"/>
+                            <constraint firstItem="CQ9-kD-ccp" firstAttribute="top" secondItem="DoZ-b6-WXE" secondAttribute="bottom" id="kc2-6e-WYS"/>
+                            <constraint firstAttribute="trailing" secondItem="ORD-B6-GJO" secondAttribute="trailing" constant="16" id="noH-Ot-dQC"/>
+                            <constraint firstAttribute="trailing" secondItem="QBf-ZX-gBo" secondAttribute="trailing" id="yXf-Sg-52C"/>
                         </constraints>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="600"/>
+                    <connections>
+                        <outlet property="categoryTableView" destination="ORD-B6-GJO" id="p8j-Q9-s3M"/>
+                        <outlet property="searchTableView" destination="DoZ-b6-WXE" id="0Yx-KH-dpJ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lH9-LH-0o7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2144,6 +2299,7 @@
                                 </constraints>
                                 <variation key="default">
                                     <mask key="constraints">
+                                        <exclude reference="iV0-6q-4nb"/>
                                         <exclude reference="Clc-cX-bMR"/>
                                         <exclude reference="8K1-gQ-R2z"/>
                                         <exclude reference="UJS-E3-w3W"/>
@@ -2369,8 +2525,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWo-gw-hwI">
                                 <rect key="frame" x="0.0" y="81" width="375" height="1319"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Qo-SD-Cbu" userLabel="ContentView">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1319"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2Qo-SD-Cbu" userLabel="ContentView">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="1248"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Co0-j6-YPc">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="286"/>
@@ -2419,7 +2575,7 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="y17-eL-Rd0">
                                                 <rect key="frame" x="16" y="474" width="343" height="218"/>
-                                                <mutableString key="text">Also there is no common theory explaining what gave rise to the Games. The Helletic world was split into dozens of city-states which were constantly at war, but it was in their mutual interests to make peace and engage in military alliances, trading and culture, so supposably the Olympic Games were created to bring the Greek world together and for the city-states to peacefully compete with each other. People from different parts of Greece and its colonies (in Italy, North Africa and Asia Minor) traveled to Olimpia to participate or attend the Games, sharing the filling of belonging to the same culture. </mutableString>
+                                                <string key="text">Also there is no common theory explaining what gave rise to the Games. The Helletic world was split into dozens of city-states which were constantly at war, but it was in their mutual interests to make peace and engage in military alliances, trading and culture, so supposably the Olympic Games were created to bring the Greek world together and for the city-states to peacefully compete with each other. People from different parts of Greece and its colonies (in Italy, North Africa and Asia Minor) traveled to Olimpia to participate or attend the Games, sharing the filling of belonging to the same culture. </string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" red="0.2666666667" green="0.2666666667" blue="0.2666666667" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -2573,6 +2729,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="4f7-EL-GCu"/>
-        <segue reference="tqm-Hi-gbU"/>
+        <segue reference="9OC-pK-jr8"/>
     </inferredMetricsTieBreakers>
 </document>

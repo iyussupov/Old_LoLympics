@@ -8,8 +8,11 @@
 
 import UIKit
 
-class RightSideVC: UIViewController {
+class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
+    @IBOutlet weak var categoryTableView: UITableView!
+    @IBOutlet weak var searchTableView: UITableView!
+    
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         self.navigationController?.navigationBarHidden = true
@@ -24,6 +27,36 @@ class RightSideVC: UIViewController {
         //
         NSNotificationCenter.defaultCenter().addObserver(self, selector: "contentSizeDidChangeNotification:", name: UIContentSizeCategoryDidChangeNotification, object: nil)
         //
+        
+        categoryTableView.dataSource = self
+        categoryTableView.delegate = self
+        
+        searchTableView.dataSource = self
+        searchTableView.delegate = self
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return 3;
+        
+    }
+    
+    func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
+        return 48.0
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
+        
+        let cell:UITableViewCell
+        
+        if tableView == self.categoryTableView {
+            cell = categoryTableView.dequeueReusableCellWithIdentifier("CategoryCell", forIndexPath: indexPath) as! CategoryCell
+        } else {
+            cell = searchTableView.dequeueReusableCellWithIdentifier("SearchCell", forIndexPath: indexPath) as! SearchCell
+        }
+        
+        return cell;
+        
     }
 
 }

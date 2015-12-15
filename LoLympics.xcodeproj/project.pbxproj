@@ -18,6 +18,9 @@
 		5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */; };
 		5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 5A0545C61C0C34D100961E23 /* ionicons.ttf */; };
 		5A0545C91C0C375C00961E23 /* ButtonClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A0545C81C0C375C00961E23 /* ButtonClass.swift */; };
+		5A4F994A1C1FFFA2002A88FB /* TextFieldViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F99491C1FFFA2002A88FB /* TextFieldViewStyle.swift */; };
+		5A4F994C1C200579002A88FB /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F994B1C200579002A88FB /* CategoryCell.swift */; };
+		5A4F994E1C200C6C002A88FB /* SearchCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4F994D1C200C6C002A88FB /* SearchCell.swift */; };
 		5A9082DD1C1EFBCF006CAA3B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5A9082DC1C1EFBCF006CAA3B /* MessageUI.framework */; };
 		5AF0B3AC1C0EF56F0066F666 /* BadgeViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0B3AB1C0EF56F0066F666 /* BadgeViewStyle.swift */; };
 		5AF0B3AE1C0EFD440066F666 /* PostCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AF0B3AD1C0EFD440066F666 /* PostCell.swift */; };
@@ -56,6 +59,9 @@
 		5A0545BC1C0C31E700961E23 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5A0545C61C0C34D100961E23 /* ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = ionicons.ttf; sourceTree = "<group>"; };
 		5A0545C81C0C375C00961E23 /* ButtonClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonClass.swift; sourceTree = "<group>"; };
+		5A4F99491C1FFFA2002A88FB /* TextFieldViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TextFieldViewStyle.swift; sourceTree = "<group>"; };
+		5A4F994B1C200579002A88FB /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		5A4F994D1C200C6C002A88FB /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		5A9082DC1C1EFBCF006CAA3B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5AF0B3AB1C0EF56F0066F666 /* BadgeViewStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BadgeViewStyle.swift; sourceTree = "<group>"; };
 		5AF0B3AD1C0EFD440066F666 /* PostCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostCell.swift; sourceTree = "<group>"; };
@@ -160,6 +166,9 @@
 				98F92E7C1C154A47007C1402 /* AvatarView.swift */,
 				5A03EC651C1AE1A80000FCA9 /* MenuCell.swift */,
 				5AFE036B1C1EF24C00D4C83E /* ContactsCell.swift */,
+				5A4F99491C1FFFA2002A88FB /* TextFieldViewStyle.swift */,
+				5A4F994B1C200579002A88FB /* CategoryCell.swift */,
+				5A4F994D1C200C6C002A88FB /* SearchCell.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -343,6 +352,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5A03EC5F1C1ACAF20000FCA9 /* LeftSideVC.swift in Sources */,
+				5A4F994E1C200C6C002A88FB /* SearchCell.swift in Sources */,
 				5AF505E41C0DA53A00819EE9 /* RoundBtnViewStyle.swift in Sources */,
 				98F5F3771C1374DC006B70A5 /* SendBtnClass.swift in Sources */,
 				98ED70B91C142C8300D1C5C0 /* DetailVC.swift in Sources */,
@@ -358,10 +368,12 @@
 				5A0545B11C0C31E700961E23 /* AppDelegate.swift in Sources */,
 				5AFE036C1C1EF24D00D4C83E /* ContactsCell.swift in Sources */,
 				5AF505EC1C0DDB7E00819EE9 /* ShowAlert.swift in Sources */,
+				5A4F994C1C200579002A88FB /* CategoryCell.swift in Sources */,
 				98F92E7D1C154A47007C1402 /* AvatarView.swift in Sources */,
 				5AF505E21C0D92D700819EE9 /* SignUpVC.swift in Sources */,
 				98F92E791C15473F007C1402 /* ImageFromUrl.swift in Sources */,
 				5AF5A3E61C1192BE00AD7813 /* Post.swift in Sources */,
+				5A4F994A1C1FFFA2002A88FB /* TextFieldViewStyle.swift in Sources */,
 				985BEA791C1DE4AA002E4068 /* ContactsVC.swift in Sources */,
 				5AF505EA1C0DB37100819EE9 /* DataService.swift in Sources */,
 				5AF505E71C0DA72000819EE9 /* Constans.swift in Sources */,
