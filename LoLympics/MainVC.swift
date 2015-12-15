@@ -59,7 +59,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             (count: Int32, error: NSError?) -> Void in
             if error == nil {
                 self.postCount = Int(count)
-                print(self.postCount)
             }
         }
     }

@@ -13,6 +13,7 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
 
     @IBOutlet weak var categoryTableView: UITableView!
     @IBOutlet weak var searchTableView: UITableView!
+    @IBOutlet weak var searchBar: UISearchBar!
     
     var categories = [Category]()
     
