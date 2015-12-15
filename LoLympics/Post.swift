@@ -93,7 +93,7 @@ class Post {
             self._content = content
         }
         
-        if let category = dictionary["category"] as? String {
+        if let category = dictionary["category"]["categoryName"] as? String {
             self._category = category
         }
         

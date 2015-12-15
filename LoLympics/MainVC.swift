@@ -66,6 +66,7 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let predicate = NSPredicate(format: "published = 1")
         let PostsQuery: PFQuery =  PFQuery(className:"Post", predicate: predicate)
+        PostsQuery.includeKey("category")
         PostsQuery.addAscendingOrder("priority")
         PostsQuery.skip = postSkip
         PostsQuery.limit = postLimit
