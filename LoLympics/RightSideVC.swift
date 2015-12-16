@@ -78,8 +78,8 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             
             if let cell = searchTableView.dequeueReusableCellWithIdentifier("SearchCell") as? SearchCell {
                 
-
-              //  cell.searchLbl.text = self.searchResults[indexPath.row]["title"] as? String
+                let post = self.searchResults[indexPath.row]
+                cell.configureSearchCell(post)
                 
                 return cell
             } else {
@@ -127,26 +127,31 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         customSearchBar.resignFirstResponder()
         
         let predicate = NSPredicate(format: "published = 1")
-        let searchQuery = PFQuery(className: "Post", predicate: predicate)
-        searchQuery.addAscendingOrder("priority")
-        searchQuery.whereKey("content", containsString: customSearchBar.text)
         
-        searchQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error: NSError?) -> Void in
+        let titleQuery = PFQuery(className: "Post", predicate: predicate)
+        titleQuery.whereKey("title", matchesRegex: customSearchBar.text!, modifiers: "i")
+        
+        let contentQuery = PFQuery(className: "Post", predicate: predicate)
+        contentQuery.whereKey("content", matchesRegex: customSearchBar.text!, modifiers: "i")
+        
+        let resultQuery = PFQuery.orQueryWithSubqueries([titleQuery, contentQuery])
+        resultQuery.includeKey("category")
+        resultQuery.addAscendingOrder("priority")
+        resultQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error: NSError?) -> Void in
             if error == nil {
                 
-                //self.searchResults.removeAll(keepCapacity: false)
+                self.searchResults.removeAll(keepCapacity: false)
                 
                 for object in objects! {
                     let key = object.objectId as String!
                     let date = object.createdAt as NSDate!
                     
-                    let post = Category(categoryId: key, dictionary: object)
-                    print(post)
-                    //self.searchResults.append(searchObject)
+                    let post = Post(postKey: key, date: date, dictionary: object)
+                    self.searchResults.append(post)
                 }
                 
-               // self.searchTableView.reloadData()
-               // self.customSearchBar.resignFirstResponder()
+               self.searchTableView.reloadData()
+               self.customSearchBar.resignFirstResponder()
 
             
             }
