@@ -20,7 +20,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var commentTextField: UITextField!
     
     var post: Post!
-    var hideBackBtn: Bool?
+    var toggleRightDrawer: Bool?
     var comments = [Comment]()
     static var imageCache = NSCache()
     var preventAnimation = Set<NSIndexPath>()
@@ -51,11 +51,12 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let tap = UITapGestureRecognizer(target: self, action: "showImageViewer")
         imageViewer.addGestureRecognizer(tap)
-        
+        /*
         if hideBackBtn == true {
             self.backBtnLbl.hidden = true
             self.backBtnView.hidden = true
         }
+        */
     }
     
     func showImageViewer() {
@@ -279,7 +280,11 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     
     @IBAction func DetailsBackBtn(sender: AnyObject) {
-        self.navigationController?.popViewControllerAnimated(true)
+        if toggleRightDrawer != true {
+            self.navigationController?.popViewControllerAnimated(true)
+        } else {
+            self.evo_drawerController?.toggleRightDrawerSideAnimated(true, completion: nil)
+        }
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {

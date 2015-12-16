@@ -114,7 +114,7 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             
             let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailVC") as! DetailVC
             centerViewController.post = post
-            centerViewController.hideBackBtn = true
+            centerViewController.toggleRightDrawer = true
             let centerNav = UINavigationController(rootViewController: centerViewController)
             
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate

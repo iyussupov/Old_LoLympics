@@ -80,7 +80,7 @@ class ContactsVC: UIViewController, UITableViewDataSource, UITableViewDelegate, 
             if (UIApplication.sharedApplication().canOpenURL(facebookUrl!)) {
                 UIApplication.sharedApplication().openURL(facebookUrl!)
             } else {
-                UIApplication.sharedApplication().openURL(NSURL(string:"www.facebook.com/lolympicsapp")!)
+                UIApplication.sharedApplication().openURL(NSURL(string:"facebook.com/lolympicsapp")!)
             }
             
             break;
