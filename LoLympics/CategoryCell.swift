@@ -12,6 +12,8 @@ class CategoryCell: UITableViewCell {
 
     @IBOutlet weak var categoryLbl: UILabel!
     
+    @IBOutlet weak var cellFooterView: UIView!
+    
     private var _category: Category?
     
     var category: Category? {

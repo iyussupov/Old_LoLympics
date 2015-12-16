@@ -12,6 +12,8 @@ class SearchCell: UITableViewCell {
 
     @IBOutlet weak var searchLbl: UILabel!
     
+    @IBOutlet weak var cellFooterView: UIView!
+    
     private var _post: Post?
     
     var post: Post? {

@@ -69,6 +69,9 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
                 let category = self.categories[indexPath.row]
                 
                 cell.configureCategoryCell(category)
+                if indexPath.row == categories.count - 1 {
+                    cell.cellFooterView.hidden = true
+                }
                 return cell
             } else {
                 return CategoryCell()
@@ -80,7 +83,9 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
                 
                 let post = self.searchResults[indexPath.row]
                 cell.configureSearchCell(post)
-                
+                if indexPath.row == searchResults.count - 1 {
+                    cell.cellFooterView.hidden = true
+                }
                 return cell
             } else {
                 return SearchCell()
@@ -104,17 +109,17 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             appDelegate.drawerController!.toggleDrawerSide(.Right, animated: true, completion: nil)
             
         } else {
-            /*
+           
             let post = self.searchResults[indexPath.row]
             
             let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailVC") as! DetailVC
-            centerViewController.post = post as! Post
+            centerViewController.post = post
             let centerNav = UINavigationController(rootViewController: centerViewController)
             
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
             appDelegate.drawerController!.centerViewController = centerNav
             appDelegate.drawerController!.toggleDrawerSide(.Right, animated: true, completion: nil)
-            */
+
         }
         
     }
@@ -158,12 +163,9 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         }
         
         
-        
-        print("search clicked")
-        
     }
 
-    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+    @IBAction func cancelSearchBtn(sender: AnyObject) {
         self.categoryTableView.hidden = false
         self.searchTableView.hidden = true
         
@@ -171,8 +173,6 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         customSearchBar.text = ""
         self.searchResults.removeAll(keepCapacity: false)
         self.searchTableView.reloadData()
-        
-        print("cancel clicked")
     }
 
     
