@@ -20,6 +20,7 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     @IBOutlet weak var commentTextField: UITextField!
     
     var post: Post!
+    var hideBackBtn: Bool?
     var comments = [Comment]()
     static var imageCache = NSCache()
     var preventAnimation = Set<NSIndexPath>()
@@ -30,6 +31,12 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
     
     @IBOutlet weak var categoryLbl: BadgeViewStyle!
     @IBOutlet weak var backBtnLbl: RoundBtnViewStyle!
+    @IBOutlet weak var backBtnView: UIButton!
+    
+    override func viewWillAppear(animated: Bool) {
+        self.navigationController?.navigationBarHidden = true
+        self.evo_drawerController?.openDrawerGestureModeMask = .All
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -44,6 +51,11 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
         let tap = UITapGestureRecognizer(target: self, action: "showImageViewer")
         imageViewer.addGestureRecognizer(tap)
+        
+        if hideBackBtn == true {
+            self.backBtnLbl.hidden = true
+            self.backBtnView.hidden = true
+        }
     }
     
     func showImageViewer() {

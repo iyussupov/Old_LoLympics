@@ -97,7 +97,7 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
         if tableView == self.categoryTableView {
-            
+            self.customSearchBar.resignFirstResponder()
             let category = self.categories[indexPath.row]
         
             let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("MainVC") as! MainVC
@@ -114,6 +114,7 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
             
             let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailVC") as! DetailVC
             centerViewController.post = post
+            centerViewController.hideBackBtn = true
             let centerNav = UINavigationController(rootViewController: centerViewController)
             
             let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
