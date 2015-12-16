@@ -9,13 +9,14 @@
 import UIKit
 import Parse
 
-class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     @IBOutlet weak var categoryTableView: UITableView!
     @IBOutlet weak var searchTableView: UITableView!
-    @IBOutlet weak var searchBar: UISearchBar!
+    @IBOutlet weak var customSearchBar: UISearchBar!
     
     var categories = [Category]()
+    var searchResults = [Post]()
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -38,7 +39,9 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         searchTableView.dataSource = self
         searchTableView.delegate = self
         
-        loadCategoriesList()
+        customSearchBar.delegate = self
+        
+        self.loadCategoriesList()
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -47,7 +50,7 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
         if tableView == self.categoryTableView {
             rowsCount = categories.count
         } else {
-        
+            rowsCount = searchResults.count
         }
         
         return rowsCount
@@ -59,8 +62,6 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell:UITableViewCell
-        
         if tableView == self.categoryTableView {
             
             if let cell = categoryTableView.dequeueReusableCellWithIdentifier("CategoryCell") as? CategoryCell {
@@ -68,17 +69,23 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
                 let category = self.categories[indexPath.row]
                 
                 cell.configureCategoryCell(category)
-                
                 return cell
             } else {
                 return CategoryCell()
             }
             
         } else {
-            cell = searchTableView.dequeueReusableCellWithIdentifier("SearchCell", forIndexPath: indexPath) as! SearchCell
+            
+            if let cell = searchTableView.dequeueReusableCellWithIdentifier("SearchCell") as? SearchCell {
+                
+
+              //  cell.searchLbl.text = self.searchResults[indexPath.row]["title"] as? String
+                
+                return cell
+            } else {
+                return SearchCell()
+            }
         }
-        
-        return cell;
         
     }
     
@@ -97,10 +104,73 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate 
             appDelegate.drawerController!.toggleDrawerSide(.Right, animated: true, completion: nil)
             
         } else {
+            /*
+            let post = self.searchResults[indexPath.row]
             
+            let centerViewController = self.storyboard?.instantiateViewControllerWithIdentifier("DetailVC") as! DetailVC
+            centerViewController.post = post as! Post
+            let centerNav = UINavigationController(rootViewController: centerViewController)
+            
+            let appDelegate:AppDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+            appDelegate.drawerController!.centerViewController = centerNav
+            appDelegate.drawerController!.toggleDrawerSide(.Right, animated: true, completion: nil)
+            */
         }
         
     }
+    
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        self.categoryTableView.hidden = true
+        self.searchTableView.hidden = false
+        
+        customSearchBar.resignFirstResponder()
+        
+        let predicate = NSPredicate(format: "published = 1")
+        let searchQuery = PFQuery(className: "Post", predicate: predicate)
+        searchQuery.addAscendingOrder("priority")
+        searchQuery.whereKey("content", containsString: customSearchBar.text)
+        
+        searchQuery.findObjectsInBackgroundWithBlock { (objects:[PFObject]?, error: NSError?) -> Void in
+            if error == nil {
+                
+                //self.searchResults.removeAll(keepCapacity: false)
+                
+                for object in objects! {
+                    let key = object.objectId as String!
+                    let date = object.createdAt as NSDate!
+                    
+                    let post = Category(categoryId: key, dictionary: object)
+                    print(post)
+                    //self.searchResults.append(searchObject)
+                }
+                
+               // self.searchTableView.reloadData()
+               // self.customSearchBar.resignFirstResponder()
+
+            
+            }
+        }
+        
+        
+        
+        print("search clicked")
+        
+    }
+
+    func searchBarCancelButtonClicked(searchBar: UISearchBar) {
+        self.categoryTableView.hidden = false
+        self.searchTableView.hidden = true
+        
+        customSearchBar.resignFirstResponder()
+        customSearchBar.text = ""
+        self.searchResults.removeAll(keepCapacity: false)
+        self.searchTableView.reloadData()
+        
+        print("cancel clicked")
+    }
+
+    
     
     func loadCategoriesList() {
         

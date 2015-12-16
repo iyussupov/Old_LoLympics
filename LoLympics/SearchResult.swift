@@ -1,16 +1,16 @@
 //
-//  Post.swift
+//  SearchResult.swift
 //  LoLympics
 //
-//  Created by Dev1 on 12/4/15.
+//  Created by Dev1 on 12/16/15.
 //  Copyright © 2015 FXoffice. All rights reserved.
 //
 
 import Foundation
 import Parse
 
-class Post {
-    
+class SearchResult {
+
     private var _featuredImg: PFFile?
     
     private var _title: String?
@@ -112,18 +112,5 @@ class Post {
     }
     
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }
