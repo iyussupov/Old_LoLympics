@@ -13,6 +13,11 @@ class HistoryVC: UIViewController, UIScrollViewDelegate {
     
     @IBOutlet weak var headerImage: UIImageView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var imageView: UIView!
+    @IBOutlet weak var imageView2: UIImageView!
+    @IBOutlet weak var imageView3: UIImageView!
+    @IBOutlet weak var imageView4: UIImageView!
+    
     @IBAction func openMenu(sender: AnyObject) {
         self.evo_drawerController?.toggleDrawerSide(.Left, animated: true, completion: nil)
     }
@@ -24,6 +29,28 @@ class HistoryVC: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
+        
+        let tap = UITapGestureRecognizer(target: self, action: "showImageViewer:")
+        let tap2 = UITapGestureRecognizer(target: self, action: "showImageViewer:")
+        let tap3 = UITapGestureRecognizer(target: self, action: "showImageViewer:")
+        let tap4 = UITapGestureRecognizer(target: self, action: "showImageViewer:")
+        imageView.addGestureRecognizer(tap)
+        imageView2.addGestureRecognizer(tap2)
+        imageView3.addGestureRecognizer(tap3)
+        imageView4.addGestureRecognizer(tap4)
+    }
+    
+    func showImageViewer(sender: UITapGestureRecognizer) {
+        performSegueWithIdentifier("ViewerVC", sender: sender)
+    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "ViewerVC" {
+            if let viewerVC = segue.destinationViewController as? ViewerVC {
+                if let tag = sender {
+                    viewerVC.tag = tag
+                }
+            }
+        }
     }
     
     func scrollViewDidScroll(scrollView: UIScrollView) {

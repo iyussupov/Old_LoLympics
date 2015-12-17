@@ -106,7 +106,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return nil
     }
-
+    
+    func application(application: UIApplication, supportedInterfaceOrientationsForWindow window: UIWindow?) -> UIInterfaceOrientationMask {
+        if self.window?.rootViewController?.presentedViewController is ViewerVC {
+            return UIInterfaceOrientationMask.All
+        }
+        return UIInterfaceOrientationMask.Portrait
+    }
+    
     
 }
 
