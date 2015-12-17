@@ -243,5 +243,6 @@ class MainVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         self.evo_drawerController?.toggleDrawerSide(.Right, animated: true, completion: nil)
     }
     
+    @IBOutlet weak var openMenuBg: RoundBtnViewStyle!
     
 }

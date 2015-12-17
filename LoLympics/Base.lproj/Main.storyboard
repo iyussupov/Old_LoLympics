@@ -1136,6 +1136,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="openMenuBg" destination="Nwy-eR-sZK" id="Hcd-wU-KYz"/>
                         <outlet property="tableView" destination="KfR-Qj-BWx" id="BOl-GP-fgL"/>
                         <segue destination="iap-FA-Wmr" kind="show" identifier="DetailVC" id="idt-5R-7GN"/>
                         <segue destination="Yu8-mF-eP9" kind="presentation" identifier="ViewerVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="tqm-Hi-gbU"/>
@@ -2755,6 +2756,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="IhS-C5-udh"/>
-        <segue reference="9OC-pK-jr8"/>
+        <segue reference="tqm-Hi-gbU"/>
     </inferredMetricsTieBreakers>
 </document>
