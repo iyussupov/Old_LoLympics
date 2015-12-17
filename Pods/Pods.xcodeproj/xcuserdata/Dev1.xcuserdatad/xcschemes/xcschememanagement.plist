@@ -34,6 +34,11 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>IQKeyboardManagerSwift.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 		<key>Parse.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -57,6 +62,11 @@
 			<key>primary</key>
 			<true/>
 		</dict>
+		<key>192C8C2413796E089B0A00D1D53C6C09</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
 		<key>511B536F0DE06D9C3BD65397A91990C0</key>
 		<dict>
 			<key>primary</key>
@@ -72,7 +82,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>A45BAF8BF04F8BD180B76EA002407F71</key>
+		<key>8BBE1C2336CA1D89AE2A15CC2D8E9E5F</key>
 		<dict>
 			<key>primary</key>
 			<true/>

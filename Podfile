@@ -10,4 +10,5 @@ pod 'FBSDKLoginKit'
 pod 'FBSDKShareKit'
 pod 'FBSDKMessengerShareKit'
 pod 'DrawerController', '~> 1.0'
+pod 'IQKeyboardManagerSwift'
 end

@@ -11,6 +11,7 @@ import Parse
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
 import DrawerController
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -57,6 +58,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let settings = UIUserNotificationSettings(forTypes: [.Alert, .Badge], categories: nil)
         application.registerUserNotificationSettings(settings)
         application.registerForRemoteNotifications()
+        
+        IQKeyboardManager.sharedManager().enable = true
         
         return true
     }
