@@ -9,7 +9,7 @@
 import UIKit
 import Parse
 
-let offset_HeaderStop:CGFloat = 243.0 // At this offset the Header stops its transformations
+let offset_HeaderStop:CGFloat = 260.0 // At this offset the Header stops its transformations
 
 class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
