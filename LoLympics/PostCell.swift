@@ -123,8 +123,16 @@ class PostCell: UITableViewCell {
         }
     
     }
+    
+    
+    @IBOutlet weak var postShareHover: RoundBtnViewStyle!
+    
+    @IBAction func postShareDown(sender: AnyObject) {
+        self.postShareHover.backgroundColor = UIColor(red: 136/255, green: 38/255, blue: 147/255, alpha: 1)
+    }
 
     @IBAction func postShareAction(sender: AnyObject) {
+        self.postShareHover.backgroundColor = UIColor(red: 175/255, green: 70/255, blue: 187/255, alpha: 1)
         
         var textToShare = ""
         

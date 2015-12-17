@@ -252,7 +252,14 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         
     }
     
+    @IBOutlet weak var postShareHover: RoundBtnViewStyle!
+    
+    @IBAction func postShareDown(sender: AnyObject) {
+        self.postShareHover.backgroundColor = UIColor(red: 136/255, green: 38/255, blue: 147/255, alpha: 1)
+    }
+    
     @IBAction func postShareAction(sender: AnyObject) {
+        self.postShareHover.backgroundColor = UIColor(red: 175/255, green: 70/255, blue: 187/255, alpha: 1)
         
         var textToShare = ""
         
@@ -273,8 +280,15 @@ class DetailVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         }
     }
     
+    @IBOutlet weak var backBtnHover: RoundBtnViewStyle!
+    
+    @IBAction func backBtnDown(sender: AnyObject) {
+        self.backBtnHover.backgroundColor = UIColor(red: 217/255, green: 101/255, blue: 16/255, alpha: 1)
+    }
     
     @IBAction func DetailsBackBtn(sender: AnyObject) {
+        self.backBtnHover.backgroundColor = UIColor(red: 244/255, green: 121/255, blue: 31/255, alpha: 1)
+        
         if toggleRightDrawer != true {
             self.navigationController?.popViewControllerAnimated(true)
         } else {
