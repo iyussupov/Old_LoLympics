@@ -24,7 +24,13 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     
     @IBOutlet weak var passwordTxtFld: UITextField!
     
+    @IBOutlet weak var emailLoginHover: BtnViewStyle!
+    
+    @IBAction func emailLoginDown(sender: AnyObject) {
+        self.emailLoginHover.backgroundColor = UIColor(red: 239/255, green: 154/255, blue: 92/255, alpha: 1)
+    }
     @IBAction func EmailLoginBtnAction(sender: AnyObject) {
+        self.emailLoginHover.backgroundColor = UIColor(red: 244/255, green: 121/255, blue: 31/255, alpha: 1)
         
         if let username = usernameTxtFld.text where username != "", let password = passwordTxtFld.text where password != "" {
             
@@ -42,7 +48,12 @@ class LogInVC: UIViewController, UITextFieldDelegate {
         
     }
     
+    @IBOutlet weak var facebookLoginHover: BtnViewStyle!
+    @IBAction func facebookLoginDown(sender: AnyObject) {
+       self.facebookLoginHover.backgroundColor = UIColor(red: 84/255, green: 117/255, blue: 187/255, alpha: 1)
+    }
     @IBAction func facebookLoginBtnAction(sender: AnyObject) {
+        self.facebookLoginHover.backgroundColor = UIColor(red: 59/255, green: 89/255, blue: 152/255, alpha: 1)
         let permissions = []
         PFFacebookUtils.logInInBackgroundWithReadPermissions(permissions as? [String]) {
             (user: PFUser?, error: NSError?) -> Void in
@@ -81,10 +92,19 @@ class LogInVC: UIViewController, UITextFieldDelegate {
                 self.performSegueWithIdentifier(SEGUE_LOGGED_IN, sender: nil)
                 
             } else {
-                print("Uh oh. The user cancelled the Facebook login.")
+                print("The user cancelled the Facebook login.")
             }
         }
         
+    }
+    
+    
+    @IBOutlet weak var googleLoginHover: BtnViewStyle!
+    @IBAction func googleLoginDown(sender: AnyObject) {
+        self.googleLoginHover.backgroundColor = UIColor(red: 238/255, green: 98/255, blue: 86/255, alpha: 1)
+    }
+    @IBAction func googleLoginBtnAction(sender: AnyObject) {
+        self.googleLoginHover.backgroundColor = UIColor(red: 220/255, green: 70/255, blue: 57/255, alpha: 1)
     }
     
     override func viewDidLoad() {

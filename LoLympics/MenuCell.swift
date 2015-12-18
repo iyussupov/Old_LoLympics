@@ -13,6 +13,7 @@ class MenuCell: UITableViewCell {
     @IBOutlet weak var menuItemLbl: UILabel!
     @IBOutlet weak var menuItemIcon: UILabel!
     @IBOutlet weak var cellSeparatorView: UIView!
+    @IBOutlet weak var commingSoonLbl: BadgeViewStyle!
     
     override func awakeFromNib() {
         super.awakeFromNib()

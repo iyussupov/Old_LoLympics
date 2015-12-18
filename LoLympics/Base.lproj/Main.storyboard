@@ -97,22 +97,23 @@
                                                 <rect key="frame" x="40" y="281" width="295" height="38"/>
                                                 <connections>
                                                     <action selector="facebookLoginBtnAction:" destination="1Yd-68-KPb" eventType="touchUpInside" id="tLc-D4-EeK"/>
+                                                    <action selector="facebookLoginDown:" destination="1Yd-68-KPb" eventType="touchDown" id="JW7-jV-1Lg"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-vu-f4Z" userLabel="twitterBGView" customClass="BtnViewStyle" customModule="LoLympics" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-vu-f4Z" userLabel="googleBGView" customClass="BtnViewStyle" customModule="LoLympics" customModuleProvider="target">
                                                 <rect key="frame" x="40" y="331" width="295" height="38"/>
                                                 <subviews>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-Pe-ptj" userLabel="TwitterLoginBtnTxt">
-                                                        <rect key="frame" x="70" y="0.0" width="155" height="38"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-Pe-ptj" userLabel="GoogleLoginBtnTxt">
+                                                        <rect key="frame" x="67" y="0.0" width="162" height="38"/>
                                                         <subviews>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5F-O9-0vX">
-                                                                <rect key="frame" x="0.0" y="0.0" width="23" height="38"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e5F-O9-0vX">
+                                                                <rect key="frame" x="0.0" y="0.0" width="21" height="38"/>
                                                                 <fontDescription key="fontDescription" name="Ionicons" family="Ionicons" pointSize="24"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
                                                             </label>
-                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Twitter" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u7-6H-AX5">
-                                                                <rect key="frame" x="38" y="0.0" width="117" height="38"/>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Login with Google+" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6u7-6H-AX5">
+                                                                <rect key="frame" x="36" y="0.0" width="126" height="38"/>
                                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                                 <nil key="highlightedColor"/>
@@ -120,19 +121,23 @@
                                                         </subviews>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="38" id="dG6-AA-8Fw"/>
-                                                            <constraint firstAttribute="width" constant="155" id="tJy-5c-nR0"/>
+                                                            <constraint firstAttribute="width" constant="162" id="tJy-5c-nR0"/>
                                                         </constraints>
                                                     </stackView>
                                                 </subviews>
-                                                <color key="backgroundColor" red="0.0" green="0.67450980392156867" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.86274509803921573" green="0.27450980392156865" blue="0.22352941176470587" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstItem="xqq-Pe-ptj" firstAttribute="centerX" secondItem="TE8-vu-f4Z" secondAttribute="centerX" id="Wh8-CO-987"/>
                                                     <constraint firstAttribute="height" constant="38" id="aSh-uz-SFT"/>
                                                     <constraint firstItem="xqq-Pe-ptj" firstAttribute="top" secondItem="TE8-vu-f4Z" secondAttribute="top" id="erF-MJ-Bfo"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-ca-l7j" userLabel="TwitterLoginBtn">
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-ca-l7j" userLabel="GoogleLoginBtn">
                                                 <rect key="frame" x="40" y="331" width="295" height="38"/>
+                                                <connections>
+                                                    <action selector="googleLoginBtnAction:" destination="1Yd-68-KPb" eventType="touchUpInside" id="9Iy-Iu-qDJ"/>
+                                                    <action selector="googleLoginDown:" destination="1Yd-68-KPb" eventType="touchDown" id="BHX-3F-uvM"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OR" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Kxq-YH-kb2">
                                                 <rect key="frame" x="166" y="394" width="42" height="17"/>
@@ -275,6 +280,7 @@
                                                 <rect key="frame" x="40" y="510" width="295" height="38"/>
                                                 <connections>
                                                     <action selector="EmailLoginBtnAction:" destination="1Yd-68-KPb" eventType="touchUpInside" id="GdO-7b-vC6"/>
+                                                    <action selector="emailLoginDown:" destination="1Yd-68-KPb" eventType="touchDown" id="Xzq-SD-lp5"/>
                                                 </connections>
                                             </button>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="CMW-my-2bi" userLabel="Don't have account Stack">
@@ -400,6 +406,9 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="667"/>
                     <connections>
+                        <outlet property="emailLoginHover" destination="2aW-Nr-2Uh" id="jAb-SX-yfO"/>
+                        <outlet property="facebookLoginHover" destination="aQx-Ne-qoH" id="WMX-qg-Jc2"/>
+                        <outlet property="googleLoginHover" destination="TE8-vu-f4Z" id="mTB-JL-bWw"/>
                         <outlet property="passwordTxtFld" destination="yJq-a2-Bth" id="m5W-of-hdp"/>
                         <outlet property="scrollView" destination="nbc-dg-Mfa" id="9WA-ka-QpO"/>
                         <outlet property="usernameTxtFld" destination="20a-b7-xKk" id="pSG-eT-Hbg"/>
@@ -613,6 +622,7 @@
                                                 </constraints>
                                                 <connections>
                                                     <action selector="SignUpBtnAction:" destination="GhD-3g-RJP" eventType="touchUpInside" id="7Km-PN-lmG"/>
+                                                    <action selector="emailLoginDown:" destination="GhD-3g-RJP" eventType="touchDown" id="YE6-yZ-KYz"/>
                                                 </connections>
                                             </button>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQI-2Z-U7Q" userLabel="RoundBtnViewStyle" customClass="RoundBtnViewStyle" customModule="LoLympics" customModuleProvider="target">
@@ -641,6 +651,7 @@
                                                 <rect key="frame" x="16" y="4" width="49" height="49"/>
                                                 <connections>
                                                     <action selector="SignUpBackBtn:" destination="GhD-3g-RJP" eventType="touchUpInside" id="KRp-kn-3LV"/>
+                                                    <action selector="backBtnDown:" destination="GhD-3g-RJP" eventType="touchDown" id="AbD-F6-7vW"/>
                                                 </connections>
                                             </button>
                                         </subviews>
@@ -754,6 +765,8 @@
                         <outlet property="EmailTxtFld" destination="Bfx-CH-xam" id="TX7-R2-Sfz"/>
                         <outlet property="PasswordTxtFld" destination="T5g-ul-fTx" id="f8K-eh-zUr"/>
                         <outlet property="UsernameTxtFld" destination="OJh-2h-0e2" id="Bkd-JU-h5k"/>
+                        <outlet property="backBtnHover" destination="gQI-2Z-U7Q" id="gfh-TS-rbZ"/>
+                        <outlet property="emailLoginHover" destination="Iun-eb-NmF" id="C3k-0M-Ezo"/>
                         <segue destination="4Ha-oY-g2l" kind="show" identifier="loggedIn" id="9PQ-4b-BD4"/>
                     </connections>
                 </viewController>
@@ -1422,7 +1435,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Item" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YS9-mV-EOK">
-                                                    <rect key="frame" x="54" y="11" width="229" height="22"/>
+                                                    <rect key="frame" x="54" y="11" width="86" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="22" id="CfL-we-WGb"/>
                                                     </constraints>
@@ -1447,14 +1460,27 @@
                                                         <constraint firstAttribute="height" constant="1" id="dO6-em-N9M"/>
                                                     </constraints>
                                                 </view>
+                                                <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="COMMING SOON" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rio-vC-Etg" customClass="BadgeViewStyle" customModule="LoLympics" customModuleProvider="target">
+                                                    <rect key="frame" x="156" y="14" width="102" height="18"/>
+                                                    <color key="backgroundColor" red="0.66274509803921566" green="0.66274509803921566" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="18" id="03O-lV-sUr"/>
+                                                        <constraint firstAttribute="width" constant="102" id="Tot-sV-I2A"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <constraints>
                                                 <constraint firstItem="4PB-p0-MkP" firstAttribute="leading" secondItem="w0r-Uv-N3L" secondAttribute="leading" constant="19" id="0PQ-w9-a0n"/>
                                                 <constraint firstAttribute="trailingMargin" secondItem="YS9-mV-EOK" secondAttribute="trailing" constant="84" id="2qH-Qc-wSr"/>
                                                 <constraint firstItem="YS9-mV-EOK" firstAttribute="baseline" secondItem="4PB-p0-MkP" secondAttribute="baseline" id="BVJ-Ne-Ebv"/>
+                                                <constraint firstItem="Rio-vC-Etg" firstAttribute="leading" secondItem="YS9-mV-EOK" secondAttribute="trailing" constant="16" id="Jap-NZ-j6V"/>
                                                 <constraint firstItem="YS9-mV-EOK" firstAttribute="leading" secondItem="w0r-Uv-N3L" secondAttribute="leadingMargin" constant="37" id="Jib-B9-hhh"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="YS9-mV-EOK" secondAttribute="bottom" constant="3" id="Nol-OV-Yyi"/>
                                                 <constraint firstItem="YS9-mV-EOK" firstAttribute="top" secondItem="w0r-Uv-N3L" secondAttribute="topMargin" constant="3" id="RDg-o9-GdI"/>
+                                                <constraint firstItem="Rio-vC-Etg" firstAttribute="centerY" secondItem="YS9-mV-EOK" secondAttribute="centerY" constant="1" id="RMT-Zi-ES8"/>
                                                 <constraint firstItem="4PB-p0-MkP" firstAttribute="centerY" secondItem="w0r-Uv-N3L" secondAttribute="centerY" id="RrZ-ru-FUW"/>
                                                 <constraint firstAttribute="trailing" secondItem="Gyi-H4-2Yz" secondAttribute="trailing" id="TUk-xY-ZNv"/>
                                                 <constraint firstAttribute="bottom" secondItem="Gyi-H4-2Yz" secondAttribute="bottom" id="dua-O1-2T7"/>
@@ -1464,6 +1490,7 @@
                                             </constraints>
                                             <variation key="default">
                                                 <mask key="constraints">
+                                                    <exclude reference="2qH-Qc-wSr"/>
                                                     <exclude reference="BVJ-Ne-Ebv"/>
                                                     <exclude reference="Jib-B9-hhh"/>
                                                     <exclude reference="Nol-OV-Yyi"/>
@@ -1473,6 +1500,7 @@
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="cellSeparatorView" destination="Gyi-H4-2Yz" id="KkZ-vJ-Q8j"/>
+                                            <outlet property="commingSoonLbl" destination="Rio-vC-Etg" id="y8k-u5-U2L"/>
                                             <outlet property="menuItemIcon" destination="4PB-p0-MkP" id="NGZ-ZO-TdA"/>
                                             <outlet property="menuItemLbl" destination="YS9-mV-EOK" id="Eyu-LD-LVq"/>
                                         </connections>
@@ -1980,6 +2008,7 @@
                                         <rect key="frame" x="335" y="43" width="24" height="24"/>
                                         <connections>
                                             <action selector="cancelSearchBtn:" destination="tn8-tO-tjS" eventType="touchUpInside" id="W0y-hv-RE4"/>
+                                            <action selector="cancelSearchBtnDown:" destination="tn8-tO-tjS" eventType="touchDown" id="Qnr-kc-srC"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2114,6 +2143,7 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="375" height="600"/>
                     <connections>
+                        <outlet property="cancelSearchBtnHover" destination="9LI-6b-Aqj" id="aXT-y1-K9M"/>
                         <outlet property="categoryTableView" destination="ORD-B6-GJO" id="p8j-Q9-s3M"/>
                         <outlet property="customSearchBar" destination="tOx-MJ-91M" id="Bci-iq-Cqk"/>
                         <outlet property="searchTableView" destination="DoZ-b6-WXE" id="0Yx-KH-dpJ"/>
@@ -2274,6 +2304,7 @@
                                             <action selector="openMenu:" destination="8bd-Wb-kGu" eventType="touchUpInside" id="9mc-g4-NWV"/>
                                             <action selector="openMenu:" destination="2oh-Z2-Yr5" eventType="touchUpInside" id="Jov-v4-YH2"/>
                                             <action selector="openMenu:" destination="4Ha-oY-g2l" eventType="touchUpInside" id="rau-7S-JAN"/>
+                                            <action selector="openMenuDown:" destination="8bd-Wb-kGu" eventType="touchDown" id="Hxz-Wc-564"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ew4-S1-1Ql" userLabel="SearchBgView" customClass="RoundBtnViewStyle" customModule="LoLympics" customModuleProvider="target">
@@ -2304,6 +2335,7 @@
                                             <action selector="openSearch:" destination="8bd-Wb-kGu" eventType="touchUpInside" id="9BF-cU-qy0"/>
                                             <action selector="openSearch:" destination="4Ha-oY-g2l" eventType="touchUpInside" id="NrQ-8X-zD9"/>
                                             <action selector="openSearch:" destination="2oh-Z2-Yr5" eventType="touchUpInside" id="lKs-bA-scK"/>
+                                            <action selector="openSearchDown:" destination="8bd-Wb-kGu" eventType="touchDown" id="LSS-Zh-G0e"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -2424,6 +2456,8 @@
                     <size key="freeformSize" width="375" height="600"/>
                     <connections>
                         <outlet property="headerImage" destination="Xaj-gL-Ic8" id="cFF-q1-zJg"/>
+                        <outlet property="openMenuHover" destination="82K-fd-atb" id="AvU-gs-noe"/>
+                        <outlet property="openSearchHover" destination="ew4-S1-1Ql" id="Byn-sm-81U"/>
                         <outlet property="tableView" destination="OZy-a9-V59" id="cSB-re-UvP"/>
                     </connections>
                 </viewController>
@@ -2492,8 +2526,8 @@
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-PF-rPL">
                                                 <rect key="frame" x="16" y="464" width="343" height="218"/>
-                                                <mutableString key="text">Also there is no  common theory explaining what gave rise to the Games. The Helletic world was split into dozens of city-states which were constantly at war, but it was in their mutual interests to make peace and engage in military alliances, trading and culture, so supposably the Olympic Games were created to bring the Greek world together and for the city-states to peacefully compete with each
-other. People from different parts of Greece and its colonies (in Italy, North Africa and Asia Minor) traveled to Olimpia to participate or attend the Games, sharing the filling of belonging to the same culture.</mutableString>
+                                                <string key="text">Also there is no  common theory explaining what gave rise to the Games. The Helletic world was split into dozens of city-states which were constantly at war, but it was in their mutual interests to make peace and engage in military alliances, trading and culture, so supposably the Olympic Games were created to bring the Greek world together and for the city-states to peacefully compete with each
+other. People from different parts of Greece and its colonies (in Italy, North Africa and Asia Minor) traveled to Olimpia to participate or attend the Games, sharing the filling of belonging to the same culture.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2541,7 +2575,7 @@ penalties forbidden.</string>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqv-sE-pwo">
                                                 <rect key="frame" x="16" y="1854" width="343" height="184"/>
-                                                <mutableString key="text">Originally, athletes competed in the loin-cloths covering their genitals. The first one who ran a race naked and started the tradition was Orsippus, he won the stadion-race of the 15th Olympic Games in 720 BC. To prepare for training or competition, athletes covered their bodies with olive oil and then dusted themselves with fine sand. This would protect body from sun and help to regulate body temperature. Because the men competed nude, married women were forbidden to watch the Olympics under penalty of death.</mutableString>
+                                                <string key="text">Originally, athletes competed in the loin-cloths covering their genitals. The first one who ran a race naked and started the tradition was Orsippus, he won the stadion-race of the 15th Olympic Games in 720 BC. To prepare for training or competition, athletes covered their bodies with olive oil and then dusted themselves with fine sand. This would protect body from sun and help to regulate body temperature. Because the men competed nude, married women were forbidden to watch the Olympics under penalty of death.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
@@ -2977,6 +3011,7 @@ penalties forbidden.</string>
                                         <connections>
                                             <action selector="openMenu:" destination="4Ha-oY-g2l" eventType="touchUpInside" id="EUs-Vm-zBj"/>
                                             <action selector="openMenu:" destination="2oh-Z2-Yr5" eventType="touchUpInside" id="P7x-a8-P6H"/>
+                                            <action selector="openMenuDown:" destination="2oh-Z2-Yr5" eventType="touchDown" id="kaM-53-cGK"/>
                                         </connections>
                                     </button>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Kyh-kN-Rvk" userLabel="SearchBgView" customClass="RoundBtnViewStyle" customModule="LoLympics" customModuleProvider="target">
@@ -3006,6 +3041,7 @@ penalties forbidden.</string>
                                         <connections>
                                             <action selector="openSearch:" destination="4Ha-oY-g2l" eventType="touchUpInside" id="1VA-3L-IyN"/>
                                             <action selector="openSearch:" destination="2oh-Z2-Yr5" eventType="touchUpInside" id="Buy-ZK-eG1"/>
+                                            <action selector="openSearchDown:" destination="2oh-Z2-Yr5" eventType="touchDown" id="3RR-pX-WE7"/>
                                         </connections>
                                     </button>
                                 </subviews>
@@ -3085,6 +3121,8 @@ penalties forbidden.</string>
                         <outlet property="imageView2" destination="3vI-M4-mtx" id="Ape-xl-VNZ"/>
                         <outlet property="imageView3" destination="7cF-qP-e1o" id="2RD-Ye-xMN"/>
                         <outlet property="imageView4" destination="gxY-dR-ubL" id="p2G-Mk-h1z"/>
+                        <outlet property="openMenuHover" destination="KWO-Bx-qDF" id="D3y-Qk-DIH"/>
+                        <outlet property="openSearchHover" destination="Kyh-kN-Rvk" id="Yfe-WP-OUx"/>
                         <outlet property="scrollView" destination="UDw-ba-jXj" id="gcb-qt-PsM"/>
                         <segue destination="Yu8-mF-eP9" kind="presentation" identifier="ViewerVC" modalPresentationStyle="fullScreen" modalTransitionStyle="crossDissolve" id="WXf-LS-DY9"/>
                     </connections>
@@ -3108,7 +3146,7 @@ penalties forbidden.</string>
         <image name="mask" width="750" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="IhS-C5-udh"/>
-        <segue reference="9OC-pK-jr8"/>
+        <segue reference="9PQ-4b-BD4"/>
+        <segue reference="tqm-Hi-gbU"/>
     </inferredMetricsTieBreakers>
 </document>

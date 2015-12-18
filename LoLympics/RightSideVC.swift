@@ -165,8 +165,16 @@ class RightSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate,
         
         
     }
+    
+    
+    @IBOutlet weak var cancelSearchBtnHover: CancelBtnView!
+    
+    @IBAction func cancelSearchBtnDown(sender: AnyObject) {
+        self.cancelSearchBtnHover.backgroundColor = UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1)
+    }
 
     @IBAction func cancelSearchBtn(sender: AnyObject) {
+        self.cancelSearchBtnHover.backgroundColor = UIColor(red: 255/255, green: 255/255, blue: 255/255, alpha: 1)
         self.categoryTableView.hidden = false
         self.searchTableView.hidden = true
         

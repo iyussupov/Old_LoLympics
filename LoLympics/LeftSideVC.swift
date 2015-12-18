@@ -66,6 +66,10 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
         cell.menuItemLbl.text = menuItems[indexPath.row]
         cell.menuItemIcon.text = menuItemsIcons[indexPath.row]
         
+        if indexPath.row == 2 || indexPath.row == 3 {
+            cell.commingSoonLbl.hidden = false
+        }
+        
         if indexPath.row == menuItems.count - 1 {
             cell.cellSeparatorView.hidden = true
         }

@@ -18,11 +18,25 @@ class HistoryVC: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var imageView3: UIImageView!
     @IBOutlet weak var imageView4: UIImageView!
     
+    @IBOutlet weak var openMenuHover: RoundBtnViewStyle!
+    
+    @IBAction func openMenuDown(sender: AnyObject) {
+        self.openMenuHover.backgroundColor = UIColor(red: 217/255, green: 101/255, blue: 16/255, alpha: 1)
+    }
+    
     @IBAction func openMenu(sender: AnyObject) {
+        self.openMenuHover.backgroundColor = UIColor(red: 244/255, green: 121/255, blue: 31/255, alpha: 1)
         self.evo_drawerController?.toggleDrawerSide(.Left, animated: true, completion: nil)
     }
     
+    @IBOutlet weak var openSearchHover: RoundBtnViewStyle!
+    
+    @IBAction func openSearchDown(sender: AnyObject) {
+        self.openSearchHover.backgroundColor = UIColor(red: 2/255, green: 136/255, blue: 179/255, alpha: 1)
+    }
+    
     @IBAction func openSearch(sender: AnyObject) {
+        self.openSearchHover.backgroundColor = UIColor(red: 0/255, green: 174/255, blue: 230/255, alpha: 1)
         self.evo_drawerController?.toggleDrawerSide(.Right, animated: true, completion: nil)
     }
     
