@@ -100,7 +100,7 @@
                                                     <action selector="facebookLoginDown:" destination="1Yd-68-KPb" eventType="touchDown" id="JW7-jV-1Lg"/>
                                                 </connections>
                                             </button>
-                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-vu-f4Z" userLabel="googleBGView" customClass="BtnViewStyle" customModule="LoLympics" customModuleProvider="target">
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TE8-vu-f4Z" userLabel="googleBGView" customClass="GIDSignInButton">
                                                 <rect key="frame" x="40" y="331" width="295" height="38"/>
                                                 <subviews>
                                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="xqq-Pe-ptj" userLabel="GoogleLoginBtnTxt">
@@ -132,7 +132,7 @@
                                                     <constraint firstItem="xqq-Pe-ptj" firstAttribute="top" secondItem="TE8-vu-f4Z" secondAttribute="top" id="erF-MJ-Bfo"/>
                                                 </constraints>
                                             </view>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-ca-l7j" userLabel="GoogleLoginBtn">
+                                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nGJ-ca-l7j" userLabel="GoogleLoginBtn">
                                                 <rect key="frame" x="40" y="331" width="295" height="38"/>
                                                 <connections>
                                                     <action selector="googleLoginBtnAction:" destination="1Yd-68-KPb" eventType="touchUpInside" id="9Iy-Iu-qDJ"/>
@@ -408,9 +408,9 @@
                     <connections>
                         <outlet property="emailLoginHover" destination="2aW-Nr-2Uh" id="jAb-SX-yfO"/>
                         <outlet property="facebookLoginHover" destination="aQx-Ne-qoH" id="WMX-qg-Jc2"/>
-                        <outlet property="googleLoginHover" destination="TE8-vu-f4Z" id="mTB-JL-bWw"/>
                         <outlet property="passwordTxtFld" destination="yJq-a2-Bth" id="m5W-of-hdp"/>
                         <outlet property="scrollView" destination="nbc-dg-Mfa" id="9WA-ka-QpO"/>
+                        <outlet property="signInButton" destination="TE8-vu-f4Z" id="zLO-Yf-3bC"/>
                         <outlet property="usernameTxtFld" destination="20a-b7-xKk" id="pSG-eT-Hbg"/>
                         <segue destination="4Ha-oY-g2l" kind="show" identifier="loggedIn" id="4f7-EL-GCu"/>
                     </connections>
@@ -2521,7 +2521,7 @@
                                                 <rect key="frame" x="16" y="288" width="343" height="168"/>
                                                 <string key="text">The Olympic Games is the largest sport festival in the world and at some point the longest standing tradition in the human history. Almost all credits though go to ancient Greeks – while modern Olympic Games have been held 30 times for now, our esteemed ancestors hosted at least 293 events. It's unknown for sure when exactly the Games began, but the first written mention dates back to 776 BC. According to some ancient historians though, the Games of 776 were fourteenth, not the first ones.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QO9-PF-rPL">
@@ -2529,26 +2529,26 @@
                                                 <string key="text">Also there is no  common theory explaining what gave rise to the Games. The Helletic world was split into dozens of city-states which were constantly at war, but it was in their mutual interests to make peace and engage in military alliances, trading and culture, so supposably the Olympic Games were created to bring the Greek world together and for the city-states to peacefully compete with each
 other. People from different parts of Greece and its colonies (in Italy, North Africa and Asia Minor) traveled to Olimpia to participate or attend the Games, sharing the filling of belonging to the same culture.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gfy-7L-Xsl">
                                                 <rect key="frame" x="16" y="690" width="343" height="168"/>
                                                 <string key="text">The Games were always held in Olympia and were named under their location. Olympia, in turn, got its name from Mount Olympus - the highest mountain in Greece, and, according to Greek mythology, home of the Twelve Olympian gods. Zeus, the king of gods, is the one the Olympic Games were held in honor to. 42 feet (13 m) statue of the Zeus made of gold and ivory created by sculptor Pheidias was placed on a throne in the temple of Zeus. The statue became  one of the seven wonders of the ancient world.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The Olympic Games were just one of four major sport festivals in the ancient Greece (the biggest and oldest one though):" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ktv-19-WhT">
                                                 <rect key="frame" x="16" y="1217" width="343" height="51"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The general name for those festivals was Panhellenic Games (pan - all, hellene - Greek)." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LOb-mm-HU5">
                                                 <rect key="frame" x="16" y="1352" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MoN-pm-WQh">
@@ -2556,172 +2556,172 @@ other. People from different parts of Greece and its colonies (in Italy, North A
                                                 <string key="text">During the Games a Sacred Truce or Ekecheiria, was enacted, allowing the athletes and spectators to travel to the festival and back to their cities safely. Messengers went from one city-state to another announcing the date of the competitions. Wars were suspended, legal disputes were stopped and death
 penalties forbidden.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LZE-6g-y6M">
                                                 <rect key="frame" x="16" y="1519" width="343" height="151"/>
                                                 <string key="text">The ancient Olympics were as much a religious and cultural festival as an athletic event. Sculptors, poets and other artisans would come to the Games to glorify the victors and display their works to public. Politicians would use this time for negotiations and to announce political alliances. Merchants ran food and drink concessions and sold souvenirs. Over 40.000 people attended Olympia in the golden age of the festival.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUn-xd-Lpm">
                                                 <rect key="frame" x="16" y="1678" width="343" height="168"/>
                                                 <string key="text">Only freeborn Greek men were allowed to compete. Also, to be able to participate in the Games, every contestant had to take an oath in front of statue of Zeus, saying that he had been in training for ten months. In case athletes did not respect the rules during the competitions, judges punished them with a whip. For more serious offences, the athletes had to pay a fine, and the names of cheaters were inscribed along the passageway leading to the stadium.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rqv-sE-pwo">
                                                 <rect key="frame" x="16" y="1854" width="343" height="184"/>
                                                 <string key="text">Originally, athletes competed in the loin-cloths covering their genitals. The first one who ran a race naked and started the tradition was Orsippus, he won the stadion-race of the 15th Olympic Games in 720 BC. To prepare for training or competition, athletes covered their bodies with olive oil and then dusted themselves with fine sand. This would protect body from sun and help to regulate body temperature. Because the men competed nude, married women were forbidden to watch the Olympics under penalty of death.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5V-NR-Yyo">
                                                 <rect key="frame" x="16" y="2046" width="343" height="168"/>
                                                 <string key="text">The victors of the ancient Olympics got no material or financial reward, so the Games are also known as the Stephanitic Games (stephanos is the Attic Greek word for crown), because winners received only a garland for victory. Nevertheless, there wasn't higher reward in the Greek world than this crown of leaves. By returning to their hometowns, champions were welcomed as heroes and received numerous benefits to the rest of their lives, often becoming political figures.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1Q-yi-r8X">
                                                 <rect key="frame" x="16" y="2515" width="343" height="134"/>
                                                 <string key="text">At first, the Olympic Games lasted one day only and contained one event - the stadion (or "stade") race - a short sprint measuring between 180 and 240 metres (590 and 790 ft), or the length of the stadium, but over more than a thousand-year history of celebrating the festival underwent a lot of changes. At its peak (circa 500 B.C.) it lasted for five days and contained over a dozen events.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8Ot-D0-FO1">
                                                 <rect key="frame" x="16" y="2657" width="343" height="84"/>
                                                 <string key="text">At the first day athletes and judges took an oath in from of the statue of Zeus to respect the rules. After this ceremony a contest for trumpet players and heralds took place. The winners had the honor of making the announcements during the Games.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Q9h-Br-uFd">
                                                 <rect key="frame" x="16" y="2749" width="343" height="134"/>
                                                 <string key="text">At the second day the equestrian events were held in the hippodrome. The four-horse chariot race, or quadriga, was the most popular event. There also were chariot races for young horses and a mounted horse race. The equestrian competitions were the only ones where woman could be a winner, as it was not a jockey or the charioteer, but an owner of a stable of horses who was awarded.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="D3Q-sW-Ql4">
                                                 <rect key="frame" x="16" y="2891" width="343" height="67"/>
                                                 <string key="text">The pentathlon took place in the stadium in the afternoon. It consisted of five events: discus, long jump, javelin, running and wrestling. The last two disciplines were also practiced as a separate events.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The discus throw was carried out without a run-up  and all the athletes used the same discus." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gf3-YB-XAQ">
                                                 <rect key="frame" x="16" y="2966" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TnL-Sr-3d1">
                                                 <rect key="frame" x="16" y="3008" width="343" height="84"/>
                                                 <string key="text">For the long jump athletes used stone or metal weights. It is considered that the event consisted of five consecutive standing jumps, which required a sense of rhythm, so often a flute player was present, setting a rhythm for the athletes.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MDi-Kj-Wpf">
                                                 <rect key="frame" x="16" y="3100" width="343" height="51"/>
                                                 <string key="text">For the javelin throw, athletes used a small leather strap which was placed around the shaft in a loop, which gave the javelin an extra rotation.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiP-8n-YNK">
                                                 <rect key="frame" x="16" y="3159" width="343" height="84"/>
                                                 <string key="text">The third day was the culminating point of the Games. On the middle day a hecatomb was offered to Zeus - 100 oxen would be sacrificed to the king of gods. During a feast the meat was shared amongst participants and important guests.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="At the fourth day the foot races took place in the stadium:" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Vzw-49-Ibf">
                                                 <rect key="frame" x="16" y="3251" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- The stadium race covered one length of the stadium, that is roughly 192m." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="g8G-Bf-Ida">
                                                 <rect key="frame" x="16" y="3293" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- The diaulos, two lengths or double stadium." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d3T-yw-MxQ">
                                                 <rect key="frame" x="16" y="3327" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- The dolichos, a long-distance race (from 7 to 24 laps)." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cW8-DI-0Bt">
                                                 <rect key="frame" x="16" y="3344" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- The race in arms, where the athletes wore a helmet and greaves, and carried a shield." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZI-oI-W0c">
                                                 <rect key="frame" x="16" y="3378" width="343" height="34"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EPM-19-2x1">
                                                 <rect key="frame" x="16" y="3712" width="343" height="151"/>
                                                 <string key="text">The afternoon was dedicated to combat sports: pugilism (boxing), wrestling and pankration. There were no weight categories at that time, and rivals were chosen by drawing of lots. For boxing, the pugilists’ hands were protected by long leather thongs. These ancestors of boxing gloves underwent numerous modifications over time. Pieces of metal were added on the knuckles, making the punches much more violent.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hpf-xV-ZBS">
                                                 <rect key="frame" x="16" y="3871" width="343" height="51"/>
                                                 <string key="text">Wrestlers fought standing up, with bare hands. There were different types of hold. The person who first touched the ground three times was the loser.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4pn-ft-W0h">
                                                 <rect key="frame" x="16" y="3930" width="343" height="51"/>
                                                 <string key="text">Pankration was a type of wrestling. All moves were allowed, except for biting, gouging out eyes and putting fingers in the opponent’s nose.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Olympic Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YxM-Hb-Pha">
                                                 <rect key="frame" x="16" y="1276" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Pythian Games" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5OT-2Y-HUs">
                                                 <rect key="frame" x="16" y="1293" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Nemean Games and" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="daa-yf-JxM">
                                                 <rect key="frame" x="16" y="1310" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- Isthmian Games." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="89K-ck-lcj">
                                                 <rect key="frame" x="16" y="1327" width="343" height="17"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KUV-uE-7fX">
                                                 <rect key="frame" x="16" y="866" width="343" height="51"/>
                                                 <string key="text">The festival took place every 4 years, and this four-year period acquired the name "Olympiad" and was used by ancient historians as a time unit.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <imageView clipsSubviews="YES" tag="1" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="history-2" translatesAutoresizingMaskIntoConstraints="NO" id="3vI-M4-mtx">
@@ -2785,21 +2785,21 @@ penalties forbidden.</string>
                                                 <rect key="frame" x="16" y="3989" width="343" height="101"/>
                                                 <string key="text">Fifth and last day was reserved for honouring victorious athletes. They were covered in ribbons and received victory palms in the stadium, before a solemn ceremony in which they were crowned with olive wreaths. Finally, a banquet was given for them, together with the politicians and judges.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AwD-ZF-q2w">
                                                 <rect key="frame" x="16" y="4098" width="343" height="84"/>
                                                 <string key="text">After almost thirteen centuries of celebrating the Olympic Games, the emperor Theodosius I suppressed the festival as a pagan in 394 AD, as part of the campaign to impose Christianity as the state religion of Rome.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hpr-o0-wdX">
                                                 <rect key="frame" x="16" y="4190" width="343" height="67"/>
                                                 <string key="text">This outstanding tradition was revived many centuries later by Baron Pierre de Coubertin, and the first modern international Olympic Games took place in Athens in 1896.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -3146,7 +3146,7 @@ penalties forbidden.</string>
         <image name="mask" width="750" height="468"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="9PQ-4b-BD4"/>
+        <segue reference="4f7-EL-GCu"/>
         <segue reference="tqm-Hi-gbU"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		26FF78CEA5C08AC27C7DCDB4 /* Pods_LoLympics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 86021E96F96614F5F886CAC9 /* Pods_LoLympics.framework */; };
+		5A0175E41C2407350055CB72 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5A0175E31C2407350055CB72 /* GoogleService-Info.plist */; };
 		5A03EC5D1C1ACAE30000FCA9 /* RightSideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03EC5C1C1ACAE30000FCA9 /* RightSideVC.swift */; };
 		5A03EC5F1C1ACAF20000FCA9 /* LeftSideVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03EC5E1C1ACAF20000FCA9 /* LeftSideVC.swift */; };
 		5A03EC661C1AE1A80000FCA9 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A03EC651C1AE1A80000FCA9 /* MenuCell.swift */; };
@@ -50,6 +51,7 @@
 
 /* Begin PBXFileReference section */
 		49525FE303982E1A2502061E /* Pods-LoLympics.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-LoLympics.debug.xcconfig"; path = "Pods/Target Support Files/Pods-LoLympics/Pods-LoLympics.debug.xcconfig"; sourceTree = "<group>"; };
+		5A0175E31C2407350055CB72 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5A03EC5C1C1ACAE30000FCA9 /* RightSideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RightSideVC.swift; sourceTree = "<group>"; };
 		5A03EC5E1C1ACAF20000FCA9 /* LeftSideVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LeftSideVC.swift; sourceTree = "<group>"; };
 		5A03EC651C1AE1A80000FCA9 /* MenuCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 		5A4F994B1C200579002A88FB /* CategoryCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
 		5A4F994D1C200C6C002A88FB /* SearchCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchCell.swift; sourceTree = "<group>"; };
 		5A4F994F1C2011DC002A88FB /* Category.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
+		5A52E96A1C23F6EE009BDD33 /* LoLympics-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LoLympics-Bridging-Header.h"; sourceTree = "<group>"; };
 		5A58FC4F1C2155E500475540 /* SearchBarView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		5A9082DC1C1EFBCF006CAA3B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		5A9148EE1C219656009CABE7 /* CancelBtnView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelBtnView.swift; sourceTree = "<group>"; };
@@ -139,6 +142,8 @@
 				5A0545B71C0C31E700961E23 /* Assets.xcassets */,
 				5A0545B91C0C31E700961E23 /* LaunchScreen.storyboard */,
 				5A0545BC1C0C31E700961E23 /* Info.plist */,
+				5A0175E31C2407350055CB72 /* GoogleService-Info.plist */,
+				5A52E96A1C23F6EE009BDD33 /* LoLympics-Bridging-Header.h */,
 			);
 			path = LoLympics;
 			sourceTree = "<group>";
@@ -265,7 +270,7 @@
 		5A0545A51C0C31E700961E23 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0710;
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = FXoffice;
 				TargetAttributes = {
@@ -300,6 +305,7 @@
 			files = (
 				5A0545BB1C0C31E700961E23 /* LaunchScreen.storyboard in Resources */,
 				5A0545B81C0C31E700961E23 /* Assets.xcassets in Resources */,
+				5A0175E41C2407350055CB72 /* GoogleService-Info.plist in Resources */,
 				5A0545C71C0C34D100961E23 /* ionicons.ttf in Resources */,
 				5A0545B61C0C31E700961E23 /* Main.storyboard in Resources */,
 			);
@@ -506,6 +512,7 @@
 			baseConfigurationReference = 49525FE303982E1A2502061E /* Pods-LoLympics.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/LoLympics",
@@ -515,6 +522,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.lolympics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoLympics/LoLympics-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -523,6 +532,7 @@
 			baseConfigurationReference = 67B32F7BCC25368ABAD5527F /* Pods-LoLympics.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(PROJECT_DIR)/LoLympics",
@@ -532,6 +542,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.fxoffice.lolympics;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "LoLympics/LoLympics-Bridging-Header.h";
 			};
 			name = Release;
 		};

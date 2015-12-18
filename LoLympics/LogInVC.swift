@@ -11,7 +11,7 @@ import Parse
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
 
-class LogInVC: UIViewController, UITextFieldDelegate {
+class LogInVC: UIViewController, UITextFieldDelegate, GIDSignInUIDelegate {
     
     @IBOutlet weak var scrollView: UIScrollView!
     
@@ -99,16 +99,39 @@ class LogInVC: UIViewController, UITextFieldDelegate {
     }
     
     
-    @IBOutlet weak var googleLoginHover: BtnViewStyle!
+    @IBOutlet weak var signInButton: GIDSignInButton!
+    
+    
+    /*
     @IBAction func googleLoginDown(sender: AnyObject) {
-        self.googleLoginHover.backgroundColor = UIColor(red: 238/255, green: 98/255, blue: 86/255, alpha: 1)
+        self.signInButton.backgroundColor = UIColor(red: 238/255, green: 98/255, blue: 86/255, alpha: 1)
     }
     @IBAction func googleLoginBtnAction(sender: AnyObject) {
-        self.googleLoginHover.backgroundColor = UIColor(red: 220/255, green: 70/255, blue: 57/255, alpha: 1)
+        self.signInButton.backgroundColor = UIColor(red: 220/255, green: 70/255, blue: 57/255, alpha: 1)
+    }
+    */
+    
+    // Stop the UIActivityIndicatorView animation that was started when the user
+    // pressed the Sign In button
+    func signInWillDispatch(signIn: GIDSignIn!, error: NSError!) {
+        //myActivityIndicator.stopAnimating()
+    }
+    
+    // Present a view that prompts the user to sign in with Google
+    func signIn(signIn: GIDSignIn!,
+        presentViewController viewController: UIViewController!) {
+            self.presentViewController(viewController, animated: true, completion: nil)
+    }
+    
+    // Dismiss the "Sign in with Google" view
+    func signIn(signIn: GIDSignIn!,
+        dismissViewController viewController: UIViewController!) {
+            self.dismissViewControllerAnimated(true, completion: nil)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        GIDSignIn.sharedInstance().uiDelegate = self
     }
 
 }

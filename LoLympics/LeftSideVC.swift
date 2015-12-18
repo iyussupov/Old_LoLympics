@@ -123,6 +123,7 @@ class LeftSideVC: UIViewController, UITableViewDataSource, UITableViewDelegate {
             
             refreshAlert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { (action: UIAlertAction!) in
                 PFUser.logOut()
+                GIDSignIn.sharedInstance().signOut()
                 let aboutViewController = self.storyboard?.instantiateViewControllerWithIdentifier("LogInVC") as UIViewController!
                 
                 
